@@ -8,7 +8,7 @@ everyone has a portfolio linked in bio. so why not?
 
 According to GitHub, repos without licensing retain all the rights over their contents, and I quote:
 
-> "*[...]* However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. *[...]" [^1]
+> "*[...]* However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. *[...]*" [^1]
 
 Do not copy my logos, and even less logos from cited projects, as I do not own their copyright but someone else does and who knows where you could end up?
 
