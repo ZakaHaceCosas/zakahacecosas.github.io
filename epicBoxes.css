@@ -1,0 +1,146 @@
+/*
+This is epic. I do not accept any valid argument against that statement because it would not be possible for that kind of argument to even exist.
+
+Box names are chosen in purpose. If you do not understand them, it's not a problem. If you do, you're probably someone I know.
+*/
+.box-yt:hover {
+    background-color: #ff3d0090;
+    -webkit-box-shadow: 0 0 60px 0 #ff3d0080;
+    box-shadow: 0 0 60px 0 #ff3d0080;
+    border: 1px solid #ff3d00;
+}
+.box-yt:hover svg path[fill="#FFF"] {
+    fill: #ff3d00;
+}
+.box-action:hover svg path,
+.box-boblox:hover svg path,
+.box-dev:hover svg path,
+.box-pechonaplus:hover svg path,
+.box-discblox:hover svg path,
+.box-leno:hover svg path,
+.box-leno:hover svg rect,
+.box-revo:hover svg path,
+.box-roblos:hover svg path,
+.box-proton:hover svg path,
+.box-neboola:hover svg path,
+.box-yt:hover svg path[fill="#FF3D00"] {
+    fill: #fff;
+}
+.box-x:hover {
+    background-color: #03a9f490;
+    -webkit-box-shadow: 0 0 60px 0 #03a9f480;
+    box-shadow: 0 0 60px 0 #03a9f480;
+    border: 1px solid #03a9f4;
+}
+.box-dc:hover svg path,
+.box-fogma:hover svg circle,
+.box-fogma:hover svg path,
+.box-replot:hover svg path,
+.box-x:hover svg path {
+    fill: white;
+}
+.box-dc:hover {
+    background-color: #536dfe90;
+    -webkit-box-shadow: 0 0 60px 0 #536dfe80;
+    box-shadow: 0 0 60px 0 #536dfe80;
+    border: 1px solid #536dfe;
+}
+.box-replot:hover {
+    background-color: #fb8c0090;
+    -webkit-box-shadow: 0 0 60px 0 #fb8c0080;
+    box-shadow: 0 0 60px 0 #fb8c0080;
+    border: 1px solid #fb8c00;
+}
+.box-fogma:hover {
+    background-color: #66bb6a90;
+    -webkit-box-shadow: 0 0 60px 0 #66bb6a80;
+    box-shadow: 0 0 60px 0 #66bb6a80;
+    border: 1px solid #66bb6a;
+}
+.box-gh:hover {
+    background-color: #000;
+    -webkit-box-shadow: 0 0 60px 0 #ffffff30;
+    box-shadow: 0 0 60px 0 #ffffff30;
+    border: 1px solid #ffffff90;
+}
+.box-calajarm:hover {
+    background-color: #fee46e90;
+    -webkit-box-shadow: 0 0 60px 0 #fee46e80;
+    box-shadow: 0 0 60px 0 #fee46e80;
+    border: 1px solid #fee46e;
+}
+.box-boblox:hover {
+    background-color: #ff573390;
+    -webkit-box-shadow: 0 0 60px 0 #ff573380;
+    box-shadow: 0 0 60px 0 #ff573380;
+    border: 1px solid #ff5733;
+}
+.box-neboola:hover {
+    background-color: #834dba90;
+    -webkit-box-shadow: 0 0 60px 0 #834dba80;
+    box-shadow: 0 0 60px 0 #834dba80;
+    border: 1px solid #834dba;
+}
+.box-aflan:hover {
+    background-color: #0070f390;
+    -webkit-box-shadow: 0 0 60px 0 #0070f380;
+    box-shadow: 0 0 60px 0 #0070f380;
+    border: 1px solid #0070f3;
+}
+.box-leno:hover {
+    background-color: #f9b42790;
+    -webkit-box-shadow: 0 0 60px 0 #f9b42780;
+    box-shadow: 0 0 60px 0 #f9b42780;
+    border: 1px solid #f9b427;
+}
+.box-leno:hover svg circle {
+    stroke: #fff;
+}
+.box-sus:hover {
+    background-color: #dc187a90;
+    -webkit-box-shadow: 0 0 60px 0 #dc187a80;
+    box-shadow: 0 0 60px 0 #dc187a80;
+    border: 1px solid #dc187a;
+}
+.box-revo:hover {
+    background-color: #00a07890;
+    -webkit-box-shadow: 0 0 60px 0 #00a07880;
+    box-shadow: 0 0 60px 0 #00a07880;
+    border: 1px solid #00a078;
+}
+.box-roblos:hover {
+    background-color: #ff9b1990;
+    -webkit-box-shadow: 0 0 60px 0 #ff9b1980;
+    box-shadow: 0 0 60px 0 #ff9b1980;
+    border: 1px solid #ff9b19;
+}
+.box-pechonaplus:hover {
+    background-color: #32ff8090;
+    -webkit-box-shadow: 0 0 60px 0 #32ff8080;
+    box-shadow: 0 0 60px 0 #32ff8080;
+    border: 1px solid #32ff80;
+}
+.box-action:hover {
+    background-color: #3296fa90;
+    -webkit-box-shadow: 0 0 60px 0 #3296fa80;
+    box-shadow: 0 0 60px 0 #3296fa80;
+    border: 1px solid #3296fa;
+}
+.box-emhu:hover {
+    background-color: #ffe24b90;
+    -webkit-box-shadow: 0 0 60px 0 #ffe24b80;
+    box-shadow: 0 0 60px 0 #ffe24b80;
+    border: 1px solid #ffe24b;
+}
+.box-discblox:hover {
+    background-color: #edbe0090;
+    -webkit-box-shadow: 0 0 60px 0 #edbe0080;
+    box-shadow: 0 0 60px 0 #edbe0080;
+    border: 1px solid #edbe00;
+}
+.box-proton:hover {
+    background-color: #7341ff90;
+    -webkit-box-shadow: 0 0 60px 0 #7341ff80;
+    box-shadow: 0 0 60px 0 #7341ff80;
+    border: 1px solid #7341ff;
+}

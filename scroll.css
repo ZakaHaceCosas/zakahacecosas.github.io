@@ -1,0 +1,117 @@
+/*
+Animate On Scroll. Inspired (aka copied) from a Fireship video.
+
+Looks good.
+*/
+.animation {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+.animation:first-of-type {
+    -webkit-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+.animation:nth-of-type(2) {
+    -webkit-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    transition-duration: 750ms;
+}
+.animation:nth-of-type(3) {
+    -webkit-transition-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+    transition-duration: 0.9s;
+}
+.animation:nth-of-type(4) {
+    -webkit-transition-duration: 1.05s;
+    -o-transition-duration: 1.05s;
+    transition-duration: 1.05s;
+}
+.animation:nth-of-type(5) {
+    -webkit-transition-duration: 1.2s;
+    -o-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+}
+.animation:nth-of-type(6) {
+    -webkit-transition-duration: 1.35s;
+    -o-transition-duration: 1.35s;
+    transition-duration: 1.35s;
+}
+.animation:nth-of-type(7) {
+    -webkit-transition-duration: 1.5s;
+    -o-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+}
+.animation:nth-of-type(8) {
+    -webkit-transition-duration: 1.65s;
+    -o-transition-duration: 1.65s;
+    transition-duration: 1.65s;
+}
+.animation:nth-of-type(9) {
+    -webkit-transition-duration: 1.8s;
+    -o-transition-duration: 1.8s;
+    transition-duration: 1.8s;
+}
+.animation:nth-of-type(10) {
+    -webkit-transition-duration: 1.95s;
+    -o-transition-duration: 1.95s;
+    transition-duration: 1.95s;
+}
+.animation:nth-of-type(11) {
+    -webkit-transition-duration: 2.1s;
+    -o-transition-duration: 2.1s;
+    transition-duration: 2.1s;
+}
+.animation:nth-of-type(12) {
+    -webkit-transition-duration: 2.25s;
+    -o-transition-duration: 2.25s;
+    transition-duration: 2.25s;
+}
+.animation:nth-of-type(13) {
+    -webkit-transition-duration: 2.4s;
+    -o-transition-duration: 2.4s;
+    transition-duration: 2.4s;
+}
+.animation:nth-of-type(14) {
+    -webkit-transition-duration: 2.55s;
+    -o-transition-duration: 2.55s;
+    transition-duration: 2.55s;
+}
+.animation:nth-of-type(15) {
+    -webkit-transition-duration: 2.7s;
+    -o-transition-duration: 2.7s;
+    transition-duration: 2.7s;
+}
+.animation:nth-of-type(16) {
+    -webkit-transition-duration: 2.85s;
+    -o-transition-duration: 2.85s;
+    transition-duration: 2.85s;
+}
+.animation:nth-of-type(17) {
+    -webkit-transition-duration: 3s;
+    -o-transition-duration: 3s;
+    transition-duration: 3s;
+}
+.animation:nth-of-type(18) {
+    -webkit-transition-duration: 3.15s;
+    -o-transition-duration: 3.15s;
+    transition-duration: 3.15s;
+}
+.animation:nth-of-type(19) {
+    -webkit-transition-duration: 3.3s;
+    -o-transition-duration: 3.3s;
+    transition-duration: 3.3s;
+}
+.animation:nth-of-type(20) {
+    -webkit-transition-duration: 3.45s;
+    -o-transition-duration: 3.45s;
+    transition-duration: 3.45s;
+}
+.scroll-animation {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
