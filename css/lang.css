@@ -1,0 +1,47 @@
+html[lang="Esp"] eng {
+    display: none;
+}
+
+html[lang="Eng"] esp {
+    display: none;
+}
+
+a.lang {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: white;
+    align-items: center;
+    opacity: 0.5;
+}
+
+a.lang:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+a.lang img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.langsss {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+    z-index: 99;
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1000px) {
+    .langsss {
+        right: 10vw;
+    }
+}
