@@ -1,0 +1,95 @@
+bento {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 200px 200px;
+    grid-template-rows: repeat(200px, 200px);
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+bento > a {
+    display: contents;
+}
+
+bento > a > box {
+    grid-column: span 1;
+    -ms-grid-column-span: 1;
+}
+
+bento > a:first-child > box {
+    grid-row: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+bento > a:nth-child(2) > box {
+    grid-row: 1;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+bento > a:nth-child(3) > box {
+    grid-row: 2;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+bento > a:nth-child(4) > box {
+    grid-row: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+}
+bento a {
+    color: #fff;
+}
+box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    padding: 20px;
+    background-color: var(--cardBg);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: var(--cardStroke);
+    gap: 10px;
+}
+box p.pp {
+    margin-bottom: 10px;
+}
+box flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: auto;
+}
+box:hover {
+    cursor: pointer;
+}
+box:hover flex {
+    gap: 30px;
+}

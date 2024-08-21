@@ -124,6 +124,9 @@ body side {
     position: fixed;
     left: 0;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 footer {
     padding: 12px;
@@ -148,116 +151,21 @@ footer {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
 }
-.status,
-box,
-table {
+.zakabox {
+    flex-grow: 1;
     padding: 20px;
     background-color: var(--cardBg);
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: var(--cardStroke);
 }
 .otpoxlogo {
-    width: 45%;
-    max-width: 650px;
+    width: 30%;
+    max-width: 450px;
     height: auto;
     -o-object-fit: scale-down;
     object-fit: scale-down;
-}
-bento {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 200px 200px;
-    grid-template-rows: repeat(200px, 200px);
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-bento > a {
-    display: contents;
-}
-
-bento > a > box {
-    grid-column: span 1;
-    -ms-grid-column-span: 1;
-}
-
-bento > a:first-child > box {
-    grid-row: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-}
-
-bento > a:nth-child(2) > box {
-    grid-row: 1;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-}
-
-bento > a:nth-child(3) > box {
-    grid-row: 2;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-}
-
-bento > a:nth-child(4) > box {
-    grid-row: 2;
-    grid-column: 2;
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-}
-
-bento a {
-    color: #fff;
-}
-box {
-    border: var(--cardStroke);
-    border-radius: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-}
-box p.pp {
-    margin-bottom: 20px;
-}
-box flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 5px;
-}
-box:hover {
-    cursor: pointer;
-}
-box:hover flex {
-    gap: 30px;
-}
-table {
-    width: 100%;
-    border-radius: 20px;
-    border: var(--cardStroke);
 }
 .god {
     color: #00ff64;
@@ -271,15 +179,6 @@ table {
 .disclaimer {
     color: #ccc;
     font-size: small;
-}
-.status {
-    width: calc(100% - 40px);
-    border-radius: 20px;
-    border: var(--cardStroke);
-}
-.status a {
-    color: #fff;
-    text-decoration: underline;
 }
 hr {
     width: 100%;
@@ -335,7 +234,7 @@ footer.foot2 {
     }
 }
 
-@media only screen and (max-width: 1600px) and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     .side1 {
         position: static !important;
         height: -webkit-fit-content !important;
@@ -351,13 +250,6 @@ footer.foot2 {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: start;
-        max-width: 75vw !important;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    body side {
-        height: auto;
-        width: 100%;
     }
     footer.foot1 {
         display: none;
@@ -366,5 +258,29 @@ footer.foot2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+    body {
+        max-width: 70vw !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body side {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1900px) {
+    body {
+        max-width: 50vw !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body side {
+        height: auto;
+        width: 100%;
     }
 }
