@@ -284,3 +284,10 @@ footer.foot2 {
         width: 100%;
     }
 }
+
+@media only screen and (min-width: 1900px) {
+    body {
+        width: 100vw !important;
+        flex-direction: row;
+    }
+}
