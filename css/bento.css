@@ -6,6 +6,7 @@ bento {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    width: 100%;
 }
 bento > a {
     display: contents;
