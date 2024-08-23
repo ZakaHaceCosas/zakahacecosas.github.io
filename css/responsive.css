@@ -74,7 +74,7 @@
     }
 }
 
-@media only screen and (min-width: 1500px) and (max-width: 1900px) {
+@media only screen and (min-width: 1500px) {
     body {
         max-width: 50vw !important;
         margin-left: auto;
@@ -89,9 +89,5 @@
 @media only screen and (min-width: 1900px) {
     body {
         width: 100vw !important;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
     }
 }
