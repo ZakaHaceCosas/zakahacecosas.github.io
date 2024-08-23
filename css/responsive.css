@@ -1,0 +1,97 @@
+/* RESPONSIVE DESIGN FOR PEOPLE WHO CAN'T BUY A PC AND NEED TO USE A SCREEN ON THEIR POCKET */
+@media only screen and (max-width: 1000px) {
+    .side1 {
+        position: static !important;
+        height: -webkit-fit-content !important;
+        height: -moz-fit-content !important;
+        height: fit-content !important;
+        overflow: visible;
+    }
+    body {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+    }
+    body side {
+        height: auto;
+        width: calc(100vw - 40px);
+    }
+    /* bento {
+        width: 100%;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    } */
+    footer.foot1 {
+        display: none;
+    }
+    footer.foot2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .side1 {
+        position: static !important;
+        height: -webkit-fit-content !important;
+        height: -moz-fit-content !important;
+        height: fit-content !important;
+        overflow: visible;
+    }
+    body {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+    }
+    footer.foot1 {
+        display: none;
+    }
+    footer.foot2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+    body {
+        max-width: 70vw !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body side {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1900px) {
+    body {
+        max-width: 50vw !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body side {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    body {
+        width: 100vw !important;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
