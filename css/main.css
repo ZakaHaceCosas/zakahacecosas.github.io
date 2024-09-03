@@ -39,7 +39,7 @@ table tbody tr td:nth-of-type(3) {
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #19ff73;
+    background: #19ff73; /* this is the current logo's color */
 }
 img {
     pointer-events: none !important;
