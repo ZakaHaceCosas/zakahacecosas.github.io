@@ -69,7 +69,7 @@ img {
     left: -25vw;
     height: auto;
     width: 65vw;
-    opacity: 0.5;
+    opacity: 1;
     -webkit-filter: blur(250px);
     filter: blur(250px);
     border-radius: 30%;
