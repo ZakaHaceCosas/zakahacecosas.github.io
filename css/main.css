@@ -53,7 +53,7 @@ img {
     -webkit-transition-duration: 450ms;
     -o-transition-duration: 450ms;
     transition-duration: 450ms;
-    font-family: Poppins, "Segoe UI", Outfit, sans-serif;
+    font-family: Poppins, "Segoe UI", sans-serif;
 }
 :root {
     --bodyBg: rgba(0, 0, 0, 1);
