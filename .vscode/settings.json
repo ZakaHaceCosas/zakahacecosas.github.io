@@ -2,5 +2,14 @@
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
     "prettier.tabWidth": 4,
-    "cSpell.language": "en-US,es-ES"
+    "cSpell.language": "en-US,es-ES",
+    "cSpell.words": [
+        "Amog",
+        "Autoprefixer",
+        "Avdan",
+        "bento",
+        "leoptix",
+        "optix",
+        "zaka"
+    ]
 }

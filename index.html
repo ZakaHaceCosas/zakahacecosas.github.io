@@ -11,7 +11,7 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         />
-        <!--FIXME: descargar las fuentes y subirlas al repo para usar github como host, asi google no espia-->
+        <!-- NOTE: maybe download the fonts and serve them from github so google does not spy on us? -->
 
         <!--begin JS-->
         <script src="https://zakahacecosas.github.io/js/aos.js" defer></script>
@@ -29,7 +29,11 @@
         />
         <link
             rel="stylesheet"
-            href="https://zakahacecosas.github.io/css/scroll.css"
+            href="https://zakahacecosas.github.io/css/scrollbar.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://zakahacecosas.github.io/css/scrollAnimation.css"
         />
         <link
             rel="stylesheet"
@@ -91,10 +95,10 @@
             <img
                 src="images/design/logo.png"
                 alt="Logotipo de Zaka"
-                class="animation otpoxlogo"
+                class="animation logo"
             />
             <!--localization-->
-            <div class="animation langsss">
+            <div class="animation langSelector">
                 <a onclick="setLang('Esp')" href="#" class="animation lang">
                     <img
                         src="images/icons/what-is-stable-politics.png"
@@ -121,8 +125,8 @@
                     this. I'm Zaka and I Do Things.
                 </eng>
             </h1>
-            <div class="zakabox animation skill-box">
-                <p class="testo">
+            <div class="zakaBox animation skill-box">
+                <p>
                     <esp>Habilidades</esp>
                     <eng>Skills</eng>
                 </p>
@@ -591,8 +595,8 @@
                 <esp>Contacto y redes sociales</esp>
                 <eng>Contact and social media</eng>
             </h3>
-            <div class="zakabox animation">
-                <p class="testo">
+            <div class="zakaBox animation">
+                <p>
                     <esp>Estado</esp>
                     <eng>Status</eng>
                 </p>
@@ -609,10 +613,10 @@
                             Ten en cuenta que ahora que volvió el curso
                             académico, no estaré disponible tan frecuentemente.
                         </i>
-                        <b>Contáctame por Discord o correo-e si te interesa.</b>
+                        <b>Contacta por Discord o correo-e si te interesa.</b>
                     </esp>
                     <eng>
-                        I accept comissions / jobs. Currently working
+                        I accept commissions / jobs. Currently working
                         <b>for free</b> as I'm seeking experience (and I don't
                         have a bank account to get paid anyway).
                         <i>
@@ -634,7 +638,7 @@
                 </esp>
                 <eng>
                     Saw I'm available? Choose any of these options to get in
-                    touch and let's make epic things. Preferrably
+                    touch and let's make epic things. Preferably
                     <b>Discord</b>.
                 </eng>
             </p>
@@ -784,7 +788,7 @@
                         <h2>GitHub</h2>
                         <p class="animation pp">
                             <esp>Repositorios y cosas</esp>
-                            <eng>Repositoires and stuff</eng>
+                            <eng>Repositories and stuff</eng>
                         </p>
                         <flex>
                             <p>GO</p>
