@@ -109,8 +109,8 @@ footer {
     border: var(--cardStroke);
 }
 .logo {
-    width: 30%;
-    max-width: 450px;
+    width: 25vw;
+    max-width: 300px;
     height: auto;
     -o-object-fit: scale-down;
     object-fit: scale-down;
