@@ -29,6 +29,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-pechonaplus:hover p,
 .box-pechonaplus:hover h2 {
     fill: #000;
+    color: #000;
 }
 .box-x:hover {
     background-color: #03a9f490;
