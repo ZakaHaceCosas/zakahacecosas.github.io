@@ -4,11 +4,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
-/* .side1, */
-body {
-    overflow-x: hidden;
-}
 bento,
 footer {
     width: calc(100% - 20px);
@@ -17,7 +12,6 @@ footer {
 bento a {
     text-decoration: none;
 }
-body,
 box flex {
     -webkit-box-orient: horizontal;
 }
@@ -59,25 +53,6 @@ img {
     filter: blur(250px);
     border-radius: 30%;
 }
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bodyBg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-    color: #fff;
-}
-/* body side, */
 footer {
     flex-direction: column;
     -ms-flex-direction: column;
@@ -86,39 +61,19 @@ footer {
     display: -ms-flexbox;
     -webkit-box-direction: normal;
 }
-body /* side */ {
-    /* width: calc(50vw - 40px);
-    height: calc(100vh - 40px); */
-    padding: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
+body {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: start;
-    /* gap: 10px; */
     gap: 20px;
+    padding: 20px;
+    background-color: var(--bodyBg);
+    color: #fff;
 }
-/* .side1 {
-    position: fixed;
-    left: 0;
-    overflow-y: scroll;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 20px;
-} */
 footer {
     padding: 12px;
     border-radius: 12px;
