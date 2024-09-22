@@ -1,5 +1,4 @@
-bento,
-footer {
+bento {
     width: calc(100% - 20px);
 }
 *,
@@ -9,7 +8,6 @@ bento a {
 box flex {
     -webkit-box-orient: horizontal;
 }
-footer,
 table tbody tr td:nth-of-type(2),
 table tbody tr td:nth-of-type(3) {
     text-align: center;
@@ -47,14 +45,6 @@ img {
     filter: blur(250px);
     border-radius: 30%;
 }
-footer {
-    flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-direction: normal;
-}
 body {
     margin-left: auto;
     margin-right: auto;
@@ -80,10 +70,9 @@ body {
 footer {
     padding: 12px;
     border-radius: 12px;
-    background-color: var(--cardBg);
-    border: var(--cardStroke);
-    opacity: 0.5;
-    margin-top: 10px;
+    margin-bottom: 20px;
+
+    width: calc(100% - 20px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -91,12 +80,19 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
+    text-align: center;
+
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
 }
@@ -139,9 +135,6 @@ hr {
     height: 1px;
     background-color: #ffffff50;
     border-radius: 12px;
-}
-footer.footer-mobile {
-    display: none;
 }
 .skill-box {
     display: -webkit-box;

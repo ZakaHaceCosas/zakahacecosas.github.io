@@ -16,15 +16,6 @@
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     } */
-    footer.footer-default {
-        display: none;
-    }
-    footer.footer-mobile {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-bottom: 20px;
-    }
     .all-skills {
         -webkit-box-orient: horizontal !important;
         -webkit-box-direction: normal !important;
@@ -62,14 +53,5 @@
         justify-content: start;
         max-width: 1500px !important;
         width: 75vw;
-    }
-    footer.footer-default {
-        display: none;
-    }
-    footer.footer-mobile {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-bottom: 20px;
     }
 }
