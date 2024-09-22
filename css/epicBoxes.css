@@ -144,3 +144,9 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #7341ff80;
     border: 1px solid #7341ff;
 }
+.box-toro:hover {
+    background-color: #655dea90;
+    -webkit-box-shadow: 0 0 60px 0 #655dea80;
+    box-shadow: 0 0 60px 0 #655dea80;
+    border: 1px solid #655dea;
+}
