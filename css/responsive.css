@@ -34,14 +34,16 @@
         display: flex;
     }
     .all-skills {
-        flex-direction: column !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
     }
     .skill {
-        width: 100%;
+        width: calc(100% - 40px);
         align-items: center;
         justify-content: flex-start;
         flex-direction: row;
         padding: 20px;
+        flex-basis: 20%;
     }
 }
 
