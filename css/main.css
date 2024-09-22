@@ -87,8 +87,8 @@ footer {
     -webkit-box-direction: normal;
 }
 body /* side */ {
-    width: calc(50vw - 40px);
-    height: calc(100vh - 40px);
+    /* width: calc(50vw - 40px);
+    height: calc(100vh - 40px); */
     padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
