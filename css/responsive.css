@@ -9,7 +9,6 @@
         -ms-flex-pack: start;
         justify-content: start;
         height: auto;
-        width: calc(100vw - 40px);
         max-width: calc(100vw - 40px);
     }
     /* bento {
