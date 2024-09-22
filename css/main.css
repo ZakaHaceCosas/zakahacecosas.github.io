@@ -140,14 +140,7 @@ hr {
     background-color: #ffffff50;
     border-radius: 12px;
 }
-/* a.testa {
-    color: white;
-    text-decoration: underline;
-}
-a.testa:hover {
-    color: #00c864;
-} */
-footer.foot2 {
+footer.footer-mobile {
     display: none;
 }
 .skill-box {

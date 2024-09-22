@@ -16,13 +16,14 @@
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     } */
-    footer.foot1 {
+    footer.footer-default {
         display: none;
     }
-    footer.foot2 {
+    footer.footer-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        margin-bottom: 20px;
     }
     .all-skills {
         -webkit-box-orient: horizontal !important;
@@ -62,12 +63,13 @@
         max-width: 1500px !important;
         width: 75vw;
     }
-    footer.foot1 {
+    footer.footer-default {
         display: none;
     }
-    footer.foot2 {
+    footer.footer-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        margin-bottom: 20px;
     }
 }
