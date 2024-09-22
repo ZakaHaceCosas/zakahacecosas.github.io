@@ -3,12 +3,6 @@ This is epic. I do not accept any valid argument against that statement because 
 
 Box names are chosen in purpose. If you do not understand them, it's not a problem. If you do, you're probably someone I know.
 */
-.box-yt:hover {
-    background-color: #ff3d0090;
-    -webkit-box-shadow: 0 0 60px 0 #ff3d0080;
-    box-shadow: 0 0 60px 0 #ff3d0080;
-    border: 1px solid #ff3d00;
-}
 .box-yt:hover svg path[fill="#FFF"] {
     fill: #ff3d00;
 }
@@ -22,27 +16,33 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-roblos:hover svg path,
 .box-proton:hover svg path,
 .box-neboola:hover svg path,
-.box-yt:hover svg path[fill="#FF3D00"] {
-    fill: #fff;
-}
+.box-yt:hover svg path[fill="#FF3D00"],
+.box-dc:hover svg path,
+.box-fogma:hover svg circle,
+.box-fogma:hover svg path,
+.box-replot:hover svg path,
 .box-pechonaplus:hover svg path,
+.box-x:hover svg path {
+    fill: #ffffff;
+}
+/* .box-pechonaplus:hover svg path,
 .box-pechonaplus:hover p,
 .box-pechonaplus:hover h2 {
     fill: #000;
     color: #000;
+} */
+/* boxes */
+.box-yt:hover {
+    background-color: #ff3d0090;
+    -webkit-box-shadow: 0 0 60px 0 #ff3d0080;
+    box-shadow: 0 0 60px 0 #ff3d0080;
+    border: 1px solid #ff3d00;
 }
 .box-x:hover {
     background-color: #03a9f490;
     -webkit-box-shadow: 0 0 60px 0 #03a9f480;
     box-shadow: 0 0 60px 0 #03a9f480;
     border: 1px solid #03a9f4;
-}
-.box-dc:hover svg path,
-.box-fogma:hover svg circle,
-.box-fogma:hover svg path,
-.box-replot:hover svg path,
-.box-x:hover svg path {
-    fill: white;
 }
 .box-dc:hover {
     background-color: #536dfe90;
@@ -120,7 +120,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     border: 1px solid #ff9b19;
 }
 .box-pechonaplus:hover {
-    background-color: #32ff8090;
+    background-color: #32ff8080;
     -webkit-box-shadow: 0 0 60px 0 #32ff8080;
     box-shadow: 0 0 60px 0 #32ff8080;
     border: 1px solid #32ff80;
