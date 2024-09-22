@@ -36,6 +36,12 @@
     .all-skills {
         flex-direction: column !important;
     }
+    .skill {
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
