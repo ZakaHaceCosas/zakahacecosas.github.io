@@ -3,6 +3,7 @@ This is epic. I do not accept any valid argument against that statement because 
 
 Box names are chosen in purpose. If you do not understand them, it's not a problem. If you do, you're probably someone I know.
 */
+/* labels */
 .box-yt:hover svg path[fill="#FFF"] {
     fill: #ff3d00;
 }
@@ -25,12 +26,6 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-x:hover svg path {
     fill: #ffffff;
 }
-/* .box-pechonaplus:hover svg path,
-.box-pechonaplus:hover p,
-.box-pechonaplus:hover h2 {
-    fill: #000;
-    color: #000;
-} */
 /* boxes */
 .box-yt:hover {
     background-color: #ff3d0090;
@@ -120,7 +115,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     border: 1px solid #ff9b19;
 }
 .box-pechonaplus:hover {
-    background-color: #32ff8080;
+    background-color: #32ff8070; /* for visibility, i'll make an exception with this color */
     -webkit-box-shadow: 0 0 60px 0 #32ff8080;
     box-shadow: 0 0 60px 0 #32ff8080;
     border: 1px solid #32ff80;
