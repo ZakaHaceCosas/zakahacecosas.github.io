@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: flex-start;
         flex-direction: row;
+        padding: 20px;
     }
 }
 
