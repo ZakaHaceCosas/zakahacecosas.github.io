@@ -15,7 +15,6 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-action:hover svg path,
 .box-boblox:hover svg path,
 .box-dev:hover svg path,
-.box-pechonaplus:hover svg path,
 .box-discblox:hover svg path,
 .box-leno:hover svg path,
 .box-leno:hover svg rect,
@@ -25,6 +24,11 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-neboola:hover svg path,
 .box-yt:hover svg path[fill="#FF3D00"] {
     fill: #fff;
+}
+.box-pechonaplus:hover svg path,
+.box-pechonaplus:hover p,
+.box-pechonaplus:hover h2 {
+    fill: #000;
 }
 .box-x:hover {
     background-color: #03a9f490;
