@@ -48,6 +48,8 @@
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: start;
+        max-width: 75vw !important;
+        width: 75vw;
     }
     footer.foot1 {
         display: none;
@@ -56,26 +58,5 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-    }
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1500px) {
-    body {
-        max-width: 75vw !important;
-        width: 75vw;
-    }
-}
-
-@media only screen and (min-width: 1500px) {
-    body {
-        max-width: 50vw !important;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media only screen and (min-width: 1900px) {
-    body {
-        width: 100vw !important;
     }
 }
