@@ -94,8 +94,11 @@
         <!--end meta-->
     </head>
     <body>
+        <!--
+        this one has eager loading because turns out lazy loading can make it sometimes not load at all, specially on mobile
+        -->
         <img
-            loading="lazy"
+            loading="eager"
             src="https://zakahacecosas.github.io/images/design/grad-og.png"
             alt="gradiente"
             class="colorinchi"
