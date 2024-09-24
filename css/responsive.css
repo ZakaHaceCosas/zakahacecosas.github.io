@@ -11,11 +11,15 @@
         height: auto;
         max-width: calc(100vw - 40px);
     }
-    /* bento {
+    bento {
         width: 100%;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    } */
+        /* use flex instead of grid for easier responsive */
+        display: flex;
+        flex-direction: column;
+    }
+    box {
+        flex-grow: 1;
+    }
     .all-skills {
         -webkit-box-orient: horizontal !important;
         -webkit-box-direction: normal !important;
