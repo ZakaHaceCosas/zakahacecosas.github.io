@@ -8,7 +8,7 @@ Está aquí porque no tengo otro sitio para alojarlo XD.
 ## Ideas
 
 - [ ] Descargar las fuentes de Google Fonts y subirlas aquí para usar GitHub y no Google como CDN.
-- [ ] Añadir las típicas etiquetas a cada proyecto con la tecnología (la que yo haya usado, no todas las del proyecto).
+- [X] Añadir las típicas etiquetas a cada proyecto con la tecnología (la que yo haya usado, no todas las del proyecto).
 - [ ] Añadir /páginas para ver algún trabajo mío.
 - [ ] Pensar más ideas.
 
