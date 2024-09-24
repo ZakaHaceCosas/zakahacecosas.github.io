@@ -79,7 +79,8 @@ box labeler {
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex: 1;
+    height: fit-content;
 }
 box labeler label {
     padding: 5px 10px;
@@ -88,4 +89,7 @@ box labeler label {
     background-color: var(--lightBg);
     font-size: small;
     text-transform: uppercase;
+    flex: 1;
+    text-align: center;
+    height: fit-content;
 }
