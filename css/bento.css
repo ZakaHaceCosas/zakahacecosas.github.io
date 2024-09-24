@@ -74,6 +74,7 @@ box p {
 }
 box flex p {
     margin-bottom: 0;
+    line-height: 100%;
 }
 box flex {
     display: -webkit-box;
