@@ -7,9 +7,12 @@ Looks good.
     opacity: 0;
     -webkit-transform: translateY(10px);
     -ms-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
     transform: translateY(10px);
     -webkit-transition-duration: 0.6s;
     -o-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
     transition-duration: 0.6s;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -17,9 +20,12 @@ Looks good.
         opacity: 1;
         -webkit-transform: translateY(0px);
         -ms-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -o-transform: translateY(0px);
         transform: translateY(0px);
         -webkit-transition-duration: 0.1s;
         -o-transition-duration: 0.1s;
+        -moz-transition-duration: 0.1s;
         transition-duration: 0.1s;
     }
 }
@@ -27,106 +33,128 @@ Looks good.
 .animation:first-of-type {
     -webkit-transition-delay: 0ms;
     -o-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
     transition-delay: 0ms;
 }
 .animation:nth-of-type(2) {
     -webkit-transition-delay: 150ms;
     -o-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
     transition-delay: 150ms;
 }
 .animation:nth-of-type(3) {
     -webkit-transition-delay: 300ms;
     -o-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
     transition-delay: 300ms;
 }
 .animation:nth-of-type(4) {
     -webkit-transition-delay: 450ms;
     -o-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
     transition-delay: 450ms;
 }
 .animation:nth-of-type(5) {
     -webkit-transition-delay: 600ms;
     -o-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
     transition-delay: 600ms;
 }
 .animation:nth-of-type(6) {
     -webkit-transition-delay: 750ms;
     -o-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
     transition-delay: 750ms;
 }
 .animation:nth-of-type(7) {
     -webkit-transition-delay: 900ms;
     -o-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
     transition-delay: 900ms;
 }
 .animation:nth-of-type(8) {
     -webkit-transition-delay: 1050ms;
     -o-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
     transition-delay: 1050ms;
 }
 .animation:nth-of-type(9) {
     -webkit-transition-delay: 1200ms;
     -o-transition-delay: 1200ms;
+    -moz-transition-delay: 1200ms;
     transition-delay: 1200ms;
 }
 .animation:nth-of-type(10) {
     -webkit-transition-delay: 1350ms;
     -o-transition-delay: 1350ms;
+    -moz-transition-delay: 1350ms;
     transition-delay: 1350ms;
 }
 .animation:nth-of-type(11) {
     -webkit-transition-delay: 1500ms;
     -o-transition-delay: 1500ms;
+    -moz-transition-delay: 1500ms;
     transition-delay: 1500ms;
 }
 .animation:nth-of-type(12) {
     -webkit-transition-delay: 1650ms;
     -o-transition-delay: 1650ms;
+    -moz-transition-delay: 1650ms;
     transition-delay: 1650ms;
 }
 .animation:nth-of-type(13) {
     -webkit-transition-delay: 1800ms;
     -o-transition-delay: 1800ms;
+    -moz-transition-delay: 1800ms;
     transition-delay: 1800ms;
 }
 .animation:nth-of-type(14) {
     -webkit-transition-delay: 1950ms;
     -o-transition-delay: 1950ms;
+    -moz-transition-delay: 1950ms;
     transition-delay: 1950ms;
 }
 .animation:nth-of-type(15) {
     -webkit-transition-delay: 2100ms;
     -o-transition-delay: 2100ms;
+    -moz-transition-delay: 2100ms;
     transition-delay: 2100ms;
 }
 .animation:nth-of-type(16) {
     -webkit-transition-delay: 2250ms;
     -o-transition-delay: 2250ms;
+    -moz-transition-delay: 2250ms;
     transition-delay: 2250ms;
 }
 .animation:nth-of-type(17) {
     -webkit-transition-delay: 2400ms;
     -o-transition-delay: 2400ms;
+    -moz-transition-delay: 2400ms;
     transition-delay: 2400ms;
 }
 .animation:nth-of-type(18) {
     -webkit-transition-delay: 2550ms;
     -o-transition-delay: 2550ms;
+    -moz-transition-delay: 2550ms;
     transition-delay: 2550ms;
 }
 .animation:nth-of-type(19) {
     -webkit-transition-delay: 2700ms;
     -o-transition-delay: 2700ms;
+    -moz-transition-delay: 2700ms;
     transition-delay: 2700ms;
 }
 .animation:nth-of-type(20) {
     -webkit-transition-delay: 2850ms;
     -o-transition-delay: 2850ms;
+    -moz-transition-delay: 2850ms;
     transition-delay: 2850ms;
 }
 .scroll-animation {
     opacity: 1;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
 }

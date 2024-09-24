@@ -9,15 +9,22 @@ html[lang="Eng"] esp {
 a.lang {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
     flex-direction: row;
     gap: 5px;
     color: white;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
     align-items: center;
     opacity: 0.5;
 }
@@ -30,22 +37,29 @@ a.lang:hover {
 a.lang img {
     width: 30px;
     height: 30px;
+    -webkit-border-radius: 50px;
     border-radius: 50px;
 }
 
 .langSelector {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
     flex-direction: column;
     gap: 12px;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 12px;
+    -webkit-border-radius: 12px;
     border-radius: 12px;
     background-color: var(--cardBg);
     border: var(--cardStroke);
