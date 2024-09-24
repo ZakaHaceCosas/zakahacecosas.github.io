@@ -72,6 +72,9 @@ box {
 box p {
     margin-bottom: 10px;
 }
+box flex p {
+    margin-bottom: 0;
+}
 box flex {
     display: -webkit-box;
     display: -ms-flexbox;
