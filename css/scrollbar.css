@@ -2,12 +2,10 @@
     width: 6px;
 }
 ::-webkit-scrollbar-track {
-    -webkit-border-radius: 0;
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb {
     background: #00c864; /* this was the OG color of the logo */
-    -webkit-border-radius: 0;
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
