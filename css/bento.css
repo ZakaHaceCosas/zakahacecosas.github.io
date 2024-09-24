@@ -91,6 +91,7 @@ box labeler label {
     font-size: small;
     text-transform: uppercase;
     flex: 1;
+    flex-basis: 30%; /* idk why but this makes it better */
     text-align: center;
     height: fit-content;
 }
