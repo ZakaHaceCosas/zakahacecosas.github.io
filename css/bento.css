@@ -57,11 +57,7 @@ box {
     border: var(--cardStroke);
     gap: 10px;
 }
-box p {
-    margin-bottom: 10px;
-}
 box flex p {
-    margin-bottom: 0;
     line-height: 100%;
 }
 box flex {
@@ -77,4 +73,19 @@ box:hover {
 }
 box:hover flex {
     gap: 30px;
+}
+box labeler {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+box labeler label {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cardStrokeDark);
+    background-color: var(--lightBg);
+    font-size: small;
+    text-transform: uppercase;
 }

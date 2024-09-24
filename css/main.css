@@ -28,8 +28,11 @@ img {
     --bodyBg: rgba(0, 0, 0, 1);
     --cardBg: rgba(15, 15, 15, 0.5);
     --extraBg: rgba(20, 20, 20, 0.75);
-    --cardStrokeWhite: rgba(255, 255, 255, 0.25);
-    --cardStroke: 0.25px solid var(--cardStrokeWhite);
+    --lightBg: rgba(20, 20, 20, 0.25);
+    --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
+    --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
+    --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
+    --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
 }
 .colorinchi {
     position: fixed;
