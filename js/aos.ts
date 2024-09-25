@@ -1,21 +1,22 @@
 // animate on scroll with intersection observer API
 // if for some reason you're inspecting this, feel free to copy it lol
-const the_animation = document.querySelectorAll(".animation");
+const thingsToAnimate: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>(".animation");
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("scroll-animation");
-            } else {
-                entry.target.classList.remove("scroll-animation");
-            }
-        });
-    },
-    { threshold: 0.5 }
-);
-for (let i = 0; i < the_animation.length; i++) {
-    const elements = the_animation[i];
+const observerCallback = (entries: IntersectionObserverEntry[]): void => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+        const targetElement = entry.target as HTMLElement;
 
-    observer.observe(elements);
-}
+        if (entry.isIntersecting) {
+            targetElement.classList.add("scroll-animation");
+            observer.unobserve(targetElement); // animate once
+        } else {
+            targetElement.classList.remove("scroll-animation");
+        }
+    });
+};
+
+const observer: IntersectionObserver = new IntersectionObserver(observerCallback, { threshold: 0.5 });
+
+thingsToAnimate.forEach((element: HTMLElement) => {
+    observer.observe(element);
+});
