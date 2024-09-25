@@ -4,39 +4,35 @@ enum Languages {
 };
 
 function setLang(lang: Languages) {
+    if (lang !== Languages.English && lang !== Languages.Spanish) {
+        throw new Error("Why are you trying to set the language to something that isn't 'Eng' or 'Esp'?");
+    }
+
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 365);
-    if (typeof localStorage !== "undefined") {
-        if (lang === Languages.English || lang === Languages.Spanish) {
-            try {
-                localStorage.setItem("selectedLang", lang);
-                localStorage.setItem("langExpiration", expirationDate.toISOString());
-            } catch (e) {
-                console.error("Error accessing localStorage", e);
-            }
-        } else {
-            console.error("Why are you trying to set the language to something that isn't 'Eng' or 'Esp'?")
-        }
+    try {
+        localStorage.setItem("selectedLang", lang);
+        localStorage.setItem("langExpiration", expirationDate.toISOString());
+    } catch (e) {
+        console.error("Error accessing localStorage", e);
     }
     document.documentElement.setAttribute("lang", lang);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    function testLang(test: string) {
-        const lang = /^es/i.test(test) ? Languages.Spanish : Languages.English;
-        return lang
+    function testLang(test: string): Languages {
+        return /^es/i.test(test) ? Languages.Spanish : Languages.English;
     }
 
-    if (typeof localStorage !== "undefined") {
-        const selectedLang = localStorage.getItem("selectedLang");
+    try {
+        const selectedLang = localStorage.getItem("selectedLang") as Languages | null;
         const langExpiration = localStorage.getItem("langExpiration");
 
         if (selectedLang && langExpiration) {
             const expirationDate = new Date(langExpiration);
-
-            if (expirationDate > new Date()) {
-                if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
-                    setLang(selectedLang as Languages);
+            if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
+                if (selectedLang === Languages.English || selectedLang === Languages.Spanish) {
+                    setLang(selectedLang);
                 } else {
                     localStorage.removeItem("selectedLang");
                     localStorage.removeItem("langExpiration");
@@ -44,11 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 localStorage.removeItem("selectedLang");
                 localStorage.removeItem("langExpiration");
+                setLang(testLang(navigator.language));
             }
         } else {
             setLang(testLang(navigator.language));
         }
-    } else {
+    } catch (e) {
+        console.error("Error accessing localStorage", e);
         setLang(testLang(navigator.language));
     }
 });
