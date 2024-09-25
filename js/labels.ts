@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const boxes = document.querySelectorAll("box");
 
     boxes.forEach((box) => {
-        const labels = box.getAttribute("labels").split(",");
+        const allLabels = box.getAttribute("labels");
+        if (!allLabels) {
+            return // no labels = just ignore
+        }
+        const labels = allLabels.split(",");
         const flexElement = box.querySelector("flex");
 
         // creates a <labeler> and adds it to the <box>
