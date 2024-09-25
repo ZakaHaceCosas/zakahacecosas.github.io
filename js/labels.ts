@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const boxes = document.querySelectorAll("box");
+    const boxes: NodeListOf<Element> = document.querySelectorAll<Element>("box");
 
     boxes.forEach((box: Element) => {
         const allLabels: string | null = box.getAttribute("labels");
