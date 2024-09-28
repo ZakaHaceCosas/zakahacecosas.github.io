@@ -65,6 +65,7 @@ box flex {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    -webkit-box-orient: horizontal;
     gap: 5px;
     margin-top: auto;
 }

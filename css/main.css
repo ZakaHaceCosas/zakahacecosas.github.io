@@ -1,16 +1,9 @@
-bento {
-    width: calc(100% - 20px);
+/* important, without this both English and Spanish text will render at the same time */
+html[lang="Esp"] eng {
+    display: none;
 }
-*,
-bento a {
-    text-decoration: none;
-}
-box flex {
-    -webkit-box-orient: horizontal;
-}
-table tbody tr td:nth-of-type(2),
-table tbody tr td:nth-of-type(3) {
-    text-align: center;
+html[lang="Eng"] esp {
+    display: none;
 }
 img {
     pointer-events: none !important;
@@ -23,6 +16,7 @@ img {
     scroll-behavior: smooth;
     transition-duration: 450ms;
     font-family: Poppins, "Segoe UI", sans-serif;
+    text-decoration: none;
 }
 :root {
     --bodyBg: rgba(0, 0, 0, 1);

@@ -1,11 +1,3 @@
-html[lang="Esp"] eng {
-    display: none;
-}
-
-html[lang="Eng"] esp {
-    display: none;
-}
-
 a.lang {
     display: flex;
     flex-direction: row;
