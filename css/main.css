@@ -141,3 +141,30 @@ hr {
     font-size: larger;
     font-weight: 400;
 }
+dialog {
+    max-width: 60vw;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+
+    /* center modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+
+    /* fix for blur issue (i hope) */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+#noDiscord {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
