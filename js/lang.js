@@ -1,13 +1,13 @@
 "use strict";
 var Languages;
 (function (Languages) {
-    Languages["English"] = "Eng";
-    Languages["Spanish"] = "Esp";
+    Languages["English"] = "en";
+    Languages["Spanish"] = "es";
 })(Languages || (Languages = {}));
 ;
 function setLang(lang) {
     if (lang !== Languages.English && lang !== Languages.Spanish) {
-        throw new Error("Why are you trying to set the language to something that isn't 'Eng' or 'Esp'?");
+        throw new Error("Why are you trying to set the language to something that isn't 'en' or 'es'?");
     }
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 365);

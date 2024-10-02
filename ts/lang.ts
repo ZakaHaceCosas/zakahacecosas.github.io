@@ -1,11 +1,11 @@
 enum Languages {
-    English = "Eng",
-    Spanish = "Esp"
+    English = "en",
+    Spanish = "es"
 };
 
 function setLang(lang: Languages) {
     if (lang !== Languages.English && lang !== Languages.Spanish) {
-        throw new Error("Why are you trying to set the language to something that isn't 'Eng' or 'Esp'?");
+        throw new Error("Why are you trying to set the language to something that isn't 'en' or 'es'?");
     }
 
     const expirationDate = new Date();

@@ -1,8 +1,8 @@
 /* important, without this both English and Spanish text will render at the same time */
-html[lang="Esp"] eng {
+html[lang="es"] eng {
     display: none;
 }
-html[lang="Eng"] esp {
+html[lang="en"] esp {
     display: none;
 }
 img {
