@@ -155,12 +155,3 @@ hr {
     font-size: larger;
     font-weight: 400;
 }
-#noDiscord {
-    font-size: 25px;
-    color: white;
-    background-color: transparent;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-}
