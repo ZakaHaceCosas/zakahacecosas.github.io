@@ -51,8 +51,6 @@ box {
     justify-content: start;
     padding: 20px;
     background-color: var(--cardBg);
-    -webkit-backdrop-filter: blur(--zakaBoxBlur);
-    backdrop-filter: blur(--zakaBoxBlur);
     border-radius: 20px;
     border: var(--cardStroke);
     gap: 10px;

@@ -27,7 +27,10 @@ img {
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
     --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
     --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
-    --zakaBoxBlur: 50px;
+}
+.zakaBoxBlur {
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
 }
 @media (prefers-reduced-transparency: reduce) {
     :root {
@@ -39,7 +42,10 @@ img {
         --doNotUseMe_darkStroke: rgba(40, 40, 40, 1);
         --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
         --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
-        --zakaBoxBlur: 0px;
+    }
+    .zakaBoxBlur {
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
     }
 }
 .colorinchi {
@@ -82,16 +88,11 @@ footer {
 
     background-color: var(--cardBg);
     border: var(--cardStroke);
-
-    -webkit-backdrop-filter: blur(--zakaBoxBlur);
-    backdrop-filter: blur(--zakaBoxBlur);
 }
 .zakaBox {
     flex-grow: 1;
     padding: 20px;
     background-color: var(--cardBg);
-    -webkit-backdrop-filter: blur(--zakaBoxBlur);
-    backdrop-filter: blur(--zakaBoxBlur);
     border-radius: 20px;
     border: var(--cardStroke);
 }
