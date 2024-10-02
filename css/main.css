@@ -27,6 +27,22 @@ img {
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
     --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
     --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
+    --zakaBoxBlur: 50px;
+    --colorinchiBlur: 250px;
+}
+@media (prefers-reduced-transparency: reduce) {
+    :root {
+        --bodyBg: rgba(0, 0, 0, 1);
+        --cardBg: rgba(30, 30, 30, 1);
+        --extraBg: rgba(45, 45, 45, 1);
+        --lightBg: rgba(35, 35, 35, 1);
+        --doNotUseMe_whiteStroke: rgba(195, 195, 195, 1);
+        --doNotUseMe_darkStroke: rgba(40, 40, 40, 1);
+        --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
+        --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
+        --zakaBoxBlur: 0px;
+        --colorinchiBlur: 50px;
+    }
 }
 .colorinchi {
     position: fixed;
@@ -36,8 +52,8 @@ img {
     height: auto;
     width: 65vw;
     opacity: 1;
-    -webkit-filter: blur(250px);
-    filter: blur(250px);
+    -webkit-filter: blur(--colorinchiBlur);
+    filter: blur(--colorinchiBlur);
     border-radius: 30%;
 }
 body {
@@ -69,15 +85,15 @@ footer {
     background-color: var(--cardBg);
     border: var(--cardStroke);
 
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(--zakaBoxBlur);
+    backdrop-filter: blur(--zakaBoxBlur);
 }
 .zakaBox {
     flex-grow: 1;
     padding: 20px;
     background-color: var(--cardBg);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(--zakaBoxBlur);
+    backdrop-filter: blur(--zakaBoxBlur);
     border-radius: 20px;
     border: var(--cardStroke);
 }
