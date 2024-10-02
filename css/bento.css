@@ -57,6 +57,16 @@ box {
     border: var(--cardStroke);
     gap: 10px;
 }
+box img {
+    border-radius: 5px;
+    object-fit: scale-down;
+}
+box .imageLike {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+}
 box flex p {
     line-height: 100%;
 }
