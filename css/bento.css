@@ -59,6 +59,7 @@ box {
 }
 box img {
     border-radius: 5px;
+    -o-object-fit: scale-down;
     object-fit: scale-down;
 }
 box .imageLike {
@@ -75,7 +76,6 @@ box flex {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    -webkit-box-orient: horizontal;
     gap: 5px;
     margin-top: auto;
 }
