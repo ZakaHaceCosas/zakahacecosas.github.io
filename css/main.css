@@ -28,9 +28,8 @@ img {
     --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
     --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
     --zakaBoxBlur: 50px;
-    --colorinchiBlur: 250px;
 }
-/* @media (prefers-reduced-transparency: reduce) {
+@media (prefers-reduced-transparency: reduce) {
     :root {
         --bodyBg: rgba(0, 0, 0, 1);
         --cardBg: rgba(30, 30, 30, 1);
@@ -41,9 +40,8 @@ img {
         --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
         --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
         --zakaBoxBlur: 0px;
-        --colorinchiBlur: 50px;
     }
-} */
+}
 .colorinchi {
     position: fixed;
     z-index: -1;
@@ -52,8 +50,8 @@ img {
     height: auto;
     width: 65vw;
     opacity: 1;
-    -webkit-filter: blur(--colorinchiBlur);
-    filter: blur(--colorinchiBlur);
+    -webkit-filter: blur(210px);
+    filter: blur(210px);
     border-radius: 30%;
 }
 body {
