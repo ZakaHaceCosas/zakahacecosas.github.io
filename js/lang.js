@@ -27,15 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
         const selectedLang = localStorage.getItem("selectedLang");
         const langExpiration = localStorage.getItem("langExpiration");
+        const isInvalidLang = selectedLang !== Languages.English && selectedLang !== Languages.Spanish;
         if (selectedLang && langExpiration) {
             const expirationDate = new Date(langExpiration);
             if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
-                if (selectedLang === Languages.English || selectedLang === Languages.Spanish) {
-                    setLang(selectedLang);
-                }
-                else {
+                if (isInvalidLang) {
                     localStorage.removeItem("selectedLang");
                     localStorage.removeItem("langExpiration");
+                    setLang(testLang(navigator.language));
+                }
+                else {
+                    setLang(selectedLang);
                 }
             }
             else {
