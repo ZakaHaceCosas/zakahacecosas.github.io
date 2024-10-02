@@ -17,6 +17,7 @@
         <script src="https://zakahacecosas.github.io/js/aos.js" defer></script>
         <script src="https://zakahacecosas.github.io/js/lang.js"></script>
         <script src="https://zakahacecosas.github.io/js/labels.js"></script>
+        <script src="js/status.js"></script>
         <!--end JS-->
 
         <!--begin top 10 biggest CSS-->
@@ -361,6 +362,7 @@
                 project.
             </eng>
         </p>
+        <!-- PROJECTS -->
         <h3 class="animation">
             <esp> Trabajo / he trabajado con (o he contribuido a) </esp>
             <eng> I work / I've worked with (or have contributed to) </eng>
@@ -576,7 +578,7 @@
                 </box>
             </a>
         </bento>
-
+        <!-- PROJECTS -->
         <h3 class="animation">
             <esp>He creado estos proyectos</esp>
             <eng>I've created these projects</eng>
@@ -628,55 +630,15 @@
                 </box>
             </a>
         </bento>
-
+        <!-- CONTACT -->
         <h3 class="animation" id="contact">
             <esp>Contacto y redes sociales</esp>
             <eng>Contact and social media</eng>
         </h3>
-        <div class="zakaBox animation">
-            <p>
-                <esp>Estado</esp>
-                <eng>Status</eng>
-            </p>
-            <h2 class="nah">
-                <esp>Muy ocupado</esp>
-                <eng>Very busy</eng>
-            </h2>
-            <p>
-                <esp>
-                    <b>De momento NO acepto comisiones / encargos.</b> Volvió el
-                    curso escolar y las responsabilidades se me acumulan. No
-                    puedo ofrecer nada. Lo siento.
-                    <!-- Acepto comisiones / encargos. Actualmente trabajo
-                    <b>gratis</b> para ganar experiencia (y por no tener cuenta
-                    bancaria para cobrar). -->
-                    <!-- <b>Contacta por Discord o correo-e si te interesa.</b> -->
-                </esp>
-                <eng>
-                    <b>For now I do NOT accept commissions / orders.</b> School
-                    course came back and responsibilities are stacking up. I
-                    cannot offer anything. Apologies.
-                    <!-- I accept commissions / jobs. Currently working
-                    <b>for free</b> as I'm seeking experience (and I don't have
-                    a bank account to get paid anyway).
-                    <b>
-                        Contact me via Discord or e-mail if you're interested.
-                    </b> -->
-                </eng>
-            </p>
-        </div>
-        <p class="animation">
-            <esp>
-                ¿Viste que estoy disponible? Elige alguna de estas opciones para
-                hablar conmigo y hagamos cosas épicas. Preferible
-                <b>Discord</b>.
-            </esp>
-            <eng>
-                Saw I'm available? Choose any of these options to get in touch
-                and let's make epic things. Preferably
-                <b>Discord</b>.
-            </eng>
-        </p>
+        <StatusItem
+            class="zakaBox animation"
+            status="notAvailable"
+        ></StatusItem>
         <bento>
             <a
                 href="https://youtube.com/@ZakaHaceCosas"
