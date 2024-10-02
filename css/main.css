@@ -37,8 +37,8 @@ img {
         --bodyBg: rgba(0, 0, 0, 1);
         --cardBg: rgba(30, 30, 30, 1);
         --extraBg: rgba(45, 45, 45, 1);
-        --lightBg: rgba(35, 35, 35, 1);
-        --doNotUseMe_whiteStroke: rgba(195, 195, 195, 1);
+        --lightBg: rgba(35, 35, 35, 0.5);
+        --doNotUseMe_whiteStroke: rgba(155, 155, 155, 1);
         --doNotUseMe_darkStroke: rgba(40, 40, 40, 1);
         --cardStroke: 0.25px solid var(--doNotUseMe_whiteStroke);
         --cardStrokeDark: 0.25px solid var(--doNotUseMe_darkStroke);
@@ -151,6 +151,10 @@ hr {
     flex: 1;
     gap: 10px;
     border-radius: 10px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--extraBg);
+    border: var(--cardStroke);
 }
 .skill h3 {
     font-size: larger;
