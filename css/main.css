@@ -53,6 +53,13 @@ img {
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
     }
+    box,
+    .langSelector,
+    footer,
+    .zakaBox,
+    .skill {
+        border: var(--cardStrokeDark) !important;
+    }
 }
 .colorinchi {
     position: fixed;
