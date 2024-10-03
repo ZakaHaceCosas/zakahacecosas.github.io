@@ -12,9 +12,7 @@ a.lang:hover {
     cursor: pointer;
 }
 
-a.lang img {
-    width: 30px;
-    height: 30px;
+a.lang svg {
     border-radius: 50px;
 }
 
