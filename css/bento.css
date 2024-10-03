@@ -97,7 +97,7 @@ box labeler {
 box labeler label {
     padding: 5px 10px;
     border-radius: 5px;
-    border: 1px solid var(--cardStrokeDark);
+    border: var(--cardStrokeDark);
     background-color: var(--lightBg);
     font-size: small;
     text-transform: uppercase;
