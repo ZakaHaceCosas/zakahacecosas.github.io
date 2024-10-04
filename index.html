@@ -4,7 +4,12 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta
             http-equiv="Content-Security-Policy"
-            content="default-src 'self' https://zakahacecosas.github.io; img-src 'self' https://zakahacecosas.github.io; child-src 'none'; frame-ancestors 'none';"
+            content="default-src 'self' https://zakahacecosas.github.io; 
+                    style-src 'self' https://fonts.googleapis.com; 
+                    font-src 'self' https://fonts.gstatic.com; 
+                    img-src 'self' https://zakahacecosas.github.io; 
+                    child-src 'none'; 
+                    frame-ancestors 'none';"
         />
         <!--begin basics-->
         <title>ZakaHaceCosas&trade;</title>
@@ -120,7 +125,7 @@
         />
         <!--localization-->
         <div class="animation langSelector">
-            <a onclick="setLang('es')" href="#" class="lang">
+            <a id="setLangEs" href="#" class="lang">
                 <!-- what-is-stable-politics.svg -->
                 <svg
                     width="30"
@@ -142,7 +147,7 @@
                 ESPAÑOL
             </a>
             <hr />
-            <a onclick="setLang('en')" href="#" class="lang">
+            <a id="setLangEn" href="#" class="lang">
                 <!-- what-is-a-kilometer.svg -->
                 <svg
                     width="30"

@@ -54,4 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error accessing localStorage", e);
         setLang(testLang(navigator.language));
     }
+    const switchToEnglish = document.getElementById("setLangEn");
+    const switchToSpanish = document.getElementById("setLangEs");
+    if (!switchToEnglish || !switchToSpanish) {
+        console.error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.");
+        throw new Error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.");
+    }
+    switchToEnglish.addEventListener("click", function () {
+        setLang(Languages.English);
+    });
+    switchToSpanish.addEventListener("click", function () {
+        setLang(Languages.Spanish);
+    });
 });
