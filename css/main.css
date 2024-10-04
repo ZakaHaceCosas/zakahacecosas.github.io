@@ -172,6 +172,12 @@ hr {
 .skill h3 {
     font-size: larger;
     font-weight: 400;
+    line-height: 1.1;
+}
+.skill p {
+    font-size: x-small;
+    opacity: 0.75;
+    line-height: 1;
 }
 .status-item {
     width: calc(100% - 40px);
