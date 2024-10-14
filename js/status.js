@@ -3,7 +3,7 @@ const statusTextMap = {
     available: {
         esp: "Disponible",
         eng: "Available",
-        longTextEsp: `Acepto comisiones / encargos. ¡Genial! Escríbeme por donde sea, <b>preferible Discord</b>, y hagamos cosas épicas.`, // Trabajo gratis para ganar experiencia (y por no tener cuenta bancaria para cobrar), aunque también acepto BTC.
+        longTextEsp: `Acepto comisiones / encargos. ¡Genial! Escríbeme por donde sea, <b>preferible Discord</b>, y hagamos cosas épicas.`,
         longTextEng: `I am available for hire. Great! Text me anywhere, <b>preferably Discord</b>, and lets make epic things.`,
         className: "god"
     },
