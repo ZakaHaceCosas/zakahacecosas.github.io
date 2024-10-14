@@ -88,7 +88,6 @@ box labeler {
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
-    flex: 1;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;

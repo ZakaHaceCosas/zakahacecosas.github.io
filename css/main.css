@@ -154,6 +154,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .skill {
     display: flex;
@@ -168,6 +169,7 @@ hr {
     padding: 20px;
     background-color: var(--extraBg);
     border: var(--cardStroke);
+    flex-basis: 20%;
 }
 .skill h3 {
     font-size: larger;
