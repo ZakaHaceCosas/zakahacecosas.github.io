@@ -105,6 +105,11 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #32ff8080;
     border: 1px solid #32ff80;
 }
+.box-nodular:hover {
+    background-color: #67a55790;
+    box-shadow: 0 0 60px 0 #67a55780;
+    border: 1px solid #67a55780;
+}
 .box-action:hover {
     background-color: #3296fa90;
     box-shadow: 0 0 60px 0 #3296fa80;
