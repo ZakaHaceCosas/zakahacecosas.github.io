@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("If this is running, it means a card WITH labels doesn't have the <flex> element. Check your code.");
             throw new Error("Error: No flex element on labeled card.");
         }
+        // visual fix
+        flexElement.style.marginTop = "10px";
         // creates a <labeler> and adds labels to it before inserting it into the <box>
         const labeler = document.createElement("labeler");
         const fragment = document.createDocumentFragment();
