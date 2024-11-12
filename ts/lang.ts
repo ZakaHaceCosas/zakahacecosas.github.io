@@ -1,11 +1,13 @@
 enum Languages {
     English = "en",
-    Spanish = "es"
-};
+    Spanish = "es",
+}
 
 function setLang(lang: Languages) {
     if (lang !== Languages.English && lang !== Languages.Spanish) {
-        throw new Error("Why are you trying to set the language to something that isn't 'en' or 'es'?");
+        throw new Error(
+            "Why are you trying to set the language to something that isn't 'en' or 'es'?"
+        );
     }
 
     const expirationDate = new Date();
@@ -28,11 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedLang = localStorage.getItem("selectedLang");
         const langExpiration = localStorage.getItem("langExpiration");
 
-        const isInvalidLang = selectedLang !== Languages.English && selectedLang !== Languages.Spanish;
+        const isInvalidLang =
+            selectedLang !== Languages.English &&
+            selectedLang !== Languages.Spanish;
 
         if (selectedLang && langExpiration) {
             const expirationDate = new Date(langExpiration);
-            if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
+            if (
+                !isNaN(expirationDate.getTime()) &&
+                expirationDate > new Date()
+            ) {
                 if (isInvalidLang) {
                     localStorage.removeItem("selectedLang");
                     localStorage.removeItem("langExpiration");
@@ -53,19 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
         setLang(testLang(navigator.language));
     }
 
-    const switchToEnglish: HTMLElement | null = document.getElementById("setLangEn");
-    const switchToSpanish: HTMLElement | null = document.getElementById("setLangEs");
+    const switchToEnglish: HTMLElement | null =
+        document.getElementById("setLangEn");
+    const switchToSpanish: HTMLElement | null =
+        document.getElementById("setLangEs");
 
     if (!switchToEnglish || !switchToSpanish) {
-        console.error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.");
-        throw new Error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.")
+        console.error(
+            "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
+        );
+        throw new Error(
+            "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
+        );
     }
 
     switchToEnglish.addEventListener("click", function () {
         setLang(Languages.English);
-    })
+    });
 
     switchToSpanish.addEventListener("click", function () {
         setLang(Languages.Spanish);
-    })
+    });
 });

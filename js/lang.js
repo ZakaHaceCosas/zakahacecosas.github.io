@@ -4,7 +4,6 @@ var Languages;
     Languages["English"] = "en";
     Languages["Spanish"] = "es";
 })(Languages || (Languages = {}));
-;
 function setLang(lang) {
     if (lang !== Languages.English && lang !== Languages.Spanish) {
         throw new Error("Why are you trying to set the language to something that isn't 'en' or 'es'?");
@@ -27,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
         const selectedLang = localStorage.getItem("selectedLang");
         const langExpiration = localStorage.getItem("langExpiration");
-        const isInvalidLang = selectedLang !== Languages.English && selectedLang !== Languages.Spanish;
+        const isInvalidLang = selectedLang !== Languages.English &&
+            selectedLang !== Languages.Spanish;
         if (selectedLang && langExpiration) {
             const expirationDate = new Date(langExpiration);
-            if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
+            if (!isNaN(expirationDate.getTime()) &&
+                expirationDate > new Date()) {
                 if (isInvalidLang) {
                     localStorage.removeItem("selectedLang");
                     localStorage.removeItem("langExpiration");

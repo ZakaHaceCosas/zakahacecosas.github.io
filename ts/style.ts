@@ -1,6 +1,7 @@
 // animate on scroll with intersection observer API
 // if for some reason you're inspecting this, feel free to copy it lol
-const thingsToAnimate: NodeListOf<Element> = document.querySelectorAll<Element>(".animation");
+const thingsToAnimate: NodeListOf<Element> =
+    document.querySelectorAll<Element>(".animation");
 
 const observerCallback = (entries: IntersectionObserverEntry[]): void => {
     entries.forEach((entry: IntersectionObserverEntry) => {
@@ -15,7 +16,10 @@ const observerCallback = (entries: IntersectionObserverEntry[]): void => {
     });
 };
 
-const observer: IntersectionObserver = new IntersectionObserver(observerCallback, { threshold: 0.5 });
+const observer: IntersectionObserver = new IntersectionObserver(
+    observerCallback,
+    { threshold: 0.5 }
+);
 
 thingsToAnimate.forEach((element: Element) => {
     observer.observe(element);

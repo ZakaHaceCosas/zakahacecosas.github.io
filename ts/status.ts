@@ -6,25 +6,29 @@ const statusTextMap = {
         eng: "Available",
         longTextEsp: `Acepto comisiones / encargos. ¡Genial! Escríbeme por donde sea, <b>preferible Discord</b>, y hagamos cosas épicas.`, // Trabajo gratis para ganar experiencia (y por no tener cuenta bancaria para cobrar), aunque también acepto BTC.
         longTextEng: `I am available for hire. Great! Text me anywhere, <b>preferably Discord</b>, and lets make epic things.`,
-        className: "god"
+        className: "god",
     },
     busy: {
         esp: "Ocupado",
         eng: "Busy",
         longTextEsp: `Acepto comisiones / encargos, PERO que no te sorprendan (de momento) respuestas tardías o problemas para aceptar encargos. Ando mal de tiempo.`,
         longTextEng: `I am for hire, BUT don't be surprised (for now) by late replies or problems to accept some works. I'm lacking time.`,
-        className: "meh"
+        className: "meh",
     },
     notAvailable: {
         esp: "Muy ocupado",
         eng: "Very busy",
         longTextEsp: `<b>De momento NO acepto comisiones / encargos.</b> Volvió el curso escolar y las responsabilidades se me acumulan. No puedo ofrecer nada. Lo siento.`,
         longTextEng: `<b>I am NOT available for hire, for now.</b> I really lack spare time for now as I'm dealing with my studies. Sorry.`,
-        className: "nah"
-    }
+        className: "nah",
+    },
 };
 
-function createElement(tag: string, innerText: string | null, isHTML: boolean = false): HTMLElement {
+function createElement(
+    tag: string,
+    innerText: string | null,
+    isHTML: boolean = false
+): HTMLElement {
     const element = document.createElement(tag);
     if (innerText) {
         if (isHTML) {
@@ -52,8 +56,12 @@ function constructStatus(statusItem: HTMLElement, status: validStatus): void {
         statusItem.appendChild(mainLabel);
 
         const longLabel = createElement("p", null, false);
-        longLabel.appendChild(createElement("esp", statusData.longTextEsp, true));
-        longLabel.appendChild(createElement("eng", statusData.longTextEng, true));
+        longLabel.appendChild(
+            createElement("esp", statusData.longTextEsp, true)
+        );
+        longLabel.appendChild(
+            createElement("eng", statusData.longTextEng, true)
+        );
         statusItem.appendChild(longLabel);
     } catch (e) {
         console.error(e);
@@ -75,7 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("You forgot the status attribute.");
         return;
     } else if (!(status in statusTextMap)) {
-        console.error("Status is not valid. Use one of the following: notAvailable, available, busy");
+        console.error(
+            "Status is not valid. Use one of the following: notAvailable, available, busy"
+        );
         return;
     }
 
