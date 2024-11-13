@@ -135,3 +135,8 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #655dea80;
     border: 1px solid #655dea;
 }
+.box-vuelta:hover {
+    background-color: #f99a6690;
+    box-shadow: 0 0 60px 0 #f99a6680;
+    border: 1px solid #f99a66;
+}
