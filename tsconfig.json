@@ -3,6 +3,7 @@
         "outDir": "./js",
         "module": "ESNext",
         "target": "ES6",
+        "moduleResolution": "node",
         "strict": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
@@ -16,9 +17,10 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "alwaysStrict": true,
-        "esModuleInterop": false,
+        "esModuleInterop": true,
         "skipLibCheck": false,
-        "removeComments": true
+        "removeComments": true,
+        "resolveJsonModule": true
     },
     "include": ["./ts/*.ts"],
     "exclude": ["./js/*.js"]

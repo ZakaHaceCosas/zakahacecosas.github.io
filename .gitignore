@@ -2,3 +2,8 @@
 dont-upload-me.html
 # environment
 .env
+# an experiment
+boxes.ts
+all_boxes.ts
+boxes.js
+all_boxes.js
