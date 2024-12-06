@@ -84,9 +84,9 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     border: 1px solid #f9b427;
 } */
 .box-websocket:hover {
-    background-color: #7063e490;
-    box-shadow: 0 0 60px 0 #7063e480;
-    border: 1px solid #7063e4;
+    background-color: #194ec590;
+    box-shadow: 0 0 60px 0 #194ec580;
+    border: 1px solid #194ec5;
 }
 .box-leno:hover svg circle {
     stroke: #fff;
