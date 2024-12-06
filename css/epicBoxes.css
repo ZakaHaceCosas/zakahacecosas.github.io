@@ -11,8 +11,9 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-boblox:hover svg path,
 .box-dev:hover svg path,
 .box-discblox:hover svg path,
-.box-leno:hover svg path,
-.box-leno:hover svg rect,
+/* .box-leno:hover svg path,
+.box-leno:hover svg rect, */
+.box-websocket:hover svg path,
 .box-revo:hover svg path,
 .box-roblos:hover svg path,
 .box-proton:hover svg path,
@@ -77,10 +78,15 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #0070f380;
     border: 1px solid #0070f3;
 }
-.box-leno:hover {
+/* .box-leno:hover {
     background-color: #f9b42790;
     box-shadow: 0 0 60px 0 #f9b42780;
     border: 1px solid #f9b427;
+} */
+.box-websocket:hover {
+    background-color: #7063e490;
+    box-shadow: 0 0 60px 0 #7063e480;
+    border: 1px solid #7063e4;
 }
 .box-leno:hover svg circle {
     stroke: #fff;
