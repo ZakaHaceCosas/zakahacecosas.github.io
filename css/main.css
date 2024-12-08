@@ -169,14 +169,20 @@ hr {
     padding: 20px;
     background-color: var(--extraBg);
     border: var(--cardStroke);
-    flex-basis: 20%;
+    flex-basis: 40%;
 }
-.skill h3 {
+.skill .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.skill .text h3 {
     font-size: larger;
     font-weight: 400;
     line-height: 1.1;
 }
-.skill p {
+.skill .text p {
     font-size: x-small;
     opacity: 0.75;
     line-height: 1;
