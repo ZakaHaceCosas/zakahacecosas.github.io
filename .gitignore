@@ -7,8 +7,6 @@ boxes.ts
 all_boxes.ts
 boxes.js
 all_boxes.js
-# build output
-dist/
 
 # generated types
 .astro/
