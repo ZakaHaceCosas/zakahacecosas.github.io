@@ -111,6 +111,275 @@
             content="Zaka, ZakaHaceCosas, Optix, leoptix, portfolio, developer"
         />
         <!--end meta-->
+
+        <script>
+            /* LABELS */
+            document.addEventListener("DOMContentLoaded", () => {
+                const boxes: NodeListOf<Element> =
+                    document.querySelectorAll("box");
+
+                boxes.forEach((box: Element) => {
+                    const allLabels: string | null = box.getAttribute("labels");
+                    if (!allLabels) {
+                        return; // no labels = just ignore
+                    }
+
+                    const flexElement: Element | null =
+                        box.querySelector("flex");
+                    if (!flexElement) {
+                        console.error(
+                            "If this is running, it means a card WITH labels doesn't have the <flex> element. Check your code."
+                        );
+                        throw new Error(
+                            "Error: No flex element on labeled card."
+                        );
+                    }
+
+                    // visual fix
+                    (flexElement as HTMLElement).style.marginTop = "10px";
+
+                    // creates a <labeler> and adds labels to it before inserting it into the <box>
+                    const labeler: HTMLElement =
+                        document.createElement("labeler");
+                    const fragment = document.createDocumentFragment();
+
+                    allLabels.split(",").forEach((label: string) => {
+                        const labelElement: HTMLElement =
+                            document.createElement("label");
+                        labelElement.innerText = label;
+                        fragment.appendChild(labelElement);
+                    });
+
+                    // labels are added to the labeler to avoid issues with flex styling
+                    // now this is done in a single operation (for performance)
+                    labeler.appendChild(fragment);
+
+                    // append the labeler before the flex element
+                    box.insertBefore(labeler, flexElement);
+                });
+            });
+
+            /* LANGS */
+            enum Languages {
+                English = "en",
+                Spanish = "es",
+            }
+
+            function setLang(lang: Languages) {
+                if (lang !== Languages.English && lang !== Languages.Spanish) {
+                    throw new Error(
+                        "Why are you trying to set the language to something that isn't 'en' or 'es'?"
+                    );
+                }
+
+                const expirationDate = new Date();
+                expirationDate.setDate(expirationDate.getDate() + 365);
+                try {
+                    localStorage.setItem("selectedLang", lang);
+                    localStorage.setItem(
+                        "langExpiration",
+                        expirationDate.toISOString()
+                    );
+                } catch (e) {
+                    console.error("Error accessing localStorage", e);
+                }
+                document.documentElement.setAttribute("lang", lang);
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                function testLang(test: string): Languages {
+                    return /^es/i.test(test)
+                        ? Languages.Spanish
+                        : Languages.English;
+                }
+
+                try {
+                    const selectedLang = localStorage.getItem("selectedLang");
+                    const langExpiration =
+                        localStorage.getItem("langExpiration");
+
+                    const isInvalidLang =
+                        selectedLang !== Languages.English &&
+                        selectedLang !== Languages.Spanish;
+
+                    if (selectedLang && langExpiration) {
+                        const expirationDate = new Date(langExpiration);
+                        if (
+                            !isNaN(expirationDate.getTime()) &&
+                            expirationDate > new Date()
+                        ) {
+                            if (isInvalidLang) {
+                                localStorage.removeItem("selectedLang");
+                                localStorage.removeItem("langExpiration");
+                                setLang(testLang(navigator.language));
+                            } else {
+                                setLang(selectedLang as Languages);
+                            }
+                        } else {
+                            localStorage.removeItem("selectedLang");
+                            localStorage.removeItem("langExpiration");
+                            setLang(testLang(navigator.language));
+                        }
+                    } else {
+                        setLang(testLang(navigator.language));
+                    }
+                } catch (e) {
+                    console.error("Error accessing localStorage", e);
+                    setLang(testLang(navigator.language));
+                }
+
+                const switchToEnglish: HTMLElement | null =
+                    document.getElementById("setLangEn");
+                const switchToSpanish: HTMLElement | null =
+                    document.getElementById("setLangEs");
+
+                if (!switchToEnglish || !switchToSpanish) {
+                    console.error(
+                        "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
+                    );
+                    throw new Error(
+                        "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
+                    );
+                }
+
+                switchToEnglish.addEventListener("click", function () {
+                    setLang(Languages.English);
+                });
+
+                switchToSpanish.addEventListener("click", function () {
+                    setLang(Languages.Spanish);
+                });
+            });
+
+            /* STATUS */
+            type validStatus = "notAvailable" | "available" | "busy";
+
+            const statusTextMap = {
+                available: {
+                    esp: "Disponible",
+                    eng: "Available",
+                    longTextEsp: `Acepto comisiones / encargos. ¡Genial! Escríbeme por donde sea, <b>preferible Discord</b>, y hagamos cosas épicas.`, // Trabajo gratis para ganar experiencia (y por no tener cuenta bancaria para cobrar), aunque también acepto BTC.
+                    longTextEng: `I am available for hire. Great! Text me anywhere, <b>preferably Discord</b>, and lets make epic things.`,
+                    className: "god",
+                },
+                busy: {
+                    esp: "Ocupado",
+                    eng: "Busy",
+                    longTextEsp: `Acepto comisiones / encargos, PERO que no te sorprendan (de momento) respuestas tardías o problemas para aceptar encargos. Ando mal de tiempo.`,
+                    longTextEng: `I am for hire, BUT don't be surprised (for now) by late replies or problems to accept some works. I'm lacking time.`,
+                    className: "meh",
+                },
+                notAvailable: {
+                    esp: "Muy ocupado",
+                    eng: "Very busy",
+                    longTextEsp: `<b>De momento NO acepto comisiones / encargos.</b> Volvió el curso escolar y las responsabilidades se me acumulan. No puedo ofrecer nada. Lo siento.`,
+                    longTextEng: `<b>I am NOT available for hire, for now.</b> I really lack spare time for now as I'm dealing with my studies. Sorry.`,
+                    className: "nah",
+                },
+            };
+
+            function createElement(
+                tag: string,
+                innerText: string | null,
+                isHTML: boolean = false
+            ): HTMLElement {
+                const element = document.createElement(tag);
+                if (innerText) {
+                    if (isHTML) {
+                        element.innerHTML = innerText;
+                    } else {
+                        element.innerText = innerText;
+                    }
+                }
+                return element;
+            }
+
+            function constructStatus(
+                statusItem: HTMLElement,
+                status: validStatus
+            ): void {
+                try {
+                    const statusData = statusTextMap[status];
+
+                    const statusLabel = createElement("p", null, false);
+                    statusLabel.appendChild(createElement("esp", "Estado"));
+                    statusLabel.appendChild(createElement("eng", "Status"));
+                    statusItem.appendChild(statusLabel);
+
+                    const mainLabel = createElement("h2", null, false);
+                    mainLabel.appendChild(createElement("esp", statusData.esp));
+                    mainLabel.appendChild(createElement("eng", statusData.eng));
+                    mainLabel.className = statusData.className;
+                    statusItem.appendChild(mainLabel);
+
+                    const longLabel = createElement("p", null, false);
+                    longLabel.appendChild(
+                        createElement("esp", statusData.longTextEsp, true)
+                    );
+                    longLabel.appendChild(
+                        createElement("eng", statusData.longTextEng, true)
+                    );
+                    statusItem.appendChild(longLabel);
+                } catch (e) {
+                    console.error(e);
+                    throw e;
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const statusItem: HTMLElement | null =
+                    document.querySelector("StatusItem");
+
+                if (!statusItem) {
+                    console.error("Why is there no status item?");
+                    return;
+                }
+
+                const status: string | null = statusItem.getAttribute("status");
+
+                if (!status) {
+                    console.error("You forgot the status attribute.");
+                    return;
+                } else if (!(status in statusTextMap)) {
+                    console.error(
+                        "Status is not valid. Use one of the following: notAvailable, available, busy"
+                    );
+                    return;
+                }
+
+                constructStatus(statusItem, status as validStatus);
+            });
+
+            /* AOS */
+            // animate on scroll with intersection observer API
+            // if for some reason you're inspecting this, feel free to copy it lol
+            const thingsToAnimate: NodeListOf<Element> =
+                document.querySelectorAll<Element>(".animation");
+
+            const observerCallback = (
+                entries: IntersectionObserverEntry[]
+            ): void => {
+                entries.forEach((entry: IntersectionObserverEntry) => {
+                    const targetElement = entry.target as HTMLElement;
+
+                    if (entry.isIntersecting) {
+                        targetElement.classList.add("scroll-animation");
+                        observer.unobserve(targetElement); // animate once
+                    } else {
+                        targetElement.classList.remove("scroll-animation");
+                    }
+                });
+            };
+
+            const observer: IntersectionObserver = new IntersectionObserver(
+                observerCallback,
+                { threshold: 0.5 }
+            );
+
+            thingsToAnimate.forEach((element: Element) => {
+                observer.observe(element);
+            });
+        </script>
     </head>
     <body>
         <!--
