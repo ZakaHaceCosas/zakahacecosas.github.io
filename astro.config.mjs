@@ -8,4 +8,5 @@ export default defineConfig({
     trailingSlash: "ignore",
     compressHTML: true,
     integrations: [icon()],
+    outDir: "./docs",
 });
