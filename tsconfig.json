@@ -1,4 +1,5 @@
 {
+    "extends": "astro/tsconfigs/strict",
     "compilerOptions": {
         "outDir": "./js",
         "module": "ESNext",
@@ -22,6 +23,6 @@
         "removeComments": true,
         "resolveJsonModule": true
     },
-    "include": ["./ts/*.ts"],
-    "exclude": ["./js/*.js"]
+    "include": ["./ts/*.ts", ".astro/types.d.ts", "**/*"],
+    "exclude": ["./js/*.js", "dist"]
 }
