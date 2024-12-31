@@ -57,7 +57,6 @@ box {
 }
 box img {
     border-radius: 5px;
-    -o-object-fit: scale-down;
     object-fit: scale-down;
 }
 box .imageLike {
