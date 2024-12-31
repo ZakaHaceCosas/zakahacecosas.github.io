@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+interface Props {
+    url: string;
+    boxClass: string;
+    boxIcon: null | {
+        type: "image" | "svg";
+        name: string;
+    };
+    labels: string;
+    name: string;
+    desc: {
+        esp: string;
+        eng: string;
+    };
+}
+
+const { url, boxClass, boxIcon, labels, name, desc } = Astro.props;
+
+const className: string = `animation zakaBoxBlur ${boxClass}`;
+const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name}.webp`;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer">
+    <box class={className} labels={labels}>
+        {
+            boxIcon ? (
+                boxIcon.type === "svg" ? (
+                    <Icon name={boxIcon.name} width={45} height={45} />
+                ) : (
+                    <img
+                        src={imageUrl}
+                        alt={name + " logo"}
+                        width="48"
+                        height="48"
+                    />
+                )
+            ) : (
+                <div class="imageLike" />
+            )
+        }
+        <h2>{name}</h2>
+        <p>
+            <esp>
+                {desc.esp}
+            </esp>
+            <eng>
+                {desc.eng}
+            </eng>
+        </p>
+        <flex>
+            <p>GO</p>
+            <p>&LongRightArrow;</p>
+        </flex>
+    </box>
+</a>
