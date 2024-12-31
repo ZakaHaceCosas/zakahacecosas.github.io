@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Lang from "../components/Lang.astro";
 import { Icon } from "astro-icon/components";
+import Status from "../components/Status.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -339,9 +340,7 @@ import { Icon } from "astro-icon/components";
         <esp>Contacto y redes sociales</esp>
         <eng>Contact and social media</eng>
     </h3>
-    <statusItem
-        class="zakaBox zakaBoxBlur animation status-item"
-        status="notAvailable"></statusItem>
+    <Status status="busy" />
     <bento>
         <a
             href="https://youtube.com/@ZakaHaceCosas"
