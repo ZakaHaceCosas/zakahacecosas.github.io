@@ -15,7 +15,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-fogma:hover svg circle,
 .box-fogma:hover svg path,
 .box-replot:hover svg path,
-.box-pechonaplus:hover svg path,
+.box-exponential:hover svg path,
 .box-x:hover svg path {
     fill: #ffffff;
 }
@@ -75,7 +75,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #dc187a80;
     border: 1px solid #dc187a;
 }
-.box-pechonaplus:hover {
+.box-exponential:hover {
     background-color: #32ff8070; /* for visibility, i'll make an exception with this color */
     box-shadow: 0 0 60px 0 #32ff8080;
     border: 1px solid #32ff80;

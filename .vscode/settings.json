@@ -1,6 +1,7 @@
 {
     "files.exclude": {
-        "**/.git": true
+        "**/.git": true,
+        "**/dont-upload-me": true
     },
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
@@ -9,8 +10,10 @@
     "cSpell.words": [
         "Amog",
         "bento",
+        "boblox",
         "colorinchi",
         "grosso",
+        "Guilded",
         "neboola",
         "optix",
         "sokoballs",
