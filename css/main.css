@@ -114,7 +114,9 @@ footer {
     max-width: 300px;
     height: auto;
     object-fit: scale-down;
+    aspect-ratio: 16/5.5;
 }
+
 .god {
     color: #00ff64;
 }
