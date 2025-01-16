@@ -1,0 +1,6 @@
+destroy:
+  intensities: ["*"]
+  targets:
+    - ".astro"
+    - "docs/_astro"
+commitActions: true
