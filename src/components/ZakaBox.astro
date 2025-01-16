@@ -24,7 +24,7 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer">
-    <box class={className} labels={labels}>
+    <box class={className}>
         {
             boxIcon ? (
                 boxIcon.type === "svg" ? (
@@ -50,6 +50,7 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
                 {desc.eng}
             </eng>
         </p>
+        {labels && labels.split(",").map((label) => <label>{label}</label>)}
         <flex>
             <p>GO</p>
             <p>&LongRightArrow;</p>
