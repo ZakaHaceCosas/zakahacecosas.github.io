@@ -1,0 +1,193 @@
+/* important, without this both English and Spanish text will render at the same time */
+html[lang="es"] eng {
+    display: none;
+}
+html[lang="en"] esp {
+    display: none;
+}
+img {
+    pointer-events: none !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    scroll-behavior: smooth;
+    transition-duration: 450ms;
+    font-family: Poppins, "Segoe UI", sans-serif;
+    text-decoration: none;
+}
+:root {
+    --bodyBg: rgba(0, 0, 0, 1);
+    --cardBg: rgba(15, 15, 15, 0.5);
+    --extraBg: rgba(20, 20, 20, 0.75);
+    --lightBg: rgba(20, 20, 20, 0.25);
+    --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
+    --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
+    --doNotUseMe_strokeWidth: 0.4px;
+    --cardStroke: var(--doNotUseMe_strokeWidth) solid
+        var(--doNotUseMe_whiteStroke);
+    --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
+        var(--doNotUseMe_darkStroke);
+}
+.zakaBoxBlur {
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+}
+@media (prefers-reduced-transparency: reduce) {
+    :root {
+        --bodyBg: rgba(0, 0, 0, 1);
+        --cardBg: rgba(30, 30, 30, 0.5);
+        --extraBg: rgba(45, 45, 45, 0.75);
+        --lightBg: rgba(35, 35, 35, 0.5);
+        --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.75);
+        --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.75);
+        --doNotUseMe_strokeWidth: 0.4px;
+        --cardStroke: var(--doNotUseMe_strokeWidth) solid
+            var(--doNotUseMe_whiteStroke);
+        --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
+            var(--doNotUseMe_darkStroke);
+    }
+    .zakaBoxBlur {
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+    }
+    box,
+    .langSelector,
+    footer,
+    .zakaBox,
+    .skill {
+        border: var(--cardStrokeDark) !important;
+    }
+}
+.colorinchi {
+    position: fixed;
+    z-index: -1;
+    top: -25vw;
+    left: -25vw;
+    height: auto;
+    width: 65vw;
+    opacity: 1;
+    -webkit-filter: blur(210px);
+    filter: blur(210px);
+    border-radius: 30%;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bodyBg);
+    color: #fff;
+}
+footer {
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+}
+.zakaBox {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--cardBg);
+    border-radius: 20px;
+    border: var(--cardStroke);
+}
+.logo {
+    width: 25vw;
+    max-width: 300px;
+    height: auto;
+    object-fit: scale-down;
+    aspect-ratio: 16/5.5;
+}
+
+.god {
+    color: #00ff64;
+}
+.meh {
+    color: #ffff32;
+}
+.nah {
+    color: #ff3232;
+}
+.disclaimer {
+    color: #ccc;
+    font-size: xx-small;
+}
+h1 {
+    font-size: 29px;
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff50;
+    border-radius: 12px;
+}
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: calc(100% - 40px);
+}
+.all-skills {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex: 1;
+    gap: 10px;
+    border-radius: 10px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--extraBg);
+    border: var(--cardStroke);
+    flex-basis: 40%;
+}
+.skill .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.skill .text h3 {
+    font-size: larger;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.skill .text p {
+    font-size: x-small;
+    opacity: 0.75;
+    line-height: 1;
+}
+.status-item {
+    width: calc(100% - 40px);
+}

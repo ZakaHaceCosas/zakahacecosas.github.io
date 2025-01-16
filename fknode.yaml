@@ -4,3 +4,7 @@ destroy:
     - ".astro"
     - "docs/_astro"
 commitActions: true
+flagless:
+  flaglessUpdate: true
+  flaglessDestroy: true
+  flaglessCommit: true
