@@ -50,10 +50,27 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
                 {desc.eng}
             </eng>
         </p>
-        {labels && labels.split(",").map((label) => <label>{label}</label>)}
-        <flex>
-            <p>GO</p>
-            <p>&LongRightArrow;</p>
-        </flex>
+        {
+            labels && (
+                <labeler>
+                    {labels.split(",").map((label) => (
+                        <label>{label}</label>
+                    ))}
+                </labeler>
+            )
+        }
+        {
+            labels ? (
+                <flex style="margin-top: 10px;">
+                    <p>GO</p>
+                    <p>&LongRightArrow;</p>
+                </flex>
+            ) : (
+                <flex>
+                    <p>GO</p>
+                    <p>&LongRightArrow;</p>
+                </flex>
+            )
+        }
     </box>
 </a>
