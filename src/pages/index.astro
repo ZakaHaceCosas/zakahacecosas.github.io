@@ -10,8 +10,9 @@ import ZakaBox from "../components/ZakaBox.astro";
 ---
 
 <Layout>
+    <!-- not lazily loaded because it's on top, bro -->
     <img
-        loading="lazy"
+        loading="eager"
         src="https://zakahacecosas.github.io/design/logo.webp"
         alt="Logotipo de Zaka"
         class="animation logo"

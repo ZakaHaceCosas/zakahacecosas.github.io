@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 
 interface Props {
     url: string;
@@ -35,6 +34,7 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
                         alt={name + " logo"}
                         width="48"
                         height="48"
+                        loading="lazy"
                     />
                 )
             ) : (
