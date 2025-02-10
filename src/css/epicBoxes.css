@@ -65,6 +65,11 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #0070f380;
     border: 1px solid #0070f3;
 }
+.box-ppt:hover {
+    background-color: #ffa50090;
+    box-shadow: 0 0 60px 0 #ffa50080;
+    border: 1px solid #ffa500f3;
+}
 .box-websocket:hover {
     background-color: #194ec590;
     box-shadow: 0 0 60px 0 #194ec580;
