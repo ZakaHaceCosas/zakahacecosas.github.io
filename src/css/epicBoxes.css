@@ -14,7 +14,6 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-dc:hover svg path,
 .box-fogma:hover svg circle,
 .box-fogma:hover svg path,
-.box-replot:hover svg path,
 .box-exponential:hover svg path,
 .box-x:hover svg path {
     fill: #ffffff;
@@ -34,11 +33,6 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     background-color: #536dfe90;
     box-shadow: 0 0 60px 0 #536dfe80;
     border: 1px solid #536dfe;
-}
-.box-replot:hover {
-    background-color: #fb8c0090;
-    box-shadow: 0 0 60px 0 #fb8c0080;
-    border: 1px solid #fb8c00;
 }
 .box-fogma:hover {
     background-color: #66bb6a90;
