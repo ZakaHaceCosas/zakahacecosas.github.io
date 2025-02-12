@@ -5,45 +5,24 @@ bento {
     grid-gap: 20px;
     width: 100%;
 }
+
+bento > a:last-child:nth-child(odd) > box {
+    grid-column: span 2;
+}
+
 bento > a {
     display: contents;
 }
 
 bento > a > box {
-    grid-column: span 1;
-    -ms-grid-column-span: 1;
+    grid-column: auto;
+    grid-row: auto;
 }
 
-bento > a:first-child > box {
-    grid-row: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-}
-
-bento > a:nth-child(2) > box {
-    grid-row: 1;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-}
-
-bento > a:nth-child(3) > box {
-    grid-row: 2;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-}
-
-bento > a:nth-child(4) > box {
-    grid-row: 2;
-    grid-column: 2;
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-}
 bento a {
     color: #fff;
 }
+
 box {
     display: flex;
     flex-direction: column;
