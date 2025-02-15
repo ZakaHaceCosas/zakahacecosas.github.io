@@ -99,3 +99,11 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #f99a6680;
     border: 1px solid #f99a66;
 }
+.box-profo:hover {
+    background-color: #0099ff90;
+    box-shadow: 0 0 60px 0 #0099ff80;
+    border: 1px solid #0099ff;
+}
+.box-profo:hover img {
+    filter: brightness(100);
+}

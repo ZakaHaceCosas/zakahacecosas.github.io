@@ -52,11 +52,11 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
         </p>
         {
             labels && (
-                <labeler>
+                <div class="labeler">
                     {labels.split(",").map((label) => (
-                        <label>{label}</label>
+                        <div class="label">{label}</div>
                     ))}
-                </labeler>
+                </div>
             )
         }
         {
