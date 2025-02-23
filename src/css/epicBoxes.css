@@ -15,7 +15,9 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-fogma:hover svg circle,
 .box-fogma:hover svg path,
 .box-exponential:hover svg path,
-.box-x:hover svg path {
+.box-x:hover svg path,
+.box-sky:hover svg path,
+.box-roblox-chat:hover svg path {
     fill: #ffffff;
 }
 /* boxes */
@@ -99,11 +101,13 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #f99a6680;
     border: 1px solid #f99a66;
 }
-.box-profo:hover {
-    background-color: #0099ff90;
-    box-shadow: 0 0 60px 0 #0099ff80;
-    border: 1px solid #0099ff;
+.box-roblox-chat:hover {
+    background-color: #f2c32fb0; /* for visibility, i'll make an exception with this color too */
+    box-shadow: 0 0 60px 0 #f2c32f80;
+    border: 1px solid #f2c32f;
 }
-.box-profo:hover img {
-    filter: brightness(100);
+.box-sky:hover {
+    background-color: #2587fa90;
+    box-shadow: 0 0 60px 0 #2587fa80;
+    border: 1px solid #2587fa;
 }
