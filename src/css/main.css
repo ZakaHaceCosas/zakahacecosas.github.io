@@ -188,6 +188,3 @@ hr {
     opacity: 0.75;
     line-height: 1;
 }
-.status-item {
-    width: calc(100% - 40px);
-}
