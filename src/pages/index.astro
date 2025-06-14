@@ -129,8 +129,8 @@ import ZakaBox from "../components/ZakaBox.astro";
             boxClass="box-vuelta"
             labels="writing,design"
             desc={{
-                esp: "El mejor motor de juegos (Golang)",
-                eng: "The best game engine (Golang)",
+                esp: "El mejor motor de juegos, en Golang",
+                eng: "The best game engine, in Golang",
             }}
         />
         <ZakaBox
@@ -145,20 +145,6 @@ import ZakaBox from "../components/ZakaBox.astro";
             desc={{
                 esp: "Una distro Linux.",
                 eng: "A Linux distro.",
-            }}
-        />
-        <ZakaBox
-            url="https://thoneai.com/"
-            name="Thone AI"
-            boxIcon={{
-                type: "image",
-                name: "ladrillero",
-            }}
-            boxClass="box-toro"
-            labels="typescript,design"
-            desc={{
-                esp: "tiembla, OpenAI",
-                eng: "fear, OpenAi",
             }}
         />
         <ZakaBox
@@ -225,11 +211,14 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
         />
         <ZakaBox
-            url="https://zakahacecosas.github.io/FuckingNode/"
+            url="https://fuckingnode.github.io/"
             name="FuckingNode"
-            boxIcon={null}
+            boxIcon={{
+                type: "svg",
+                name: "nodular"
+            }}
             boxClass="box-nodular"
-            labels="cli, node js, deno js, bun js"
+            labels="cli, javascript"
             desc={{
                 esp: "'El caos de mantener proyectos JS acaba aquí.'",
                 eng: "'The chaos of maintaining JS projects ends here.'",

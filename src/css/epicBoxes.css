@@ -82,19 +82,14 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     border: 1px solid #32ff80;
 }
 .box-nodular:hover {
-    background-color: #6cbb5590;
-    box-shadow: 0 0 60px 0 #6cbb5580;
-    border: 1px solid #6cbb5580;
+    background-color: #A0524490;
+    box-shadow: 0 0 60px 0 #A0524480;
+    border: 1px solid #A05244;
 }
 .box-proton:hover {
     background-color: #7341ff90;
     box-shadow: 0 0 60px 0 #7341ff80;
     border: 1px solid #7341ff;
-}
-.box-toro:hover {
-    background-color: #655dea90;
-    box-shadow: 0 0 60px 0 #655dea80;
-    border: 1px solid #655dea;
 }
 .box-vuelta:hover {
     background-color: #f99a6690;
