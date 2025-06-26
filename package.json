@@ -6,7 +6,8 @@
         "dev": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "clean": "prettier --w ."
     },
     "dependencies": {
         "astro": "^5.9.3",
@@ -16,5 +17,8 @@
         "onlyBuiltDependencies": [
             "esbuild"
         ]
+    },
+    "devDependencies": {
+        "prettier": "^3.6.1"
     }
 }

@@ -31,47 +31,17 @@ img {
     --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
         var(--doNotUseMe_darkStroke);
 }
-.zakaBoxBlur {
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
-}
-@media (prefers-reduced-transparency: reduce) {
-    :root {
-        --bodyBg: rgba(0, 0, 0, 1);
-        --cardBg: rgba(30, 30, 30, 0.5);
-        --extraBg: rgba(45, 45, 45, 0.75);
-        --lightBg: rgba(35, 35, 35, 0.5);
-        --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.75);
-        --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.75);
-        --doNotUseMe_strokeWidth: 0.4px;
-        --cardStroke: var(--doNotUseMe_strokeWidth) solid
-            var(--doNotUseMe_whiteStroke);
-        --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
-            var(--doNotUseMe_darkStroke);
-    }
-    .zakaBoxBlur {
-        -webkit-backdrop-filter: blur(0px);
-        backdrop-filter: blur(0px);
-    }
-    box,
-    .langSelector,
-    footer,
-    .zakaBox,
-    .skill {
-        border: var(--cardStrokeDark) !important;
-    }
-}
 .colorinchi {
-    position: fixed;
+    position: absolute;
     z-index: -1;
-    top: -25vw;
-    left: -25vw;
+    top: -45vw;
+    left: -45vw;
     height: auto;
-    width: 65vw;
+    width: 100vw;
     opacity: 1;
-    -webkit-filter: blur(210px);
-    filter: blur(210px);
-    border-radius: 30%;
+    -webkit-filter: blur(300px);
+    filter: blur(300px);
+    border-radius: 0%;
 }
 body {
     margin-left: auto;
@@ -82,7 +52,11 @@ body {
     justify-content: start;
     gap: 20px;
     padding: 20px;
-    background-color: var(--bodyBg);
+    background-image: linear-gradient(
+        to bottom,
+        var(--bodyBg),
+        rgb(25, 45, 35)
+    );
     color: #fff;
 }
 footer {
@@ -187,4 +161,11 @@ hr {
     font-size: x-small;
     opacity: 0.75;
     line-height: 1;
+}
+a {
+    font-weight: 500;
+    color: #19ff73;
+}
+a:hover {
+    text-decoration: underline;
 }
