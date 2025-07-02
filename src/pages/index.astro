@@ -238,15 +238,23 @@ import ZakaBox from "../components/ZakaBox.astro";
     </h3>
 
     <div class="stat-pair">
-        <h1 class="animation" id="counter-commits">Made over 4.000 commits</h1>
-        <p>in the past 2 years</p>
+        <h1 class="animation">
+            <esp>Hecho más de</esp><eng>Made over</eng> <span id="counter-commits">4.000</span> commits
+        </h1>
+        <p>
+            <eng>in the past 2 years</eng>
+            <esp>en los últimos 2 años</esp>
+        </p>
     </div>
 
     <div class="stat-pair">
-        <h1 class="animation" id="counter-hours">
-            Spent over 700 hours coding
+        <h1 class="animation">
+            <eng>Spent over</eng><esp>Dedicado</esp> <span id="counter-hours">700</span> <eng>coding</eng><esp>a programar</esp>
         </h1>
-        <p>last year (counted via WakaTime)</p>
+        <p>
+            <eng>last year (counted via WakaTime)</eng>
+            <esp>en el último año (contado via WakaTime)</esp>
+        </p>
     </div>
 
     <script>
@@ -256,18 +264,15 @@ import ZakaBox from "../components/ZakaBox.astro";
                     id: "counter-commits",
                     limit: 4000,
                     speed: 0.5,
-                    format: (i) => `Made over ${i} commits`,
                 },
                 {
                     id: "counter-hours",
                     limit: 700,
                     speed: 25,
-                    format: (i) => `Spent over ${i} hours coding`,
                 },
-                // Puedes añadir más objetos aquí con { id, limit, speed, format }
             ];
 
-            for (const { id, limit, speed, format } of counters) {
+            for (const { id, limit, speed } of counters) {
                 const el = document.getElementById(id);
                 if (!el) continue;
 
@@ -283,7 +288,7 @@ import ZakaBox from "../components/ZakaBox.astro";
                                     clearInterval(interval);
                                 } else {
                                     i++;
-                                    el.textContent = format(i);
+                                    el.textContent = i.toString();
                                 }
                             }, speed);
                             observer.disconnect();
