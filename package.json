@@ -10,7 +10,7 @@
         "clean": "prettier --w ."
     },
     "dependencies": {
-        "astro": "^5.9.3",
+        "astro": "^5.12.8",
         "astro-icon": "^1.1.5"
     },
     "pnpm": {
@@ -19,6 +19,6 @@
         ]
     },
     "devDependencies": {
-        "prettier": "^3.6.1"
+        "prettier": "^3.6.2"
     }
 }
