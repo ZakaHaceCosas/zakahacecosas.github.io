@@ -8,3 +8,4 @@ flagless:
     flaglessUpdate: true
     flaglessDestroy: true
     flaglessCommit: true
+buildCmd: "bun run build^powershell -c Move-Item .\\docs\\_astro\\* .\\docs\\"
