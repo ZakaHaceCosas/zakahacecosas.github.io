@@ -149,20 +149,6 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "An epic Discord bot",
             }}
         />
-        <ZakaBox
-            url="https://vuelto.pp.ua/"
-            name="Vuelto"
-            boxIcon={{
-                type: "image",
-                name: "vuelta",
-            }}
-            boxClass="box-vuelta"
-            labels="writing,design"
-            desc={{
-                esp: "El mejor motor de juegos, en Golang",
-                eng: "The best game engine, in Golang",
-            }}
-        />
     </bento>
 
     <hr />
@@ -200,6 +186,20 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "don't say it",
             }}
         />
+        <ZakaBox
+            url="https://vuelto.pp.ua/"
+            name="Vuelto"
+            boxIcon={{
+                type: "image",
+                name: "vuelta",
+            }}
+            boxClass="box-vuelta"
+            labels="writing,design"
+            desc={{
+                esp: "El mejor motor de juegos, en Golang",
+                eng: "The best game engine, in Golang",
+            }}
+        />
     </bento>
     <p>
         <eng>
@@ -208,7 +208,11 @@ import ZakaBox from "../components/ZakaBox.astro";
                 href="https://github.com/material-extensions/vscode-material-icon-theme/pull/2605"
                 target="_blank"
                 rel="noopener noreferrer">Material icons for VSCode</a
-            > and
+            >, <a
+                href="https://github.com/OpenCut-app/OpenCut/pull/530"
+                target="_blank"
+                rel="noopener noreferrer">OpenCut</a
+            >, and
             <a
                 href="https://github.com/face-hh/webx/pull/163"
                 target="_blank"
@@ -221,7 +225,11 @@ import ZakaBox from "../components/ZakaBox.astro";
                 href="https://github.com/material-extensions/vscode-material-icon-theme/pull/2605"
                 target="_blank"
                 rel="noopener noreferrer">Material icons for VSCode</a
-            > y
+            >, <a
+                href="https://github.com/OpenCut-app/OpenCut/pull/530"
+                target="_blank"
+                rel="noopener noreferrer">OpenCut</a
+            >, y
             <a
                 href="https://github.com/face-hh/webx/pull/163"
                 target="_blank"
@@ -239,7 +247,10 @@ import ZakaBox from "../components/ZakaBox.astro";
 
     <div class="stat-pair">
         <h1 class="animation">
-            <esp>Hecho más de</esp><eng>Made over</eng> <span id="counter-commits">4.000</span> commits
+            <esp>Hecho más de</esp><eng>Made over</eng>
+            <span style="font-family: monospace;" id="counter-commits"
+                >4.000</span
+            > commits
         </h1>
         <p>
             <eng>in the past 2 years</eng>
@@ -249,7 +260,9 @@ import ZakaBox from "../components/ZakaBox.astro";
 
     <div class="stat-pair">
         <h1 class="animation">
-            <eng>Spent over</eng><esp>Dedicado</esp> <span id="counter-hours">700</span> <eng>coding</eng><esp>a programar</esp>
+            <eng>Spent over</eng><esp>Dedicado</esp>
+            <span style="font-family: monospace;" id="counter-hours">700</span>
+            <eng>hours coding</eng><esp>horas a programar</esp>
         </h1>
         <p>
             <eng>last year (counted via WakaTime)</eng>
@@ -421,6 +434,32 @@ import ZakaBox from "../components/ZakaBox.astro";
             desc={{
                 esp: "Twitter pero mejor.",
                 eng: "Twitter but better.",
+            }}
+        />
+        <ZakaBox
+            url="https://gitlab.com/zakahacecosas"
+            name="GitLab"
+            boxIcon={{
+                type: "svg",
+                name: "cat",
+            }}
+            boxClass="box-cat"
+            desc={{
+                esp: "En verdad no lo uso.",
+                eng: "I don't really use it.",
+            }}
+        />
+        <ZakaBox
+            url="https://codeberg.org/zakahacecosas"
+            name="Codeberg"
+            boxIcon={{
+                type: "svg",
+                name: "codeberg",
+            }}
+            boxClass="box-codeberg"
+            desc={{
+                esp: "En verdad, tampoco lo uso.",
+                eng: "I don't really use this either.",
             }}
         />
     </bento>

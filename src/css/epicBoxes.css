@@ -17,6 +17,8 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-exponential:hover svg path,
 .box-x:hover svg path,
 .box-sky:hover svg path,
+.box-cat:hover svg path,
+.box-codeberg:hover svg path,
 .box-roblox-chat:hover svg path {
     fill: #ffffff;
 }
@@ -105,4 +107,14 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     background-color: #2587fa90;
     box-shadow: 0 0 60px 0 #2587fa80;
     border: 1px solid #2587fa;
+}
+.box-cat:hover {
+    background-color: #e2432990;
+    box-shadow: 0 0 60px 0 #e2432980;
+    border: 1px solid #e24329;
+}
+.box-codeberg:hover {
+    background-color: #2186cf90;
+    box-shadow: 0 0 60px 0 #2186cf80;
+    border: 1px solid #2186cf;
 }
