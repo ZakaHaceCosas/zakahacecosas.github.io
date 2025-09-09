@@ -34,7 +34,7 @@ import ZakaBox from "../components/ZakaBox.astro";
         </p>
         <div class="animation all-skills">
             <div class="skill">
-                <Icon name="FIGMA" width={30} height={30} />
+                <Icon name="FIGMA" width={40} height={40} />
                 <div class="text">
                     <h3>5 <esp>años</esp><eng>years</eng></h3>
                     <p>
@@ -44,9 +44,9 @@ import ZakaBox from "../components/ZakaBox.astro";
                 </div>
             </div>
             <div class="skill">
-                <Icon name="JAVASCRIPT-BUT-BETTER" width={30} height={30} />
+                <Icon name="JAVASCRIPT-BUT-BETTER" width={40} height={40} />
                 <div class="text">
-                    <h3>~1 <esp>año</esp><eng>year</eng></h3>
+                    <h3>+1 <esp>año</esp><eng>year</eng></h3>
                     <p>
                         <esp>Desarrollo en TypeScript</esp>
                         <eng>Developing in TypeScript</eng>
@@ -54,14 +54,27 @@ import ZakaBox from "../components/ZakaBox.astro";
                 </div>
             </div>
             <div class="skill">
-                <Icon name="REACT" width={30} height={30} />
+                <Icon name="REACT" width={40} height={40} />
                 <div class="text">
-                    <h3>+6 <esp>meses</esp><eng>months</eng></h3>
+                    <h3>~1 <esp>año</esp><eng>year</eng></h3>
                     <p>
                         <esp
                             >Desarrollo de aplicaciones web simples, con ReactJS</esp
                         >
                         <eng>Development of simple web apps, with ReactJS</eng>
+                    </p>
+                </div>
+            </div>
+            <div class="skill">
+                <Icon name="GOLANG" width={40} height={40} />
+                <div class="text">
+                    <h3>
+                        <esp>acabo de empezar jaja</esp>
+                        <eng>i just got started haha</eng>
+                    </h3>
+                    <p>
+                        <esp>Primer lenguaje de bajo nivel que toco :D</esp>
+                        <eng>First low level language I touch :D</eng>
                     </p>
                 </div>
             </div>
@@ -82,8 +95,6 @@ import ZakaBox from "../components/ZakaBox.astro";
         </eng>
     </p>
 
-    <hr />
-
     <h3>
         <esp>He creado estos proyectos</esp>
         <eng>I've created these projects</eng>
@@ -103,6 +114,8 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "'The chaos of maintaining JS projects ends here.'",
             }}
         />
+        <!-- this still exists, but its TEMPORARILY unmaintained
+        maybe i should hide it -->
         <ZakaBox
             url="https://personaplus.vercel.app/"
             name="PersonaPlus"
@@ -122,8 +135,8 @@ import ZakaBox from "../components/ZakaBox.astro";
     <hr />
 
     <h3>
-        <esp> Trabajo con</esp>
-        <eng> I work with</eng>
+        <esp>Trabajo con</esp>
+        <eng>I work with</eng>
     </h3>
     <p>
         <esp>
@@ -143,10 +156,24 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "sokoballs",
             }}
             boxClass="box-neboola"
-            labels="design,writing"
+            labels="bot dev,branding"
             desc={{
-                esp: "Un bot de Discord épico",
-                eng: "An epic Discord bot",
+                esp: "Un bot de Discord muy épico.",
+                eng: "A very epic Discord bot.",
+            }}
+        />
+        <ZakaBox
+            url="https://hokki.app/"
+            name="Hokki"
+            boxIcon={{
+                type: "image",
+                name: "hokkas",
+            }}
+            boxClass="box-hokkas"
+            labels="web dev"
+            desc={{
+                esp: "Un bot de Discord con IA épica.",
+                eng: "A Discord bot with epic AI.",
             }}
         />
     </bento>
@@ -158,6 +185,20 @@ import ZakaBox from "../components/ZakaBox.astro";
         <eng>I've contributed to</eng>
     </h3>
     <bento>
+        <ZakaBox
+            url="https://codeberg.org/NotabenaDesu/"
+            name="Notabena"
+            boxIcon={{
+                type: "image",
+                name: "notabean",
+            }}
+            boxClass="box-beans"
+            labels="golang"
+            desc={{
+                esp: "A simple and great note-taking app.",
+                eng: "Una app de notas simple y genial.",
+            }}
+        />
         <ZakaBox
             url="https://github.com/Avdan-OS/"
             name="AvdanOS"

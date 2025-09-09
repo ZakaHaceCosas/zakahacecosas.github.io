@@ -118,3 +118,13 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #2186cf80;
     border: 1px solid #2186cf;
 }
+.box-beans:hover {
+    background-color: #5d2bff90;
+    box-shadow: 0 0 60px 0 #5d2bff80;
+    border: 1px solid #5d2bff;
+}
+.box-hokkas:hover {
+    background-color: #62b9e690;
+    box-shadow: 0 0 60px 0 #62b9e680;
+    border: 1px solid #62b9e6;
+}
