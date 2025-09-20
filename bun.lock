@@ -4,7 +4,7 @@
     "": {
       "name": "zakahacecosas-portfolio",
       "dependencies": {
-        "astro": "^5.13.5",
+        "astro": "^5.13.7",
         "astro-icon": "^1.1.5",
       },
       "devDependencies": {

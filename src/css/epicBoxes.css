@@ -124,7 +124,7 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     border: 1px solid #5d2bff;
 }
 .box-hokkas:hover {
-    background-color: #62b9e690;
-    box-shadow: 0 0 60px 0 #62b9e680;
-    border: 1px solid #62b9e6;
+    background-color: #fac29090;
+    box-shadow: 0 0 60px 0 #fac29080;
+    border: 1px solid #fac290;
 }

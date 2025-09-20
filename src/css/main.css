@@ -22,7 +22,7 @@ img {
     --bodyBg: rgba(0, 0, 0, 1);
     --cardBg: rgba(15, 15, 15, 0.5);
     --extraBg: rgba(20, 20, 20, 0.75);
-    --lightBg: rgba(20, 20, 20, 0.25);
+    --lightBg: rgba(65, 65, 65, 0.25);
     --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
     --doNotUseMe_strokeWidth: 0.4px;

@@ -4,13 +4,13 @@ import { Icon } from "astro-icon/components";
 interface Props {
     url: string;
     boxClass: string;
-    boxIcon: null | {
+    boxIcon?: {
         type: "image" | "svg";
         name: string;
     };
     labels?: string;
     name: string;
-    desc: {
+    desc?: {
         esp: string;
         eng: string;
     };
@@ -26,30 +26,37 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
     <box class={className}>
         {
             boxIcon ? (
-                boxIcon.type === "svg" ? (
-                    <Icon name={boxIcon.name} width={45} height={45} />
-                ) : (
-                    <img
-                        src={imageUrl}
-                        alt={name + " logo"}
-                        width="48"
-                        height="48"
-                        loading="lazy"
-                    />
-                )
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                    {boxIcon.type === "svg" ? (
+                        <>
+                            <Icon name={boxIcon.name} width={35} height={35} />
+                            <h2>{name}</h2>
+                        </>
+                    ) : (
+                        <>
+                            <img
+                                src={imageUrl}
+                                alt={name + " logo"}
+                                width="40"
+                                height="40"
+                                loading="lazy"
+                            />
+                            <h2>{name}</h2>
+                        </>
+                    )}
+                </div>
             ) : (
-                <div class="imageLike" />
+                <h2>{name}</h2>
             )
         }
-        <h2>{name}</h2>
-        <p>
-            <esp>
-                {desc.esp}
-            </esp>
-            <eng>
-                {desc.eng}
-            </eng>
-        </p>
+        {
+            desc && (
+                <p>
+                    <esp>{desc.esp}</esp>
+                    <eng>{desc.eng}</eng>
+                </p>
+            )
+        }
         {
             labels && (
                 <div class="labeler">
