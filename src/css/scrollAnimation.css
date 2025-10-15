@@ -9,12 +9,12 @@ Looks good.
     transition-duration: 1.5s !important;
 }
 /* accessibility */
- @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .animation {
         opacity: 1;
         transition: none;
     }
-} 
+}
 .scroll-animation {
     opacity: 1;
     transform: translateY(0);
