@@ -6,7 +6,7 @@ Looks good.
 .animation {
     opacity: 0;
     transform: translateY(15px);
-    transition-duration: 1.5s !important;
+    transition: all 0.6s ease !important;
 }
 /* accessibility */
 @media (prefers-reduced-motion: reduce) {

@@ -3,6 +3,7 @@
 }
 ::-webkit-scrollbar-track {
     border-radius: 0;
+    background-color: #6f6f6f;
 }
 ::-webkit-scrollbar-thumb {
     background: #00c864; /* this was the OG color of the logo */

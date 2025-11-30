@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Lang from "../components/Lang.astro";
 import { Icon } from "astro-icon/components";
 import ZakaBox from "../components/ZakaBox.astro";
 
@@ -16,15 +15,26 @@ import ZakaBox from "../components/ZakaBox.astro";
         alt="Logotipo de Zaka"
         class="animation logo"
     />
-    <Lang />
+    <div class="langSelector animation">
+        <a id="setLangEs" class="lang">
+            <Icon name="what-is-stable-politics" width={20} height={20} />
+            ESPAÑOL
+        </a>
+        <hr />
+        <a id="setLangEn" class="lang">
+            <Icon name="what-is-a-kilometer" width={20} height={20} />
+            ENGLISH
+        </a>
+    </div>
+
     <h1 class="animation">
         <esp>
             Buenos días, tardes, noches, o cuando sea que estés aquí.<br />
-            Soy Zaka y Hago Cosas.
+            <span style="font-weight: 400">Soy Zaka y Hago Cosas.</span>
         </esp>
         <eng>
             Good morning, afternoon, night, or whenever you're here.<br />
-            I'm Zaka and I Make Stuff.
+            <span style="font-weight: 400">I'm Zaka and I Make Stuff.</span>
         </eng>
     </h1>
 
@@ -40,42 +50,95 @@ import ZakaBox from "../components/ZakaBox.astro";
             <esp>Habilidades</esp>
             <eng>Skills</eng>
         </p>
-        <div class="animation all-skills">
-            <div class="skill">
+        <div class="all-skills">
+            <div class="skill animation">
                 <Icon name="JAVASCRIPT-BUT-BETTER" width={40} height={40} />
                 <p>
                     <esp>Desarrollo en TypeScript</esp>
                     <eng>Developing in TypeScript</eng>
                 </p>
             </div>
-            <div class="skill">
+            <div class="skill animation">
                 <Icon name="REACT" width={40} height={40} />
                 <p>
                     <esp>Aplicaciones simples con ReactJS</esp>
                     <eng>Simple apps with ReactJS</eng>
                 </p>
-            </div><div class="skill">
+            </div><div class="skill animation">
                 <Icon name="FIGMA" width={40} height={40} />
                 <p>
-                    <esp>Diseño gráfico y UI con Figma</esp>
-                    <eng>Graphical and UI design with Figma</eng>
+                    <esp>Diseño de interfaces con Figma</esp>
+                    <eng>Interface design with Figma</eng>
                 </p>
             </div>
-            <!-- <div class="skill">
-                <Icon name="GOLANG" width={40} height={40} />
-                <div class="text">
-                    <h3>
-                        <esp>acabo de empezar</esp>
-                        <eng>i just got started</eng>
-                    </h3>
-                    <p>
-                        <esp>Primer lenguaje de bajo nivel que toco :D</esp>
-                        <eng>First low level language I touch :D</eng>
-                    </p>
-                </div>
-            </div> -->
         </div>
     </div>
+
+    <hr />
+
+    <div>
+        <h3 id="work">
+            <esp>Detalles profesionales</esp>
+            <eng>Professional details</eng>
+        </h3>
+        <p>
+            <esp
+                >donde sale mi experiencia académica y laboral, por si te
+                interesa</esp
+            >
+            <eng
+                >where my academic and professional experience appear, in case
+                it interested you</eng
+            >
+        </p>
+    </div>
+
+    <bento>
+        <ZakaBox
+            url="https://www.linkedin.com/in/zakahacecosas/"
+            name="LinkedIn"
+            boxIcon={{
+                type: "svg",
+                name: "in",
+            }}
+            boxClass="box-in"
+            desc={{
+                esp: "Información profesional.",
+                eng: "Professional information.",
+            }}
+        />
+        <!-- <ZakaBox
+            url="https://www.linkedin.com/in/zakahacecosas/"
+            name="InfoJobs"
+            boxIcon={{
+                type: "svg",
+                name: "ij",
+            }}
+            boxClass="box-in"
+            desc={{
+                esp: "Información profesional.",
+                eng: "Professional information.",
+            }}
+        /> -->
+    </bento>
+    <p>
+        <eng>
+            I am still studying and therefore not available for full-time work
+            (as you may see here even some of my personal projects are
+            half-abandoned due to lack of time), however <b
+                >I do accept commissions and small pieces of work</b
+            >, with prices to be negotiated (or even free in exchange of
+            crediting me, depending on the case)
+        </eng>
+        <esp>
+            sigo estudiando y por tanto no estoy disponible para trabajo a
+            tiempo completo (como verás aquí hasta mis proyectos personales
+            están medio muertos por falta de tiempo), sin embargo <b
+                >sí acepto comisiones y trabajos pequeños</b
+            >, con paga a negociar (o incluso gratis a cambio de acreditar,
+            según el caso)
+        </esp>
+    </p>
 
     <hr />
 
@@ -84,11 +147,57 @@ import ZakaBox from "../components/ZakaBox.astro";
         <eng>Some stuff I make</eng>
     </h2>
 
-    <h3>
-        <esp>He creado estos proyectos</esp>
-        <eng>I've created these projects</eng>
-    </h3>
+    <div>
+        <h3>
+            <esp>He creado estos proyectos</esp>
+            <eng>I've created these projects</eng>
+        </h3>
+        <p>
+            <esp
+                >algunos están bajo organizaciones en vez de bajo mi perfil
+                personal, pero todos me acreditan debidamente como creador</esp
+            >
+            <eng
+                >some are under organizations instead of my personal profile,
+                but they all properly credit me as creator</eng
+            >
+        </p>
+    </div>
     <bento>
+        <ZakaBox
+            url="https://konbini.vercel.app/"
+            name="Konbini"
+            boxIcon={{
+                type: "svg",
+                name: "kbi",
+            }}
+            boxClass="box-kbi"
+            label={{
+                esp: "Herramienta de terminal, hecha con Bun + Web app, hecha con Preact",
+                eng: "CLI tool, made with Bun + Web app, made with Preact",
+            }}
+            desc={{
+                esp: "Cliente universal para la mayoría de gestores de paquetes.",
+                eng: "Universal client for the majority of package managers.",
+            }}
+        />
+        <ZakaBox
+            url="https://github.com/HanaOrg/Zaiko"
+            name="Zaiko"
+            boxIcon={{
+                type: "svg",
+                name: "ovs",
+            }}
+            boxClass="box-ovs"
+            label={{
+                esp: "App de escritorio, hecha con Tauri y Bun",
+                eng: "Desktop app, made with Tauri and Bun",
+            }}
+            desc={{
+                esp: "Programa de escritorio simple para gestión de inventario.",
+                eng: "Simple desktop program for stock management.",
+            }}
+        />
         <ZakaBox
             url="https://fuckingnode.github.io/"
             name="FuckingNode"
@@ -97,7 +206,10 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "nodular",
             }}
             boxClass="box-nodular"
-            labels="cli,made with Deno JS"
+            label={{
+                esp: "Herramienta de terminal, hecha con Deno",
+                eng: "CLI tool, made with Deno",
+            }}
             desc={{
                 esp: "CLI de automatización para desarrolladores de NodeJS (y otros stacks). Bastante potente.",
                 eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
@@ -113,26 +225,66 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "exponential",
             }}
             boxClass="box-exponential"
-            labels="android,made with react native"
+            label={{
+                esp: "App de Android, hecha con React Native",
+                eng: "Android app, made with React Native",
+            }}
             desc={{
-                esp: "Pequeña app de salud (trabajo en progreso). Medio-abandonada (pero la retomaré).",
-                eng: "Small (work in progress) health app. Half-abandoned (but I'll retake it).",
+                esp: "Pequeña app de salud (trabajo en progreso). Está medio-abandonada por ahora, pero planeo retomarla.",
+                eng: "Small (work in progress) health app. It's half-abandoned as of now, but I plan to retake it.",
             }}
         />
-        <p>
-            <esp>Y cosas pequeñas o paquetes de código</esp>
-            <eng>And small things or code packages</eng>
-        </p>
-        <div><!-- trick CSS into breaking the line --></div>
+    </bento>
+    <p>
+        <esp>y cosas pequeñas como paquetes de código</esp>
+        <eng>and small things like code packages</eng>
+    </p>
+    <bento>
         <ZakaBox
             url="https://github.com/ZakaHaceCosas/dev-utils"
             name="dev-utils"
             boxClass="box-gh"
+            label={{
+                esp: "jsr y parcialmente npm",
+                eng: "jsr and partially npm",
+            }}
             desc={{
-                esp: "Varios paquetes de utilidad (para strings, números, y demás).",
-                eng: "A bunch of utility packages (for strings, numbers, and more).",
+                esp: "Varios paquetes de JavaScript de utilidad (para strings, números, y demás).",
+                eng: "A bunch of JavaScript utility packages (for strings, numbers, and more).",
             }}
         />
+    </bento>
+    <p>
+        <esp>también me gusta dar clase, ¿lo sabías?</esp>
+        <eng>I also enjoy teaching, did you know that?</eng>
+    </p>
+    <bento>
+        <ZakaBox
+            url="https://zakaprofe.vercel.app/"
+            name="@ZakaProfe"
+            boxClass="box-profe"
+            label={{
+                esp: "Videos en YouTube.",
+                eng: "YouTube videos.",
+            }}
+            desc={{
+                esp: "Hago videos didácticos (o hacía, que ahora me falta tiempo, pero algún día los retomaré).",
+                eng: "I make educational videos (or used to, I now lack time, but I'll eventually retake them).",
+            }}
+        />
+        <!-- TODO: uncomment when i push the new ZP website (current one doesn't mention ZT) <ZakaBox
+            url="https://zakaprofe.vercel.app/"
+            name="@ZakaProfe & @ZakaTeka"
+            boxClass="box-profe"
+            label={{
+                esp: "Videos en YouTube.",
+                eng: "YouTube videos.",
+            }}
+            desc={{
+                esp: "Hago videos didácticos. Antes eran de carácter general, ahora más centrados en informática.",
+                eng: "I make educational videos. They used to be about general topics, though now they're more focused on informatics.",
+            }}
+        /> -->
     </bento>
 
     <hr />
@@ -141,15 +293,6 @@ import ZakaBox from "../components/ZakaBox.astro";
         <esp>Trabajo con</esp>
         <eng>I work with</eng>
     </h3>
-    <p>
-        <esp>
-            Las etiquetas indican con que rol / cómo he aportado a cada proyecto
-            (a grosso modo).
-        </esp>
-        <eng>
-            Tags indicate what I have contributed to each project (roughly).
-        </eng>
-    </p>
     <bento>
         <ZakaBox
             url="https://github.com/SokoraDesu/Sokora"
@@ -159,7 +302,10 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "sokoballs",
             }}
             boxClass="box-neboola"
-            labels="bot dev,branding"
+            label={{
+                esp: "Ejerciendo de diseñador líder + programador del bot (TypeScript)",
+                eng: "Working as lead designer + bot developer (TypeScript)",
+            }}
             desc={{
                 esp: "Un bot de Discord muy épico.",
                 eng: "A very epic Discord bot.",
@@ -173,7 +319,10 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "hokkas",
             }}
             boxClass="box-hokkas"
-            labels="web dev"
+            label={{
+                esp: "Ejerciendo de desarrollador web",
+                eng: "Working as web developer",
+            }}
             desc={{
                 esp: "Un bot de Discord con IA épica.",
                 eng: "A Discord bot with epic AI.",
@@ -187,14 +336,17 @@ import ZakaBox from "../components/ZakaBox.astro";
     </h3>
     <bento>
         <ZakaBox
-            url="https://codeberg.org/NotabenaDesu/"
+            url="https://codeberg.org/NotabenaDesu/Notabena"
             name="Notabena"
             boxIcon={{
                 type: "image",
                 name: "notabean",
             }}
             boxClass="box-beans"
-            labels="golang"
+            label={{
+                eng: "Contributed as developer (Golang)",
+                esp: "Contribuí como desarrollador (Golang)",
+            }}
             desc={{
                 eng: "A simple and great note-taking app.",
                 esp: "Una app de notas simple y genial.",
@@ -208,7 +360,10 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "bread",
             }}
             boxClass="box-bread"
-            labels="design"
+            label={{
+                esp: "Contribuí como diseñador",
+                eng: "Contributed as designer",
+            }}
             desc={{
                 esp: "Una distro Linux.",
                 eng: "A Linux distro.",
@@ -222,10 +377,13 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "sus",
             }}
             boxClass="box-sus"
-            labels="website dev,design"
+            label={{
+                esp: "Contribuí como programador web",
+                eng: "Contributed as website developer",
+            }}
             desc={{
-                esp: "no lo digan",
-                eng: "don't say it",
+                esp: "Sí, esto es real.",
+                eng: "Yes, this is real.",
             }}
         />
         <ZakaBox
@@ -236,30 +394,35 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "vuelta",
             }}
             boxClass="box-vuelta"
-            labels="writing,design"
+            label={{
+                esp: "Contribuí como diseñador y redactor de contenidos",
+                eng: "Contributed as designer and copywriter",
+            }}
             desc={{
-                esp: "El mejor motor de juegos, en Golang",
-                eng: "The best game engine, in Golang",
+                esp: "Un motor de juegos en Golang",
+                eng: "A game engine in Golang",
             }}
         />
     </bento>
 
     <hr />
 
-    <h3 id="contact">
-        <esp>Contacto y redes sociales</esp>
-        <eng>Contact and social media</eng>
-    </h3>
-    <p>
-        <esp
-            >de hecho como que soy bastante inactivo (menos en Discord) pero eso
-            no significa que este muerto eh</esp
-        >
-        <eng
-            >actually im like really inactive (except in Discord) but uhh that
-            doesn't mean im dead</eng
-        >
-    </p>
+    <div>
+        <h3 id="contact">
+            <esp>Contacto y redes sociales</esp>
+            <eng>Contact and social media</eng>
+        </h3>
+        <p>
+            <esp
+                >soy algo inactivo en la mayoría, si buscas contactarme usa
+                Discord o el correo-e</esp
+            >
+            <eng
+                >im somewhat inactive in most of them, for contact use Discord
+                or e-mail</eng
+            >
+        </p>
+    </div>
     <bento>
         <ZakaBox
             url="https://discord.com/users/807903704472223754/"
@@ -350,18 +513,9 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
             boxClass="box-boblox"
         />
-        <ZakaBox
-            url="https://guilded.gg/u/zakahacecosas"
-            name="Guilded"
-            boxIcon={{
-                type: "svg",
-                name: "roblox-chat",
-            }}
-            boxClass="box-roblox-chat"
-        />
     </bento>
 </Layout>
 <!--
 optional: gravatar https://gravatar.com/zakahacecosas / stack overflow: https://stackoverflow.com/users/21657379/zaka
-Trello: https://trello.com/u/zakahacecosas / BTC wallet: lol / BeHance: https://www.behance.net/zakacosas
+Trello: https://trello.com/u/zakahacecosas /
 -->

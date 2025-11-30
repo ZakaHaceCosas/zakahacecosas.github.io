@@ -19,112 +19,132 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
 .box-sky:hover svg path,
 .box-cat:hover svg path,
 .box-codeberg:hover svg path,
-.box-roblox-chat:hover svg path {
+.box-kbi:hover svg path,
+.box-ovs:hover svg path,
+.box-in:hover svg rect {
     fill: #ffffff;
 }
 /* boxes */
 .box-yt:hover {
     background-color: #ff3d0090;
-    box-shadow: 0 0 60px 0 #ff3d0080;
-    border: 1px solid #ff3d00;
+    box-shadow: 0 0 60px 0 #ff3d00;
+    border: 2px solid #ff3d00;
 }
 .box-x:hover {
     background-color: #03a9f490;
-    box-shadow: 0 0 60px 0 #03a9f480;
-    border: 1px solid #03a9f4;
+    box-shadow: 0 0 60px 0 #03a9f4;
+    border: 2px solid #03a9f4;
 }
 .box-dc:hover {
     background-color: #536dfe90;
-    box-shadow: 0 0 60px 0 #536dfe80;
-    border: 1px solid #536dfe;
+    box-shadow: 0 0 60px 0 #536dfe;
+    border: 2px solid #536dfe;
 }
 .box-fogma:hover {
     background-color: #66bb6a90;
-    box-shadow: 0 0 60px 0 #66bb6a80;
-    border: 1px solid #66bb6a;
+    box-shadow: 0 0 60px 0 #66bb6a;
+    border: 2px solid #66bb6a;
 }
 .box-gh:hover {
     background-color: #000;
     box-shadow: 0 0 60px 0 #ffffff30;
-    border: 1px solid #ffffff90;
+    border: 2px solid #ffffff90;
 }
 .box-boblox:hover {
     background-color: #ff573390;
-    box-shadow: 0 0 60px 0 #ff573380;
-    border: 1px solid #ff5733;
+    box-shadow: 0 0 60px 0 #ff5733;
+    border: 2px solid #ff5733;
 }
 .box-neboola:hover {
     background-color: #834dba90;
-    box-shadow: 0 0 60px 0 #834dba80;
-    border: 1px solid #834dba;
+    box-shadow: 0 0 60px 0 #834dba;
+    border: 2px solid #834dba;
 }
 .box-bread:hover {
     background-color: #0070f390;
-    box-shadow: 0 0 60px 0 #0070f380;
-    border: 1px solid #0070f3;
+    box-shadow: 0 0 60px 0 #0070f3;
+    border: 2px solid #0070f3;
 }
 .box-ppt:hover {
     background-color: #ffa50090;
-    box-shadow: 0 0 60px 0 #ffa50080;
-    border: 1px solid #ffa500f3;
+    box-shadow: 0 0 60px 0 #ffa500;
+    border: 2px solid #ffa500f3;
 }
 .box-websocket:hover {
     background-color: #194ec590;
-    box-shadow: 0 0 60px 0 #194ec580;
-    border: 1px solid #194ec5;
+    box-shadow: 0 0 60px 0 #194ec5;
+    border: 2px solid #194ec5;
 }
 .box-sus:hover {
     background-color: #dc187a90;
-    box-shadow: 0 0 60px 0 #dc187a80;
-    border: 1px solid #dc187a;
+    box-shadow: 0 0 60px 0 #dc187a;
+    border: 2px solid #dc187a;
 }
 .box-exponential:hover {
-    background-color: #32ff8070; /* for visibility, i'll make an exception with this color */
-    box-shadow: 0 0 60px 0 #32ff8080;
-    border: 1px solid #32ff80;
+    background-color: #3280ff70; /* for visibility, i'll make an exception with this color */
+    box-shadow: 0 0 60px 0 #3280ff;
+    border: 2px solid #3280ff;
 }
 .box-nodular:hover {
     background-color: #a0524490;
-    box-shadow: 0 0 60px 0 #a0524480;
-    border: 1px solid #a05244;
+    box-shadow: 0 0 60px 0 #a05244;
+    border: 2px solid #a05244;
 }
 .box-proton:hover {
     background-color: #7341ff90;
-    box-shadow: 0 0 60px 0 #7341ff80;
-    border: 1px solid #7341ff;
+    box-shadow: 0 0 60px 0 #7341ff;
+    border: 2px solid #7341ff;
 }
 .box-vuelta:hover {
     background-color: #f99a6690;
-    box-shadow: 0 0 60px 0 #f99a6680;
-    border: 1px solid #f99a66;
-}
-.box-roblox-chat:hover {
-    background-color: #f2c32fb0; /* for visibility, i'll make an exception with this color too */
-    box-shadow: 0 0 60px 0 #f2c32f80;
-    border: 1px solid #f2c32f;
+    box-shadow: 0 0 60px 0 #f99a66;
+    border: 2px solid #f99a66;
 }
 .box-sky:hover {
     background-color: #2587fa90;
-    box-shadow: 0 0 60px 0 #2587fa80;
-    border: 1px solid #2587fa;
+    box-shadow: 0 0 60px 0 #2587fa;
+    border: 2px solid #2587fa;
 }
 .box-cat:hover {
     background-color: #e2432990;
-    box-shadow: 0 0 60px 0 #e2432980;
-    border: 1px solid #e24329;
+    box-shadow: 0 0 60px 0 #e24329;
+    border: 2px solid #e24329;
 }
 .box-codeberg:hover {
     background-color: #2186cf90;
-    box-shadow: 0 0 60px 0 #2186cf80;
-    border: 1px solid #2186cf;
+    box-shadow: 0 0 60px 0 #2186cf;
+    border: 2px solid #2186cf;
 }
 .box-beans:hover {
     background-color: #5d2bff90;
-    box-shadow: 0 0 60px 0 #5d2bff80;
-    border: 1px solid #5d2bff;
+    box-shadow: 0 0 60px 0 #5d2bff;
+    border: 2px solid #5d2bff;
 }
 .box-hokkas:hover {
     background-color: #fac29090;
-    box-shadow: 0 0 60px 0 #fac29080;
-    border: 1px solid #fac290;
+    box-shadow: 0 0 60px 0 #fac290;
+    border: 2px solid #fac290;
+}
+.box-kbi:hover {
+    background-color: #c2328290;
+    box-shadow: 0 0 60px 0 #c23282;
+    border: 2px solid #c23282;
+}
+.box-ovs:hover {
+    background-color: #3e5cb190;
+    box-shadow: 0 0 60px 0 #3e5cb1;
+    border: 2px solid #3e5cb1;
+}
+.box-in:hover {
+    background-color: #00669990;
+    box-shadow: 0 0 60px 0 #006699;
+    border: 2px solid #006699;
+}
+.box-profe:hover {
+    background-color: #0099ff90;
+    box-shadow: 0 0 60px 0 #0099ff;
+    border: 2px solid #0099ff;
+}
+.box-in:hover svg path {
+    fill: #006699;
 }

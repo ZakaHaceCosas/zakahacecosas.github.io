@@ -8,7 +8,10 @@ interface Props {
         type: "image" | "svg";
         name: string;
     };
-    labels?: string;
+    label?: {
+        esp: string;
+        eng: string;
+    };
     name: string;
     desc?: {
         esp: string;
@@ -16,7 +19,7 @@ interface Props {
     };
 }
 
-const { url, boxClass, boxIcon, labels, name, desc } = Astro.props;
+const { url, boxClass, boxIcon, label, name, desc } = Astro.props;
 
 const className: string = `animation ${boxClass}`;
 const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name}.webp`;
@@ -58,16 +61,15 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
             )
         }
         {
-            labels && (
-                <div class="labeler">
-                    {labels.split(",").map((label) => (
-                        <div class="label">{label}</div>
-                    ))}
+            label && (
+                <div class="label">
+                    <esp>{label.esp}</esp>
+                    <eng>{label.eng}</eng>
                 </div>
             )
         }
         {
-            labels ? (
+            label ? (
                 <flex style="margin-top: 10px;">
                     <p>GO</p>
                     <p>&LongRightArrow;</p>

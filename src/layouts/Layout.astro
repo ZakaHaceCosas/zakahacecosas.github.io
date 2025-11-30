@@ -27,7 +27,7 @@ import "../css/scrollbar.css";
         <!--end basics-->
 
         <!-- GitHub pages forces me to do stuff this way -->
-        <link rel="stylesheet" href="/index.e2ZBsS-a.css" />
+        <link rel="stylesheet" href="/index.BoOKMzeN.css" />
 
         <link
             rel="stylesheet"
@@ -174,8 +174,10 @@ import "../css/scrollbar.css";
             /* AOS */
             // animate on scroll with intersection observer API
             // if for some reason you're inspecting this, feel free to copy it lol
-            const thingsToAnimate: NodeListOf<Element> =
-                document.querySelectorAll<Element>(".animation");
+            const thingsToAnimate: NodeListOf<HTMLElement> =
+                document.querySelectorAll<HTMLElement>(".animation");
+
+            let counter = 0;
 
             const observerCallback = (
                 entries: IntersectionObserverEntry[]
@@ -184,10 +186,15 @@ import "../css/scrollbar.css";
                     const targetElement = entry.target as HTMLElement;
 
                     if (entry.isIntersecting) {
-                        targetElement.classList.add("scroll-animation");
+                        counter++;
+                        setTimeout(() => {
+                            targetElement.classList.add("scroll-animation");
+                        }, counter * 250);
+
                         observer.unobserve(targetElement); // animate once
-                    } else {
-                        targetElement.classList.remove("scroll-animation");
+                        setTimeout(() => {
+                            counter--;
+                        }, 30);
                     }
                 });
             };
@@ -203,30 +210,23 @@ import "../css/scrollbar.css";
         </script>
     </head>
     <body>
-        <!--
-        this one has eager loading because turns out lazy loading can make it sometimes not load at all, specially on mobile
-        -->
-        <img
-            loading="eager"
-            src="https://zakahacecosas.github.io/design/grad-og.webp"
-            alt="Decorative gradient"
-            class="colorinchi"
-        />
         <slot />
-        <footer class="animation">
-            <p>&copy; ZakaHaceCosas, 2021-2025</p>
+        <footer>
+            <p>&copy; Zakaria B. ("ZakaHaceCosas"), 2021-2025</p>
             <p class="disclaimer">
                 <esp>
-                    Todos los derechos reservados. Mi logo y mis demás diseños
-                    están hechos por mí.<br />Nota: Algunos de los logos aquí
-                    mostrados NO SON MÍOS y
+                    Todos los derechos reservados. Mi logo personal, los logos
+                    de mis proyectos, y mis demás diseños están hechos por mí y
+                    protegidos por derechos de autor.<br />Nota: Algunos de los
+                    logos aquí mostrados NO SON MÍOS y
                     <b>están protegidos por DERECHOS DE AUTOR</b>. No los uses
                     sin consentimiento del autor.
                 </esp>
                 <eng>
-                    All rights reserved. My logo and my other designs are made
-                    by myself.<br />Note: some of the logos shown here are NOT
-                    MINE and
+                    All rights reserved. My logo, my projects' logos, and my
+                    other designs are made by myself and protected by copyright
+                    laws.<br />Note: some of the logos shown here are NOT MINE
+                    and
                     <b>are COPYRIGHTED</b>. Do not use them without author's
                     consent.
                 </eng>

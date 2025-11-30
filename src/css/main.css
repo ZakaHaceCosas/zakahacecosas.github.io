@@ -25,23 +25,11 @@ img {
     --lightBg: rgba(65, 65, 65, 0.25);
     --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
-    --doNotUseMe_strokeWidth: 0.4px;
+    --doNotUseMe_strokeWidth: 2px;
     --cardStroke: var(--doNotUseMe_strokeWidth) solid
         var(--doNotUseMe_whiteStroke);
     --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
         var(--doNotUseMe_darkStroke);
-}
-.colorinchi {
-    position: absolute;
-    z-index: -1;
-    top: -45vw;
-    left: -45vw;
-    height: auto;
-    width: 100vw;
-    opacity: 1;
-    -webkit-filter: blur(300px);
-    filter: blur(300px);
-    border-radius: 0%;
 }
 body {
     margin-left: auto;
@@ -51,18 +39,12 @@ body {
     align-items: start;
     justify-content: start;
     gap: 20px;
-    padding: 20px;
-    background-image: linear-gradient(
-        to bottom right,
-        var(--bodyBg),
-        var(--bodyBg),
-        rgba(0, 123, 122, 20)
-    );
+    padding: 40px 0px;
+    background-image: linear-gradient(to bottom right, #505050, #1f1f1f);
     color: #fff;
 }
 footer {
-    padding: 12px;
-    border-radius: 12px;
+    padding: 10px;
     margin-bottom: 20px;
 
     width: calc(100% - 20px);
@@ -81,15 +63,11 @@ footer {
     flex-grow: 1;
     padding: 20px;
     background-color: var(--cardBg);
-    border-radius: 20px;
     border: var(--cardStroke);
 }
 .logo {
-    width: 25vw;
-    max-width: 300px;
-    height: auto;
+    height: 100px;
     object-fit: scale-down;
-    aspect-ratio: 16/5.5;
 }
 
 .god {
@@ -106,13 +84,12 @@ footer {
     font-size: xx-small;
 }
 h1 {
-    font-size: 29px;
+    font-size: 1.5em;
 }
 hr {
     width: 100%;
-    height: 1px;
-    background-color: #ffffff50;
-    border-radius: 12px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 .skill-box {
     display: flex;
@@ -140,7 +117,6 @@ hr {
     text-align: center;
     flex: 1;
     gap: 10px;
-    border-radius: 10px;
     flex-grow: 1;
     padding: 20px;
     background-color: var(--extraBg);

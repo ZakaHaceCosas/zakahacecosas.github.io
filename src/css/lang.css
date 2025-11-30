@@ -5,6 +5,7 @@ a.lang {
     color: white;
     align-items: center;
     opacity: 0.5;
+    text-decoration: none;
 }
 
 a.lang:hover {
@@ -12,26 +13,15 @@ a.lang:hover {
     cursor: pointer;
 }
 
-a.lang svg {
-    border-radius: 50px;
-}
-
 .langSelector {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px;
-    border-radius: 12px;
+    position: fixed;
+    top: 40px;
+    right: 5vw;
+    padding: 10px;
     background-color: var(--cardBg);
     border: var(--cardStroke);
     z-index: 99;
-}
-
-@media only screen and (max-width: 1600px) and (min-width: 1000px) {
-    .langSelector {
-        right: 10vw;
-    }
 }
