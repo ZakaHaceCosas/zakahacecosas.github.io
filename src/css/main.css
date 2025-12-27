@@ -26,10 +26,8 @@ img {
     --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
     --doNotUseMe_strokeWidth: 2px;
-    --cardStroke: var(--doNotUseMe_strokeWidth) solid
-        var(--doNotUseMe_whiteStroke);
-    --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid
-        var(--doNotUseMe_darkStroke);
+    --cardStroke: var(--doNotUseMe_strokeWidth) solid var(--doNotUseMe_whiteStroke);
+    --cardStrokeDark: var(--doNotUseMe_strokeWidth) solid var(--doNotUseMe_darkStroke);
 }
 body {
     margin-left: auto;
@@ -40,7 +38,7 @@ body {
     justify-content: start;
     gap: 20px;
     padding: 40px 0px;
-    background-image: linear-gradient(to bottom right, #505050, #1f1f1f);
+    background-image: linear-gradient(to bottom right, #404040, #1f1f1f);
     color: #fff;
 }
 footer {

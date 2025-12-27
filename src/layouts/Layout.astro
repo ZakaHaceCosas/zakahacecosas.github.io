@@ -13,11 +13,8 @@ import "../css/scrollbar.css";
 <!doctype html>
 <html>
     <head>
-        <script
-            is:inline
-            src="https://analytics.ahrefs.com/analytics.js"
-            data-key="y5ZFxqJEyM+7GvuWdCne3g"
-            async></script>
+        <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="y5ZFxqJEyM+7GvuWdCne3g" async
+        ></script>
         <!-- ^ analytics -->
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
@@ -26,8 +23,7 @@ import "../css/scrollbar.css";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--end basics-->
 
-        <!-- GitHub pages forces me to do stuff this way -->
-        <link rel="stylesheet" href="/index.BoOKMzeN.css" />
+        <!--GHP-->
 
         <link
             rel="stylesheet"
@@ -36,15 +32,8 @@ import "../css/scrollbar.css";
         <!-- NOTE: maybe download the fonts and serve them from GitHub so google does not spy on us? -->
 
         <!--begin icons-->
-        <link
-            rel="apple-touch-icon"
-            href="https://zakahacecosas.github.io/design/icon.webp"
-        />
-        <link
-            rel="icon"
-            href="https://zakahacecosas.github.io/design/icon.webp"
-            type="image/webp"
-        />
+        <link rel="apple-touch-icon" href="https://zakahacecosas.github.io/design/icon.webp" />
+        <link rel="icon" href="https://zakahacecosas.github.io/design/icon.webp" type="image/webp" />
         <!--end icons-->
 
         <!--begin meta-->
@@ -58,24 +47,15 @@ import "../css/scrollbar.css";
         <meta property="og:site_name" content="ZakaHaceCosas" />
         <meta property="og:title" content="ZakaHaceCosas" />
         <meta property="og:description" content="I'm Zaka and I Make Stuff." />
-        <meta
-            name="og:image"
-            content="https://zakahacecosas.github.io/design/banner.webp"
-        />
+        <meta name="og:image" content="https://zakahacecosas.github.io/design/banner.webp" />
         <!--twitter-->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ZakaHaceCosas" />
         <meta name="twitter:description" content="I'm Zaka and I Make Stuff." />
-        <meta
-            name="twitter:image"
-            content="https://zakahacecosas.github.io/design/banner.webp"
-        />
+        <meta name="twitter:image" content="https://zakahacecosas.github.io/design/banner.webp" />
         <!--extra stuff-->
         <meta name="theme-color" content="#19FF73" />
-        <meta
-            name="keywords"
-            content="Zaka, ZakaHaceCosas, portfolio, developer"
-        />
+        <meta name="keywords" content="Zaka, ZakaHaceCosas, portfolio, developer" />
         <!--end meta-->
 
         <script>
@@ -87,19 +67,14 @@ import "../css/scrollbar.css";
 
             function setLang(lang: Languages) {
                 if (lang !== Languages.English && lang !== Languages.Spanish) {
-                    throw new Error(
-                        "Why are you trying to set the language to something that isn't 'en' or 'es'?"
-                    );
+                    throw new Error("Why are you trying to set the language to something that isn't 'en' or 'es'?");
                 }
 
                 const expirationDate = new Date();
                 expirationDate.setDate(expirationDate.getDate() + 365);
                 try {
                     localStorage.setItem("selectedLang", lang);
-                    localStorage.setItem(
-                        "langExpiration",
-                        expirationDate.toISOString()
-                    );
+                    localStorage.setItem("langExpiration", expirationDate.toISOString());
                 } catch (e) {
                     console.error("Error accessing localStorage", e);
                 }
@@ -108,26 +83,18 @@ import "../css/scrollbar.css";
 
             document.addEventListener("DOMContentLoaded", function () {
                 function testLang(test: string): Languages {
-                    return /^es/i.test(test)
-                        ? Languages.Spanish
-                        : Languages.English;
+                    return /^es/i.test(test) ? Languages.Spanish : Languages.English;
                 }
 
                 try {
                     const selectedLang = localStorage.getItem("selectedLang");
-                    const langExpiration =
-                        localStorage.getItem("langExpiration");
+                    const langExpiration = localStorage.getItem("langExpiration");
 
-                    const isInvalidLang =
-                        selectedLang !== Languages.English &&
-                        selectedLang !== Languages.Spanish;
+                    const isInvalidLang = selectedLang !== Languages.English && selectedLang !== Languages.Spanish;
 
                     if (selectedLang && langExpiration) {
                         const expirationDate = new Date(langExpiration);
-                        if (
-                            !isNaN(expirationDate.getTime()) &&
-                            expirationDate > new Date()
-                        ) {
+                        if (!isNaN(expirationDate.getTime()) && expirationDate > new Date()) {
                             if (isInvalidLang) {
                                 localStorage.removeItem("selectedLang");
                                 localStorage.removeItem("langExpiration");
@@ -148,18 +115,12 @@ import "../css/scrollbar.css";
                     setLang(testLang(navigator.language));
                 }
 
-                const switchToEnglish: HTMLElement | null =
-                    document.getElementById("setLangEn");
-                const switchToSpanish: HTMLElement | null =
-                    document.getElementById("setLangEs");
+                const switchToEnglish: HTMLElement | null = document.getElementById("setLangEn");
+                const switchToSpanish: HTMLElement | null = document.getElementById("setLangEs");
 
                 if (!switchToEnglish || !switchToSpanish) {
-                    console.error(
-                        "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
-                    );
-                    throw new Error(
-                        "Either 'setLangEn' or 'setLangEs' is missing. Check your code."
-                    );
+                    console.error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.");
+                    throw new Error("Either 'setLangEn' or 'setLangEs' is missing. Check your code.");
                 }
 
                 switchToEnglish.addEventListener("click", function () {
@@ -174,14 +135,11 @@ import "../css/scrollbar.css";
             /* AOS */
             // animate on scroll with intersection observer API
             // if for some reason you're inspecting this, feel free to copy it lol
-            const thingsToAnimate: NodeListOf<HTMLElement> =
-                document.querySelectorAll<HTMLElement>(".animation");
+            const thingsToAnimate: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>(".animation");
 
             let counter = 0;
 
-            const observerCallback = (
-                entries: IntersectionObserverEntry[]
-            ): void => {
+            const observerCallback = (entries: IntersectionObserverEntry[]): void => {
                 entries.forEach((entry: IntersectionObserverEntry) => {
                     const targetElement = entry.target as HTMLElement;
 
@@ -199,10 +157,7 @@ import "../css/scrollbar.css";
                 });
             };
 
-            const observer: IntersectionObserver = new IntersectionObserver(
-                observerCallback,
-                { threshold: 0.5 }
-            );
+            const observer: IntersectionObserver = new IntersectionObserver(observerCallback, { threshold: 0.5 });
 
             thingsToAnimate.forEach((element: Element) => {
                 observer.observe(element);
@@ -215,20 +170,15 @@ import "../css/scrollbar.css";
             <p>&copy; Zakaria B. ("ZakaHaceCosas"), 2021-2025</p>
             <p class="disclaimer">
                 <esp>
-                    Todos los derechos reservados. Mi logo personal, los logos
-                    de mis proyectos, y mis demás diseños están hechos por mí y
-                    protegidos por derechos de autor.<br />Nota: Algunos de los
-                    logos aquí mostrados NO SON MÍOS y
-                    <b>están protegidos por DERECHOS DE AUTOR</b>. No los uses
-                    sin consentimiento del autor.
+                    Todos los derechos reservados. Mi logo personal, los logos de mis proyectos, y mis demás diseños
+                    están hechos por mí y protegidos por derechos de autor.<br />Nota: Algunos de los logos aquí
+                    mostrados NO SON MÍOS y
+                    <b>están protegidos por DERECHOS DE AUTOR</b>. No los uses sin consentimiento del autor.
                 </esp>
                 <eng>
-                    All rights reserved. My logo, my projects' logos, and my
-                    other designs are made by myself and protected by copyright
-                    laws.<br />Note: some of the logos shown here are NOT MINE
-                    and
-                    <b>are COPYRIGHTED</b>. Do not use them without author's
-                    consent.
+                    All rights reserved. My logo, my projects' logos, and my other designs are made by myself and
+                    protected by copyright laws.<br />Note: some of the logos shown here are NOT MINE and
+                    <b>are COPYRIGHTED</b>. Do not use them without author's consent.
                 </eng>
             </p>
         </footer>
