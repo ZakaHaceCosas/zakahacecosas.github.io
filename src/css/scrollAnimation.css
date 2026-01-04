@@ -12,6 +12,7 @@ Looks good.
 @media (prefers-reduced-motion: reduce) {
     .animation {
         opacity: 1;
+        transform: none;
         transition: none;
     }
 }

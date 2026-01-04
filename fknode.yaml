@@ -1,5 +1,5 @@
 destroy:
-    intensities: ["*"]
+    intensities: "*"
     targets:
         - ".astro"
         - "docs/_astro"
@@ -8,5 +8,7 @@ flagless:
     flaglessUpdate: true
     flaglessDestroy: true
     flaglessCommit: true
-buildCmd: "bun run build^powershell -c Move-Item .\\docs\\_astro\\* .\\docs\\"
-# [NOTE (27-09-2025 23:49:13): Invalid config file! (Auto-added by FuckingNode). DEFAULT SETTINGS WILL BE USED UPON INTERACTING WITH THIS MOTHERFUCKER UNTIL YOU FIX THIS FILE! Refer to https://fuckingnode.github.io/manual/fknode-yaml/ to learn about how fknode.yaml works.]
+buildCmd:
+    - <bun build.ts
+commitCmd:
+    - $clean

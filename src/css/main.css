@@ -145,3 +145,29 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.votes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+}
+.votes:hover {
+    opacity: 1;
+}
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--cardBg);
+    color: white;
+    border: var(--cardStroke);
+    gap: 10px;
+}
+button:hover {
+    background-color: #19ff73;
+    color: #000;
+    border: var(--cardStrokeDark);
+}

@@ -30,6 +30,11 @@ Box names are chosen in purpose. If you do not understand them, it's not a probl
     box-shadow: 0 0 60px 0 #ff3d00;
     border: 2px solid #ff3d00;
 }
+.box-npm:hover {
+    background-color: #cb383790;
+    box-shadow: 0 0 60px 0 #cb3837;
+    border: 2px solid #cb3837;
+}
 .box-x:hover {
     background-color: #03a9f490;
     box-shadow: 0 0 60px 0 #03a9f4;

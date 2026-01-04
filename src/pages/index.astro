@@ -225,14 +225,14 @@ import ZakaBox from "../components/ZakaBox.astro";
         />
     </bento>
     <p>
-        <esp>y cosas pequeñas como paquetes de código</esp>
-        <eng>and small things like code packages</eng>
+        <esp>También hay cosas más pequeñas, como paquetes</esp>
+        <eng>There's also smaller things, like packages</eng>
     </p>
     <bento>
         <ZakaBox
             url="https://github.com/ZakaHaceCosas/dev-utils"
             name="dev-utils"
-            boxClass="box-gh"
+            boxClass="box-npm"
             label={{
                 esp: "jsr y parcialmente npm",
                 eng: "jsr and partially npm",
@@ -240,6 +240,19 @@ import ZakaBox from "../components/ZakaBox.astro";
             desc={{
                 esp: "Varios paquetes de JavaScript de utilidad (para strings, números, y demás).",
                 eng: "A bunch of JavaScript utility packages (for strings, numbers, and more).",
+            }}
+        />
+        <ZakaBox
+            url="https://npmjs.com/package/@hokkiai/djs-level-importer"
+            name="@hokkiai/djs-level-importer"
+            boxClass="box-npm"
+            label={{
+                esp: "npm",
+                eng: "npm",
+            }}
+            desc={{
+                esp: "Paquete para importar datos de nivelación de diversos bots de Discord.",
+                eng: "Package to import leveling data from several Discord bots.",
             }}
         />
     </bento>
