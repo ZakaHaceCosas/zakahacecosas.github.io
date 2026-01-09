@@ -4,7 +4,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://zakahacecosas.github.io/",
+    site: "https://me.zhc.es/",
     trailingSlash: "ignore",
     compressHTML: true,
     integrations: [icon()],

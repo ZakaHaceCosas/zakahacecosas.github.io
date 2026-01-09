@@ -9,6 +9,6 @@ flagless:
     flaglessDestroy: true
     flaglessCommit: true
 buildCmd:
-    - <bun build.ts
+    - <bunx vercel --prod
 commitCmd:
     - $clean

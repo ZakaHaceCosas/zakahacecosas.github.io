@@ -22,7 +22,7 @@ interface Props {
 const { url, boxClass, boxIcon, label, name, desc } = Astro.props;
 
 const className: string = `animation ${boxClass}`;
-const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name}.webp`;
+const imageUrl: string = `https://me.zhc.es/assets/${boxIcon?.name}.webp`;
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer">
@@ -37,13 +37,7 @@ const imageUrl: string = `https://zakahacecosas.github.io/assets/${boxIcon?.name
                         </>
                     ) : (
                         <>
-                            <img
-                                src={imageUrl}
-                                alt={name + " logo"}
-                                width="40"
-                                height="40"
-                                loading="lazy"
-                            />
+                            <img src={imageUrl} alt={name + " logo"} width="40" height="40" loading="lazy" />
                             <h2>{name}</h2>
                         </>
                     )}
