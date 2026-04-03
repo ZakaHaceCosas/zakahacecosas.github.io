@@ -6,13 +6,13 @@
         height: auto;
         max-width: calc(100vw - 40px);
     }
-    bento {
+    .bento {
         width: 100%;
         /* use flex instead of grid for easier responsive */
         display: flex;
         flex-direction: column;
     }
-    box {
+    .box {
         flex-grow: 1;
     }
     .all-skills {

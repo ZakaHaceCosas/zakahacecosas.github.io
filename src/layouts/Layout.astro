@@ -8,6 +8,8 @@ import "../css/responsive.css";
 import "../css/scrollAnimation.css";
 import "../css/scrollbar.css";
 // end top 10 biggest css
+import { Icon } from "astro-icon/components";
+import { Font } from "astro:assets";
 ---
 
 <!doctype html>
@@ -24,15 +26,11 @@ import "../css/scrollbar.css";
 
         <!--GHP-->
 
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        />
-        <!-- NOTE: maybe download the fonts and serve them from GitHub so google does not spy on us? -->
+        <Font cssVariable="--font-carlito" />
 
         <!--begin icons-->
-        <link rel="apple-touch-icon" href="https://me.zhc.es/design/icon.webp" />
-        <link rel="icon" href="https://me.zhc.es/design/icon.webp" type="image/webp" />
+        <link rel="apple-touch-icon" href="https://me.zhc.es/design/icn_c.avif" />
+        <link rel="icon" href="https://me.zhc.es/design/icn_c.avif" type="image/avif" />
         <!--end icons-->
 
         <!--begin meta-->
@@ -46,12 +44,12 @@ import "../css/scrollbar.css";
         <meta property="og:site_name" content="ZakaHaceCosas" />
         <meta property="og:title" content="ZakaHaceCosas" />
         <meta property="og:description" content="I'm Zaka and I Make Stuff." />
-        <meta name="og:image" content="https://me.zhc.es/design/banner.webp" />
+        <meta name="og:image" content="https://me.zhc.es/design/zakabanner_bgd.avif" />
         <!--twitter-->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ZakaHaceCosas" />
         <meta name="twitter:description" content="I'm Zaka and I Make Stuff." />
-        <meta name="twitter:image" content="https://me.zhc.es/design/banner.webp" />
+        <meta name="twitter:image" content="https://me.zhc.es/design/zakabanner_bgd.avif" />
         <!--extra stuff-->
         <meta name="theme-color" content="#19FF73" />
         <meta name="keywords" content="Zaka, ZakaHaceCosas, portfolio, developer" />
@@ -163,10 +161,24 @@ import "../css/scrollbar.css";
             });
         </script>
     </head>
-    <body>
+    <body
+        ><div class="langSelector animation">
+            <a href="#top" hreflang="es" id="setLangEs" class="lang">
+                <Icon name="what-is-stable-politics" width={20} height={20} />
+                <code>ESPAÑOL <esp>*</esp></code>
+            </a>
+            <hr />
+            <a href="#top" hreflang="en" id="setLangEn" class="lang">
+                <Icon name="what-is-a-kilometer" width={20} height={20} />
+                <code>ENGLISH <eng>*</eng></code>
+            </a>
+        </div>
         <slot />
         <a href="https://buymeacoffee.com/zakahacecosas" target="_blank" rel="noopener noreferrer">
-            <button class="votes">Support my work</button>
+            <button class="votes">
+                <esp>¡Apoya mi trabajo!</esp>
+                <eng>Support my work!</eng>
+            </button>
         </a>
         <footer>
             <p>&copy; Zakaria B. ("ZakaHaceCosas"), 2021-2026</p>

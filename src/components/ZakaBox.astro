@@ -21,12 +21,12 @@ interface Props {
 
 const { url, boxClass, boxIcon, label, name, desc } = Astro.props;
 
-const className: string = `animation ${boxClass}`;
+const className: string = `box animation ${boxClass}`;
 const imageUrl: string = `https://me.zhc.es/assets/${boxIcon?.name}.webp`;
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer">
-    <box class={className}>
+    <div class={className}>
         {
             boxIcon ? (
                 <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
@@ -75,5 +75,5 @@ const imageUrl: string = `https://me.zhc.es/assets/${boxIcon?.name}.webp`;
                 </flex>
             )
         }
-    </box>
+    </div>
 </a>

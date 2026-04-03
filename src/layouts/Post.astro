@@ -1,0 +1,19 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+    <h1 class="animation">
+        <span style="font-weight: 400;"><a href="/">Zaka</a>\</span><span style="font-weight: 400;"
+            ><a href="/blog">Blog</a></span
+        >\{frontmatter.title}
+    </h1>
+    <p class="animation">{frontmatter.pubDate.toString().slice(0, 10)}<br /><em>{frontmatter.description}</em></p>
+    <!--<img class="animation" src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
+    <hr />
+    <div class="animation">
+        <slot />
+    </div>
+</Layout>

@@ -9,18 +9,7 @@ import ZakaBox from "../components/ZakaBox.astro";
 
 <Layout>
     <!-- not lazily loaded because it's on top, bro -->
-    <img loading="eager" src="https://me.zhc.es/design/logo.webp" alt="Logotipo de Zaka" class="animation logo" />
-    <div class="langSelector animation">
-        <a id="setLangEs" class="lang">
-            <Icon name="what-is-stable-politics" width={20} height={20} />
-            ESPAÑOL
-        </a>
-        <hr />
-        <a id="setLangEn" class="lang">
-            <Icon name="what-is-a-kilometer" width={20} height={20} />
-            ENGLISH
-        </a>
-    </div>
+    <img loading="eager" src="https://me.zhc.es/design/logo_w.avif" alt="Logotipo de Zaka" class="animation logo" />
 
     <h1 class="animation">
         <esp>
@@ -69,8 +58,6 @@ import ZakaBox from "../components/ZakaBox.astro";
         </div>
     </div>
 
-    <hr />
-
     <div>
         <h3 id="work">
             <esp>Detalles profesionales</esp>
@@ -82,7 +69,7 @@ import ZakaBox from "../components/ZakaBox.astro";
         </p>
     </div>
 
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://www.linkedin.com/in/zakahacecosas/"
             name="LinkedIn"
@@ -96,34 +83,21 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "Professional information.",
             }}
         />
-        <!-- <ZakaBox
-            url="https://www.linkedin.com/in/zakahacecosas/"
-            name="InfoJobs"
-            boxIcon={{
-                type: "svg",
-                name: "ij",
-            }}
-            boxClass="box-in"
-            desc={{
-                esp: "Información profesional.",
-                eng: "Professional information.",
-            }}
-        /> -->
-    </bento>
-    <p>
-        <eng>
-            I am still studying and therefore not available for full-time work (as you may see here even some of my
-            personal projects are half-abandoned due to lack of time), however <b
-                >I do accept commissions and small pieces of work</b
-            >, with prices to be negotiated (or even free in exchange of crediting me, depending on the case)
-        </eng>
-        <esp>
-            sigo estudiando y por tanto no estoy disponible para trabajo a tiempo completo (como verás aquí hasta mis
-            proyectos personales están medio muertos por falta de tiempo), sin embargo <b
-                >sí acepto comisiones y trabajos pequeños</b
-            >, con paga a negociar (o incluso gratis a cambio de acreditar, según el caso)
-        </esp>
-    </p>
+        <p>
+            <eng>
+                I am still studying and therefore not available for full-time work (as you may see here even some of my
+                personal projects are half-abandoned due to lack of time), however <b
+                    >I do accept commissions and small pieces of work</b
+                >, with prices to be negotiated (or even free in exchange of crediting me, depending on the case)
+            </eng>
+            <esp>
+                sigo estudiando y por tanto no estoy disponible para trabajo a tiempo completo (como verás aquí hasta
+                mis proyectos personales están medio muertos por falta de tiempo), sin embargo <b
+                    >sí acepto comisiones y trabajos pequeños</b
+                >, con paga a negociar (o incluso gratis a cambio de acreditar, según el caso)
+            </esp>
+        </p>
+    </div>
 
     <hr />
 
@@ -147,7 +121,7 @@ import ZakaBox from "../components/ZakaBox.astro";
             >
         </p>
     </div>
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://konbini.vercel.app/"
             name="Konbini"
@@ -218,19 +192,19 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "Small (work in progress) health app. It's half-abandoned as of now, but I plan to retake it.",
             }}
         />
-    </bento>
+    </div>
     <p>
         <esp>También hay cosas más pequeñas, como paquetes</esp>
         <eng>There's also smaller things, like packages</eng>
     </p>
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://github.com/ZakaHaceCosas/dev-utils"
             name="dev-utils"
             boxClass="box-npm"
             label={{
-                esp: "jsr y parcialmente npm",
-                eng: "jsr and partially npm",
+                esp: "jsr y npm",
+                eng: "jsr and npm",
             }}
             desc={{
                 esp: "Varios paquetes de JavaScript de utilidad (para strings, números, y demás).",
@@ -250,27 +224,14 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "Package to import leveling data from several Discord bots.",
             }}
         />
-    </bento>
+    </div>
     <p>
         <esp>también me gusta dar clase, ¿lo sabías?</esp>
         <eng>I also enjoy teaching, did you know that?</eng>
     </p>
-    <bento>
+    <div class="bento">
         <ZakaBox
-            url="https://zakaprofe.vercel.app/"
-            name="@ZakaProfe"
-            boxClass="box-profe"
-            label={{
-                esp: "Videos en YouTube.",
-                eng: "YouTube videos.",
-            }}
-            desc={{
-                esp: "Hago videos didácticos (o hacía, que ahora me falta tiempo, pero algún día los retomaré).",
-                eng: "I make educational videos (or used to, I now lack time, but I'll eventually retake them).",
-            }}
-        />
-        <!-- TODO: uncomment when i push the new ZP website (current one doesn't mention ZT) <ZakaBox
-            url="https://zakaprofe.vercel.app/"
+            url="https://profe.zhc.es/"
             name="@ZakaProfe & @ZakaTeka"
             boxClass="box-profe"
             label={{
@@ -281,8 +242,8 @@ import ZakaBox from "../components/ZakaBox.astro";
                 esp: "Hago videos didácticos. Antes eran de carácter general, ahora más centrados en informática.",
                 eng: "I make educational videos. They used to be about general topics, though now they're more focused on informatics.",
             }}
-        /> -->
-    </bento>
+        />
+    </div>
 
     <hr />
 
@@ -290,7 +251,7 @@ import ZakaBox from "../components/ZakaBox.astro";
         <esp>Trabajo con</esp>
         <eng>I work with</eng>
     </h3>
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://github.com/SokoraDesu/Sokora"
             name="Sokora"
@@ -325,13 +286,13 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "A Discord bot with epic AI.",
             }}
         />
-    </bento>
+    </div>
 
     <h3>
         <esp>He contribuido a</esp>
         <eng>I've contributed to</eng>
     </h3>
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://codeberg.org/NotabenaDesu/Notabena"
             name="Notabena"
@@ -400,7 +361,7 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "A game engine in Golang",
             }}
         />
-    </bento>
+    </div>
 
     <hr />
 
@@ -414,7 +375,7 @@ import ZakaBox from "../components/ZakaBox.astro";
             <eng>im somewhat inactive in most of them, for contact use Discord or e-mail</eng>
         </p>
     </div>
-    <bento>
+    <div class="bento">
         <ZakaBox
             url="https://discord.com/users/807903704472223754/"
             name="Discord"
@@ -504,7 +465,7 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
             boxClass="box-boblox"
         />
-    </bento>
+    </div>
 </Layout>
 <!--
 optional: gravatar https://gravatar.com/zakahacecosas / stack overflow: https://stackoverflow.com/users/21657379/zaka

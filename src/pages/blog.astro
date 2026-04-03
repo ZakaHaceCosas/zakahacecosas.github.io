@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+// @ts-ignore
+const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+---
+
+<Layout>
+    <h1 class="animation"><span style="font-weight: 400;"><a href="/">Zaka</a>\</span>Blog</h1>
+    <div class="bento">
+        {
+            allPosts.map((post: any) => (
+                <a href={post.url}>
+                    <div class="box bg-pst">
+                        <p>
+                            <b>{post.frontmatter.title}</b>
+                        </p>
+                        <p>{post.frontmatter.description}</p>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    .bg-pst:hover {
+        transform: scale(1.015) translateY(-10px);
+        box-shadow: 0px 0px 15px 0px #00000090;
+    }
+</style>

@@ -1,4 +1,4 @@
-bento {
+.bento {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
@@ -6,24 +6,24 @@ bento {
     width: 100%;
 }
 
-bento > a:last-child:nth-child(odd) > box {
+.bento > a:last-child:nth-child(odd) > .box {
     grid-column: span 2;
 }
 
-bento > a {
+.bento > a {
     display: contents;
 }
 
-bento > a > box {
+.bento > a > .box {
     grid-column: auto;
     grid-row: auto;
 }
 
-bento a {
+.bento a {
     color: #fff;
 }
 
-box {
+.box {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -34,33 +34,33 @@ box {
     border: var(--cardStroke);
     gap: 10px;
 }
-box img {
+.box img {
     object-fit: scale-down;
 }
-box .imageLike {
+.box .imageLike {
     width: 48px;
     height: 48px;
     display: grid;
     place-items: center;
 }
-box flex p {
+.box flex p {
     line-height: 100%;
 }
-box flex {
+.box flex {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
-box:hover {
+.box:hover {
     cursor: pointer;
 }
-box:hover flex {
+.box:hover flex {
     gap: 40px;
     font-weight: 700;
 }
-box .label {
+.box .label {
     padding: 5px 10px;
     border: var(--cardStrokeDark);
     background-color: var(--lightBg);
