@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
+import vercelAdapter from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,4 +17,5 @@ export default defineConfig({
             cssVariable: "--font-carlito",
         },
     ],
+    adapter: vercelAdapter(),
 });

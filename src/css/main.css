@@ -29,7 +29,7 @@ img {
         "Helvetica Neue",
         sans-serif;
     text-decoration: none;
-    line-height: 130%;
+    line-height: 150%;
 }
 code {
     font-family: "Courier New", Courier, monospace;
@@ -54,7 +54,7 @@ body {
     justify-content: start;
     gap: 20px;
     padding: 40px 0px;
-    background-image: linear-gradient(to bottom right, #404040, #1f1f1f);
+    background-image: linear-gradient(to bottom right, #0a0a0a, #1f1f1f);
     color: #fff;
     min-height: calc(100vh - 80px);
 }

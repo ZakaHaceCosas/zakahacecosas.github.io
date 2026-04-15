@@ -12,9 +12,19 @@ const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true })
                 <a href={post.url}>
                     <div class="box bg-pst">
                         <p>
-                            <b>{post.frontmatter.title}</b>
+                            <esp>
+                                <b>{post.frontmatter.titleES}</b>
+                            </esp>
+                            <eng>
+                                <b>{post.frontmatter.titleEN}</b>
+                            </eng>
                         </p>
-                        <p>{post.frontmatter.description}</p>
+                        <esp>
+                            <p>{post.frontmatter.descriptionES}</p>
+                        </esp>
+                        <eng>
+                            <p>{post.frontmatter.descriptionEN}</p>
+                        </eng>
                     </div>
                 </a>
             ))

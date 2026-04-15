@@ -10,11 +10,14 @@
         "clean": "prettier --w ."
     },
     "dependencies": {
+        "@2toad/profanity": "^3.3.0",
+        "@astrojs/vercel": "^10.0.4",
+        "@supabase/supabase-js": "^2.103.2",
         "astro": "6.1.3",
         "astro-icon": "^1.1.5"
     },
     "devDependencies": {
-        "@types/bun": "^1.3.5",
-        "prettier": "^3.7.4"
+        "@types/bun": "latest",
+        "prettier": "^3.8.3"
     }
 }

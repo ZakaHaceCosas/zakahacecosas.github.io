@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
     <h1 class="animation">
         <span style="font-weight: 400;"><a href="/">Zaka</a>\</span><span style="font-weight: 400;"
             ><a href="/blog">Blog</a></span
-        >\{frontmatter.title}
+        >\<esp>{frontmatter.titleES}</esp><eng>{frontmatter.titleEN}</eng>
     </h1>
     <p class="animation">{frontmatter.pubDate.toString().slice(0, 10)}<br /><em>{frontmatter.description}</em></p>
     <!--<img class="animation" src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
