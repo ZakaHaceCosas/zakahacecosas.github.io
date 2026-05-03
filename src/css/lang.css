@@ -21,6 +21,7 @@ a.lang:hover {
     top: 40px;
     right: 5vw;
     padding: 10px;
+    border-radius: 10px;
     background-color: var(--cardBg);
     border: var(--cardStroke);
     z-index: 99;

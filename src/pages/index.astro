@@ -2,28 +2,65 @@
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import ZakaBox from "../components/ZakaBox.astro";
+import Showcase from "../components/Showcase.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <!-- not lazily loaded because it's on top, bro -->
-    <img loading="eager" src="https://me.zhc.es/design/logo_w.avif" alt="Logotipo de Zaka" class="animation logo" />
-
     <h1 class="animation">
         <esp>
-            <span style="font-weight: 600">Buenos días, tardes, noches, o cuando sea que estés aquí.</span><br />
+            <span style="font-weight: 600">Buenos días, tardes, noches o cuando sea que estés aquí.</span><br />
             <span style="font-weight: 400">Soy Zaka y Hago Cosas.</span>
         </esp>
         <eng>
-            <span style="font-weight: 600">Good morning, afternoon, night, or whenever you're here.</span><br />
+            <span style="font-weight: 600">Good morning, afternoon, night or whenever you're here.</span><br />
             <span style="font-weight: 400">I'm Zaka and I Make Stuff.</span>
         </eng>
     </h1>
+    <!--
+    <h2>
+        <esp>Proyectos</esp>
+        <eng>Projects</eng>
+    </h2>
 
-    <hr />
-
+    <div class="showcase">
+        <Showcase
+            id="kantra"
+            img="cover_kantra"
+            label={{ esp: "Kantra, el software de gestión de accesos", eng: "Kantra, the accesses control software" }}
+            desc={{
+                eng: "A minimal, self-host-first, web-based Access Control System for education institutions.",
+                esp: "Un Sistema de Acceso Controlado mínimo, pensado para self-hosting y basado en la web para instituciones educativas.",
+            }}
+        />
+        <Showcase
+            id="fkn"
+            img="cover_fkn"
+            label={{
+                esp: "FKN, la herramienta de línea de comandos para desarrolladores JavaScript",
+                eng: "FKN, the command line tool for JavaScript developers",
+            }}
+            desc={{
+                eng: "A productivity tool for JavaScript project management.",
+                esp: "Una herramienta de productividad para proyectos de JavaScript.",
+            }}
+        />
+        <Showcase
+            id="kbi"
+            img="cover_kbi"
+            label={{
+                esp: "Konbini, el administrador de paquetes universal.",
+                eng: "Konbini, the universal package manager.",
+            }}
+            desc={{
+                eng: "A unified CLI interface to all major OS package managers.",
+                esp: "Una interfaz de commandos unificada para los principales administradores de paquetes del SO.",
+            }}
+        />
+    </div>
+-->
     <h2>
         <esp>Qué sé hacer</esp>
         <eng>What I know to do</eng>
@@ -36,6 +73,13 @@ import ZakaBox from "../components/ZakaBox.astro";
         </p>
         <div class="all-skills">
             <div class="skill animation">
+                <Icon name="FIGMA" width={40} height={40} />
+                <p>
+                    <esp>Diseño de interfaces con Figma</esp>
+                    <eng>Interface design with Figma</eng>
+                </p>
+            </div>
+            <div class="skill animation">
                 <Icon name="JAVASCRIPT-BUT-BETTER" width={40} height={40} />
                 <p>
                     <esp>Desarrollo en TypeScript</esp>
@@ -43,16 +87,17 @@ import ZakaBox from "../components/ZakaBox.astro";
                 </p>
             </div>
             <div class="skill animation">
+                <Icon name="SVELTE" width={40} height={40} />
+                <p>
+                    <esp>Aplicaciones simples con Svelte</esp>
+                    <eng>Simple apps with Svelte</eng>
+                </p>
+            </div>
+            <div class="skill animation">
                 <Icon name="REACT" width={40} height={40} />
                 <p>
-                    <esp>Aplicaciones simples con ReactJS</esp>
-                    <eng>Simple apps with ReactJS</eng>
-                </p>
-            </div><div class="skill animation">
-                <Icon name="FIGMA" width={40} height={40} />
-                <p>
-                    <esp>Diseño de interfaces con Figma</esp>
-                    <eng>Interface design with Figma</eng>
+                    <esp>Básicos de ReactJS</esp>
+                    <eng>Basics of ReactJS</eng>
                 </p>
             </div>
         </div>
@@ -99,8 +144,6 @@ import ZakaBox from "../components/ZakaBox.astro";
         </p>
     </div>
 
-    <hr />
-
     <h2>
         <esp>Algunas cosas que hago</esp>
         <eng>Some stuff I make</eng>
@@ -122,6 +165,23 @@ import ZakaBox from "../components/ZakaBox.astro";
         </p>
     </div>
     <div class="bento">
+        <ZakaBox
+            url="https://fuckingnode.github.io/"
+            name="FuckingNode"
+            boxIcon={{
+                type: "svg",
+                name: "nodular",
+            }}
+            boxClass="box-nodular"
+            label={{
+                esp: "Herramienta de terminal, hecha con Deno",
+                eng: "CLI tool, made with Deno",
+            }}
+            desc={{
+                esp: "CLI de automatización para desarrolladores de NodeJS (y otros stacks). Bastante potente.",
+                eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
+            }}
+        />
         <ZakaBox
             url="https://konbini.vercel.app/"
             name="Konbini"
@@ -154,23 +214,6 @@ import ZakaBox from "../components/ZakaBox.astro";
             desc={{
                 esp: "Programa de escritorio simple para gestión de inventario.",
                 eng: "Simple desktop program for stock management.",
-            }}
-        />
-        <ZakaBox
-            url="https://fuckingnode.github.io/"
-            name="FuckingNode"
-            boxIcon={{
-                type: "svg",
-                name: "nodular",
-            }}
-            boxClass="box-nodular"
-            label={{
-                esp: "Herramienta de terminal, hecha con Deno",
-                eng: "CLI tool, made with Deno",
-            }}
-            desc={{
-                esp: "CLI de automatización para desarrolladores de NodeJS (y otros stacks). Bastante potente.",
-                eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
             }}
         />
         <!-- this still exists, but its TEMPORARILY unmaintained
@@ -226,7 +269,7 @@ import ZakaBox from "../components/ZakaBox.astro";
         />
     </div>
     <p>
-        <esp>también me gusta dar clase, ¿lo sabías?</esp>
+        <esp>También me gusta dar clase, ¿lo sabías?</esp>
         <eng>I also enjoy teaching, did you know that?</eng>
     </p>
     <div class="bento">
@@ -257,8 +300,6 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
         />
     </div>
-
-    <hr />
 
     <h3>
         <esp>Trabajo con</esp>
@@ -323,7 +364,7 @@ import ZakaBox from "../components/ZakaBox.astro";
                 esp: "Una app de notas simple y genial.",
             }}
         />
-        <ZakaBox
+        <!-- it's been so long and it's so dead... <ZakaBox
             url="https://github.com/Avdan-OS/"
             name="AvdanOS"
             boxIcon={{
@@ -339,8 +380,8 @@ import ZakaBox from "../components/ZakaBox.astro";
                 esp: "Una distro Linux.",
                 eng: "A Linux distro.",
             }}
-        />
-        <ZakaBox
+        /> -->
+        <!-- they don't accept the god damn PR <ZakaBox
             url="https://github.com/Amog-OS/"
             name="AmogOS"
             boxIcon={{
@@ -356,7 +397,7 @@ import ZakaBox from "../components/ZakaBox.astro";
                 esp: "Sí, esto es real.",
                 eng: "Yes, this is real.",
             }}
-        />
+        />-->
         <ZakaBox
             url="https://vuelto.pp.ua/"
             name="Vuelto"
@@ -370,19 +411,17 @@ import ZakaBox from "../components/ZakaBox.astro";
                 eng: "Contributed as designer and copywriter",
             }}
             desc={{
-                esp: "Un motor de juegos en Golang",
-                eng: "A game engine in Golang",
+                esp: "Un motor de juegos en Golang (deprecado)",
+                eng: "A game engine in Golang (deprecated)",
             }}
         />
     </div>
 
-    <hr />
-
     <div>
-        <h3 id="contact">
+        <h2 id="contact">
             <esp>Contacto y redes sociales</esp>
             <eng>Contact and social media</eng>
-        </h3>
+        </h2>
         <p>
             <esp>soy algo inactivo en la mayoría, si buscas contactarme usa Discord o el correo-e</esp>
             <eng>im somewhat inactive in most of them, for contact use Discord or e-mail</eng>
@@ -416,15 +455,6 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
         />
         <ZakaBox
-            url="mailto:zakahacecosas@protonmail.com"
-            name="Email"
-            boxIcon={{
-                type: "svg",
-                name: "proton",
-            }}
-            boxClass="box-proton"
-        />
-        <ZakaBox
             url="https://gitlab.com/zakahacecosas"
             name="GitLab"
             boxIcon={{
@@ -442,7 +472,7 @@ import ZakaBox from "../components/ZakaBox.astro";
             }}
             boxClass="box-codeberg"
         />
-        <ZakaBox
+        <!--<ZakaBox
             url="https://youtube.com/@ZakaHaceCosas/"
             name="YouTube"
             boxIcon={{
@@ -450,7 +480,7 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "yt",
             }}
             boxClass="box-yt"
-        />
+        /> -->
         <ZakaBox
             url="https://x.com/ZakaHaceCosas/"
             name="Twitter"
@@ -468,15 +498,6 @@ import ZakaBox from "../components/ZakaBox.astro";
                 name: "sky",
             }}
             boxClass="box-sky"
-        />
-        <ZakaBox
-            url="https://www.roblox.com/users/3596403470/profile"
-            name="Roblox"
-            boxIcon={{
-                type: "svg",
-                name: "boblox",
-            }}
-            boxClass="box-boblox"
         />
     </div>
 </Layout>

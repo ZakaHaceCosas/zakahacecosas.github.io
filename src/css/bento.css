@@ -28,9 +28,9 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    border-radius: 10px;
     padding: 20px;
     background-color: var(--cardBg);
-
     border: var(--cardStroke);
     gap: 10px;
 }
@@ -43,10 +43,12 @@
     display: grid;
     place-items: center;
 }
-.box flex p {
+.box .flx p,
+.showcased .flx p {
     line-height: 100%;
 }
-.box flex {
+.box .flx,
+.showcased .flx {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,12 +58,13 @@
 .box:hover {
     cursor: pointer;
 }
-.box:hover flex {
+.box:hover .flx {
     gap: 40px;
-    font-weight: 700;
+    font-size: larger;
 }
 .box .label {
     padding: 5px 10px;
+    border-radius: 5px;
     border: var(--cardStrokeDark);
     background-color: var(--lightBg);
     font-size: small;
@@ -69,4 +72,48 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+}
+
+.showcase {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.showcase > :first-child {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.showcase > a {
+    text-decoration: none;
+    color: white;
+}
+
+.showcased {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+    gap: 10px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-size: contain;
+    text-align: end;
+}
+
+.showcased:hover {
+    cursor: pointer;
+}
+.showcased:hover .flx {
+    gap: 40px;
+    font-size: larger;
 }
