@@ -3,7 +3,6 @@ export const prerender = false;
 import type { APIRoute } from "astro";
 import { createClient } from "@supabase/supabase-js";
 import crypto from "crypto";
-import { Profanity } from "@2toad/profanity";
 
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) throw new Error(JSON.stringify(process.env, null, 1));
 
@@ -73,13 +72,6 @@ export const GET: APIRoute = async (ctx) => {
     return buildResponse(ctx.request, comments);
 };
 
-const moderador = new Profanity({
-    languages: ["es"],
-    wholeWord: true,
-    grawlix: "*****",
-    grawlixChar: "*",
-});
-
 export const POST: APIRoute = async (ctx) => {
     const ip = crypto
         .createHash("sha256")
@@ -101,10 +93,6 @@ export const POST: APIRoute = async (ctx) => {
             { error: "Autor inválido, o es muy corto (<3 letras) o muy largo (>64)." },
             400,
         );
-
-    const clean = moderador.censor(text);
-    // podría prohibir las cosas malas directamente, pero bueno, vamos a ser algo más liberales
-    // return json({ error: "Comentario moderado. No uses palabrotas." }, { status: 400 });
 
     // emojis sospechosos
     const emojis = text.match(EMOJI_REGEX) || [];
@@ -140,7 +128,7 @@ export const POST: APIRoute = async (ctx) => {
 
     const { error: insertError } = await supabase.from("comments").insert({
         page_id: pageId,
-        text: clean,
+        text,
         ip_hash: ip,
         created_at: now,
         approved: false,
