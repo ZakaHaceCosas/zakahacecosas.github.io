@@ -4,7 +4,7 @@
         "outDir": "./js",
         "module": "ESNext",
         "target": "ES6",
-        "moduleResolution": "node",
+        "moduleResolution": "nodenext",
         "strict": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
