@@ -1,7 +1,6 @@
 ---
 interface Props {
     id: string;
-    img: string;
     label: {
         esp: string;
         eng: string;
@@ -12,29 +11,31 @@ interface Props {
     };
 }
 
-const { id, img, label, desc } = Astro.props;
+const { id, label, desc } = Astro.props;
 
-const imageUrl: string = `https://me.zhc.es/assets/${img}.webp`;
+const imageUrl: string = `/covers/${id}.png`;
 ---
 
 <a href={`projects/${id}`}>
-    <div class="animation showcased" style=`background-image: url(${imageUrl})`>
-        <h4>
-            <esp>{label.esp}</esp>
-            <eng>{label.eng}</eng>
-        </h4>
+    <div class="animation showcased" style=`background-image: url(${imageUrl});`>
+        <div class="child">
+            <h4>
+                <esp>{label.esp}</esp>
+                <eng>{label.eng}</eng>
+            </h4>
 
-        <div class="label">
-            <esp>{desc.esp}</esp>
-            <eng>{desc.eng}</eng>
-        </div>
+            <div class="label">
+                <esp>{desc.esp}</esp>
+                <eng>{desc.eng}</eng>
+            </div>
 
-        <div class="flx" style="margin-top: 10px;">
-            <p>
-                <esp>Ver este proyecto</esp>
-                <eng>See this project</eng>
-            </p>
-            <p>&LongRightArrow;</p>
+            <div class="flx" style="margin-top: 10px;">
+                <p>
+                    <esp>Ver este proyecto</esp>
+                    <eng>See this project</eng>
+                </p>
+                <p>&LongRightArrow;</p>
+            </div>
         </div>
     </div>
 </a>

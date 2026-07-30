@@ -19,7 +19,7 @@ import Showcase from "../components/Showcase.astro";
             <span style="font-weight: 400">I'm Zaka and I Make Stuff.</span>
         </eng>
     </h1>
-    <!--
+
     <h2>
         <esp>Proyectos</esp>
         <eng>Projects</eng>
@@ -28,39 +28,27 @@ import Showcase from "../components/Showcase.astro";
     <div class="showcase">
         <Showcase
             id="kantra"
-            img="cover_kantra"
             label={{ esp: "Kantra, el software de gestión de accesos", eng: "Kantra, the accesses control software" }}
             desc={{
-                eng: "A minimal, self-host-first, web-based Access Control System for education institutions.",
-                esp: "Un Sistema de Acceso Controlado mínimo, pensado para self-hosting y basado en la web para instituciones educativas.",
+                eng: "A self-host-first, web-based Access Control System for education institutions.",
+                esp: "Un Sistema de Acceso Controlado, pensado para self-hosting y basado en la web, para instituciones educativas.",
             }}
         />
         <Showcase
-            id="fkn"
-            img="cover_fkn"
+            id="sokora"
             label={{
-                esp: "FKN, la herramienta de línea de comandos para desarrolladores JavaScript",
-                eng: "FKN, the command line tool for JavaScript developers",
+                esp: "Sokora, el bot de Discord multi-propósito",
+                eng: "Sokora, the multipurpose Discord bot",
             }}
             desc={{
-                eng: "A productivity tool for JavaScript project management.",
-                esp: "Una herramienta de productividad para proyectos de JavaScript.",
+                eng: "A free, complete and intuitive bot; based on discord.js.",
+                esp: "Un bot gratuito, completo e intuitivo; basado en discord.js.",
             }}
         />
-        <Showcase
-            id="kbi"
-            img="cover_kbi"
-            label={{
-                esp: "Konbini, el administrador de paquetes universal.",
-                eng: "Konbini, the universal package manager.",
-            }}
-            desc={{
-                eng: "A unified CLI interface to all major OS package managers.",
-                esp: "Una interfaz de commandos unificada para los principales administradores de paquetes del SO.",
-            }}
-        />
+        <div class="animation showcased" style="cursor: default;">
+            <p>Soon more.</p>
+        </div>
     </div>
--->
     <h2>
         <esp>Qué sé hacer</esp>
         <eng>What I know to do</eng>
@@ -94,6 +82,13 @@ import Showcase from "../components/Showcase.astro";
                 </p>
             </div>
             <div class="skill animation">
+                <Icon name="DOTNET" width={40} height={40} />
+                <p>
+                    <esp>Básicos de C# y dotNET</esp>
+                    <eng>Basics of C# and dotNET</eng>
+                </p>
+            </div>
+            <div class="skill animation">
                 <Icon name="REACT" width={40} height={40} />
                 <p>
                     <esp>Básicos de ReactJS</esp>
@@ -104,13 +99,13 @@ import Showcase from "../components/Showcase.astro";
     </div>
 
     <div>
-        <h3 id="work">
+        <h2 id="work">
             <esp>Detalles profesionales</esp>
             <eng>Professional details</eng>
-        </h3>
+        </h2>
         <p>
-            <esp>donde sale mi experiencia académica y laboral, por si te interesa</esp>
-            <eng>where my academic and professional experience appear, in case it interested you</eng>
+            <esp>Aquí sale mi experiencia académica y laboral, por si te interesa.</esp>
+            <eng>Here's my academic and professional experience appear, in case it interests you.</eng>
         </p>
     </div>
 
@@ -130,21 +125,19 @@ import Showcase from "../components/Showcase.astro";
         />
         <p>
             <eng>
-                I am still studying and therefore not available for full-time work (as you may see here even some of my
-                personal projects are half-abandoned due to lack of time), however <b
+                I am still studying and therefore not available for full-time work, however <b
                     >I do accept commissions and small pieces of work</b
-                >, with prices to be negotiated (or even free in exchange of crediting me, depending on the case)
+                >, with prices to be negotiated (or even free in exchange of crediting me, depending on the case).
             </eng>
             <esp>
-                sigo estudiando y por tanto no estoy disponible para trabajo a tiempo completo (como verás aquí hasta
-                mis proyectos personales están medio muertos por falta de tiempo), sin embargo <b
+                Sigo estudiando y por tanto no estoy disponible para trabajo a tiempo completo, sin embargo <b
                     >sí acepto comisiones y trabajos pequeños</b
-                >, con paga a negociar (o incluso gratis a cambio de acreditar, según el caso)
+                >, con paga a negociar (o incluso gratis a cambio de acreditación, según el caso).
             </esp>
         </p>
     </div>
 
-    <h2>
+     <h2>
         <esp>Algunas cosas que hago</esp>
         <eng>Some stuff I make</eng>
     </h2>
@@ -154,7 +147,7 @@ import Showcase from "../components/Showcase.astro";
             <esp>He creado estos proyectos</esp>
             <eng>I've created these projects</eng>
         </h3>
-        <p>
+        <!--<p>
             <esp
                 >algunos están bajo organizaciones en vez de bajo mi perfil personal, pero todos me acreditan
                 debidamente como creador</esp
@@ -162,12 +155,29 @@ import Showcase from "../components/Showcase.astro";
             <eng
                 >some are under organizations instead of my personal profile, but they all properly credit me as creator</eng
             >
-        </p>
+        </p>-->
     </div>
     <div class="bento">
         <ZakaBox
+            url="https://me.zhc.es/projects/kantra"
+            name="Kantra"
+            boxIcon={{
+                type: "svg",
+                name: "kantera",
+            }}
+            boxClass="box-kantera"
+            label={{
+                esp: "App web, hecho con Svelte y Bun",
+                eng: "Web app, made with Svelte and Bun",
+            }}
+            desc={{
+                esp: "Sistema de Acceso Controlado para instituciones educativas.",
+                eng: "Access Control System for learning institutions.",
+            }}
+        />
+        <ZakaBox
             url="https://fuckingnode.github.io/"
-            name="FuckingNode"
+            name="FKN"
             boxIcon={{
                 type: "svg",
                 name: "nodular",
@@ -182,6 +192,7 @@ import Showcase from "../components/Showcase.astro";
                 eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
             }}
         />
+        <!-- these still exists, but TEMPORARILY unmaintained so maybe i should hide it
         <ZakaBox
             url="https://konbini.vercel.app/"
             name="Konbini"
@@ -216,8 +227,6 @@ import Showcase from "../components/Showcase.astro";
                 eng: "Simple desktop program for stock management.",
             }}
         />
-        <!-- this still exists, but its TEMPORARILY unmaintained
-        maybe i should hide it -->
         <ZakaBox
             url="https://personaplus.zhc.es/"
             name="PersonaPlus"
@@ -234,7 +243,7 @@ import Showcase from "../components/Showcase.astro";
                 esp: "Pequeña app de salud (trabajo en progreso). Está medio-abandonada por ahora, pero planeo retomarla.",
                 eng: "Small (work in progress) health app. It's half-abandoned as of now, but I plan to retake it.",
             }}
-        />
+        /> -->
     </div>
     <p>
         <esp>También hay cosas más pequeñas, como paquetes</esp>
@@ -245,19 +254,27 @@ import Showcase from "../components/Showcase.astro";
             url="https://github.com/ZakaHaceCosas/dev-utils"
             name="dev-utils"
             boxClass="box-npm"
+            boxIcon={{
+                type: "svg",
+                name: "npm",
+            }}
             label={{
                 esp: "jsr y npm",
                 eng: "jsr and npm",
             }}
             desc={{
-                esp: "Varios paquetes de JavaScript de utilidad (para strings, números, y demás).",
-                eng: "A bunch of JavaScript utility packages (for strings, numbers, and more).",
+                esp: "Varios paquetes de JavaScript de utilidad (para cadenas, números y demás).",
+                eng: "A bunch of JavaScript utility packages (for strings, numbers and more).",
             }}
         />
         <ZakaBox
             url="https://npmjs.com/package/@hokkiai/djs-level-importer"
             name="@hokkiai/djs-level-importer"
             boxClass="box-npm"
+            boxIcon={{
+                type: "svg",
+                name: "npm",
+            }}
             label={{
                 esp: "npm",
                 eng: "npm",
@@ -307,7 +324,7 @@ import Showcase from "../components/Showcase.astro";
     </h3>
     <div class="bento">
         <ZakaBox
-            url="https://github.com/SokoraDesu/Sokora"
+            url="https://sokora.org/"
             name="Sokora"
             boxIcon={{
                 type: "image",
@@ -315,29 +332,25 @@ import Showcase from "../components/Showcase.astro";
             }}
             boxClass="box-neboola"
             label={{
-                esp: "Ejerciendo de diseñador líder + programador del bot (TypeScript)",
-                eng: "Working as lead designer + bot developer (TypeScript)",
+                esp: "Ejerciendo de diseñador líder + programador del bot (TypeScript) + programador web (Svelte)",
+                eng: "Working as lead designer + bot developer (TypeScript) + web developer (Svelte)",
             }}
             desc={{
-                esp: "Un bot de Discord muy épico.",
-                eng: "A very epic Discord bot.",
+                esp: "Un bot de Discord bastante completo.",
+                eng: "A very complete Discord bot.",
             }}
         />
         <ZakaBox
-            url="https://hokki.app/"
-            name="Hokki"
-            boxIcon={{
-                type: "image",
-                name: "hokkas",
-            }}
+            url="https://shard.es/"
+            name="Shard"
             boxClass="box-hokkas"
             label={{
-                esp: "Ejerciendo de desarrollador web",
-                eng: "Working as web developer",
+                esp: "Ejerciendo de investigador de I+D",
+                eng: "Working as R&D researcher",
             }}
             desc={{
-                esp: "Un bot de Discord con IA épica.",
-                eng: "A Discord bot with epic AI.",
+                esp: "Grupo de herramientas con las que sacamos a la IA el mayor provecho posible.",
+                eng: "Set of tools with which we create as much value with AI as possible.",
             }}
         />
     </div>
@@ -450,8 +463,8 @@ import Showcase from "../components/Showcase.astro";
             }}
             boxClass="box-gh"
             desc={{
-                esp: "Aquí alojo todo mi código.",
-                eng: "Here I host all my code.",
+                esp: "Aquí alojo (casi) todo mi código.",
+                eng: "Here I host all(most) my code.",
             }}
         />
         <ZakaBox

@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import ZakaBox from "../components/ZakaBox.astro";
+import Showcase from "../components/Showcase.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <h1>
+        <esp>Proyectos</esp>
+        <eng>Projects</eng>
+    </h1>
+
+    <div class="bento">
+        <ZakaBox
+            url="https://me.zhc.es/projects/kantra"
+            name="Kantra"
+            boxIcon={{
+                type: "svg",
+                name: "kantera",
+            }}
+            boxClass="box-kantera"
+            label={{
+                esp: "App web, hecho con Svelte y Bun",
+                eng: "Web app, made with Svelte and Bun",
+            }}
+            desc={{
+                esp: "Sistema de Acceso Controlado para instituciones educativas.",
+                eng: "Access Control System for learning institutions.",
+            }}
+        />
+        <ZakaBox
+            url="https://fuckingnode.github.io/"
+            name="FKN"
+            boxIcon={{
+                type: "svg",
+                name: "nodular",
+            }}
+            boxClass="box-nodular"
+            label={{
+                esp: "Herramienta de terminal, hecha con Deno",
+                eng: "CLI tool, made with Deno",
+            }}
+            desc={{
+                esp: "CLI de automatización para desarrolladores de NodeJS (y otros stacks). Bastante potente.",
+                eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
+            }}
+        />
+
+
+        <ZakaBox
+            url="https://github.com/ZakaHaceCosas/dev-utils"
+            name="dev-utils"
+            boxClass="box-npm"
+            boxIcon={{
+                type: "svg",
+                name: "npm",
+            }}
+            label={{
+                esp: "jsr y npm",
+                eng: "jsr and npm",
+            }}
+            desc={{
+                esp: "Varios paquetes de JavaScript de utilidad (para cadenas, números y demás).",
+                eng: "A bunch of JavaScript utility packages (for strings, numbers and more).",
+            }}
+        />
+        <ZakaBox
+            url="https://npmjs.com/package/@hokkiai/djs-level-importer"
+            name="@hokkiai/djs-level-importer"
+            boxClass="box-npm"
+            boxIcon={{
+                type: "svg",
+                name: "npm",
+            }}
+            label={{
+                esp: "npm",
+                eng: "npm",
+            }}
+            desc={{
+                esp: "Paquete para importar datos de nivelación de diversos bots de Discord.",
+                eng: "Package to import leveling data from several Discord bots.",
+            }}
+        />
+    </div>
+
+    <h2>
+        <esp>Trabajo con</esp>
+        <eng>I work with</eng>
+    </h2>
+    <div class="bento">
+        <ZakaBox
+            url="https://sokora.org/"
+            name="Sokora"
+            boxIcon={{
+                type: "image",
+                name: "sokoballs",
+            }}
+            boxClass="box-neboola"
+            label={{
+                esp: "Ejerciendo de diseñador líder + programador del bot (TypeScript) + programador web (Svelte)",
+                eng: "Working as lead designer + bot developer (TypeScript) + web developer (Svelte)",
+            }}
+            desc={{
+                esp: "Un bot de Discord bastante completo.",
+                eng: "A very complete Discord bot.",
+            }}
+        />
+        <ZakaBox
+            url="https://shard.es/"
+            name="Shard"
+            boxClass="box-hokkas"
+            label={{
+                esp: "Ejerciendo de investigador de I+D",
+                eng: "Working as R&D researcher",
+            }}
+            desc={{
+                esp: "Grupo de herramientas con las que sacamos a la IA el mayor provecho posible.",
+                eng: "Set of tools with which we create as much value with AI as possible.",
+            }}
+        />
+    </div>
+
+    <h2>
+        <esp>He contribuido a</esp>
+        <eng>I've contributed to</eng>
+    </h2>
+    <div class="bento">
+        <ZakaBox
+            url="https://codeberg.org/NotabenaDesu/Notabena"
+            name="Notabena"
+            boxIcon={{
+                type: "image",
+                name: "notabean",
+            }}
+            boxClass="box-beans"
+            label={{
+                eng: "Contributed as developer (Golang)",
+                esp: "Contribuí como desarrollador (Golang)",
+            }}
+            desc={{
+                eng: "A simple and great note-taking app.",
+                esp: "Una app de notas simple y genial.",
+            }}
+        />
+        <ZakaBox
+            url="https://vuelto.pp.ua/"
+            name="Vuelto"
+            boxIcon={{
+                type: "image",
+                name: "vuelta",
+            }}
+            boxClass="box-vuelta"
+            label={{
+                esp: "Contribuí como diseñador y redactor de contenidos",
+                eng: "Contributed as designer and copywriter",
+            }}
+            desc={{
+                esp: "Un motor de juegos en Golang (deprecado)",
+                eng: "A game engine in Golang (deprecated)",
+            }}
+        />
+    </div>
+</Layout>

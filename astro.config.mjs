@@ -13,8 +13,8 @@ export default defineConfig({
     fonts: [
         {
             provider: fontProviders.fontsource(),
-            name: "Carlito",
-            cssVariable: "--font-carlito",
+            name: "Inter Tight",
+            cssVariable: "--font-inter",
         },
     ],
     adapter: vercelAdapter(),

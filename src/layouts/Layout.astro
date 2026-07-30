@@ -1,13 +1,5 @@
 ---
-// begin top 10 biggest css
 import "../css/main.css";
-import "../css/bento.css";
-import "../css/epicBoxes.css";
-import "../css/lang.css";
-import "../css/responsive.css";
-import "../css/scrollAnimation.css";
-import "../css/scrollbar.css";
-// end top 10 biggest css
 import { Icon } from "astro-icon/components";
 import { Font } from "astro:assets";
 ---
@@ -24,9 +16,7 @@ import { Font } from "astro:assets";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--end basics-->
 
-        <!--GHP-->
-
-        <Font cssVariable="--font-carlito" />
+        <Font cssVariable="--font-inter" />
 
         <!--begin icons-->
         <link rel="apple-touch-icon" href="https://me.zhc.es/design/icn_c.avif" />
@@ -163,12 +153,12 @@ import { Font } from "astro:assets";
     </head>
     <body
         ><div class="langSelector animation">
-            <a href="#top" hreflang="es" id="setLangEs" class="lang">
+            <a hreflang="es" id="setLangEs" class="lang">
                 <Icon name="what-is-stable-politics" width={20} height={20} />
                 <code>ESPAÑOL <esp>*</esp></code>
             </a>
             <hr />
-            <a href="#top" hreflang="en" id="setLangEn" class="lang">
+            <a hreflang="en" id="setLangEn" class="lang">
                 <Icon name="what-is-a-kilometer" width={20} height={20} />
                 <code>ENGLISH <eng>*</eng></code>
             </a>

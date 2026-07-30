@@ -5,8 +5,50 @@ html[lang="es"] eng {
 html[lang="en"] esp {
     display: none;
 }
+a.lang {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: white;
+    align-items: center;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+a.lang:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.langSelector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: fixed;
+    top: 40px;
+    right: 5vw;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+    z-index: 99;
+}
 img {
     pointer-events: none !important;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #6f6f6f;
+}
+::-webkit-scrollbar-thumb {
+    background: #00c864; /* this was the OG color of the logo */
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #19ff73; /* this is the current logo's color */
 }
 * {
     margin: 0;
@@ -16,7 +58,7 @@ img {
     scroll-behavior: smooth;
     transition-duration: 450ms;
     font-family:
-        var(--font-carlito),
+        var(--font-inter),
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
@@ -35,10 +77,10 @@ code {
     font-family: "Courier New", Courier, monospace;
 }
 :root {
-    --bodyBg: rgba(0, 0, 0, 1);
-    --cardBg: rgba(15, 15, 15, 0.5);
-    --extraBg: rgba(20, 20, 20, 0.75);
-    --lightBg: rgba(65, 65, 65, 0.25);
+    --bodyBg: rgba(255, 245, 225, 1);
+    --cardBg: rgba(115, 115, 115, 0.4);
+    --extraBg: rgba(30, 30, 30, 0.15);
+    --lightBg: rgba(65, 65, 65, 0.1);
     --doNotUseMe_whiteStroke: rgba(255, 255, 255, 0.25);
     --doNotUseMe_darkStroke: rgba(0, 0, 0, 0.25);
     --doNotUseMe_strokeWidth: 2px;
@@ -54,9 +96,25 @@ body {
     justify-content: start;
     gap: 20px;
     padding: 40px 0px;
-    background-color: #0f0f0f;
-    color: #fff;
+    background-color: var(--bodyBg);
+    color: #0f0f0f;
     min-height: calc(100vh - 80px);
+}
+p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+ul,
+ol {
+    margin-left: 20px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 footer {
     padding: 10px;
@@ -94,7 +152,7 @@ footer {
     color: #ff3232;
 }
 .disclaimer {
-    color: #ccc;
+    color: #444;
     font-size: small;
 }
 h1 {
@@ -136,7 +194,7 @@ hr {
     border-radius: 10px;
     background-color: var(--extraBg);
     border: var(--cardStroke);
-    flex-basis: 40%;
+    flex-basis: 25%;
 }
 .skill .text {
     display: flex;
@@ -155,7 +213,7 @@ hr {
 }
 a {
     font-weight: 500;
-    color: #19ff73;
+    color: #008040;
 }
 a:hover {
     text-decoration: underline;
@@ -186,4 +244,333 @@ button:hover {
     background-color: #19ff73;
     color: #000;
     border: var(--cardStrokeDark);
+}
+.bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.bento > a:last-child:nth-child(odd) > .box {
+    grid-column: span 2;
+}
+
+.bento > a {
+    display: contents;
+}
+
+.bento > a > .box {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.bento a {
+    color: #000;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--cardBg);
+    border: var(--cardStroke);
+    gap: 10px;
+}
+.box img {
+    object-fit: scale-down;
+}
+.box .imageLike {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+}
+.box .flx p,
+.showcased .flx p {
+    line-height: 100%;
+}
+.box .flx,
+.showcased .flx {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.box:hover {
+    cursor: pointer;
+}
+.box:hover .flx {
+    gap: 40px;
+}
+.box .label {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: var(--cardStrokeDark);
+    background-color: var(--lightBg);
+    font-size: small;
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.showcase {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.showcase > :first-child {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.showcase > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.showcased,
+.showcased .child {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.showcased .child {
+    background-color: #ffffff70;
+    backdrop-filter: blur(50px);
+}
+
+.showcased {
+    padding: 10px;
+    background-color: var(--cardBg);
+    outline: 2px solid var(--doNotUseMe_darkStroke);
+    gap: 10px;
+    height: 500px;
+    background-position: 3%;
+    background-repeat: repeat-x;
+}
+
+.showcased:hover {
+    cursor: pointer;
+    background-position-x: 97%;
+}
+.showcased:hover .flx {
+    gap: 40px;
+}
+.proj-d-png {
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px 0px #00000050;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/* This box idea is epic. I do not accept any valid argument against that statement because it would not be possible for that kind of argument to even exist. Box names are chosen in purpose. If you do not understand them, it's not a problem. If you do, you're probably someone I know. */
+/* box > labels */
+.box-yt:hover svg path[fill="#FFF"] {
+    fill: #ff3d00;
+}
+.box-boblox:hover svg path,
+.box-websocket:hover svg path,
+.box-proton:hover svg path,
+.box-yt:hover svg path[fill="#FF3D00"],
+.box-dc:hover svg path,
+.box-fogma:hover svg circle,
+.box-fogma:hover svg path,
+.box-exponential:hover svg path,
+.box-x:hover svg path,
+.box-sky:hover svg path,
+.box-cat:hover svg path,
+.box-codeberg:hover svg path,
+.box-kbi:hover svg path,
+.box-ovs:hover svg path,
+.box-in:hover svg rect {
+    fill: #ffffff;
+}
+/* box > boxes */
+.box-yt:hover {
+    background-color: #ff3d0090;
+    border: 2px solid #ff3d00;
+}
+.box-npm:hover {
+    background-color: #cb383790;
+    border: 2px solid #cb3837;
+}
+.box-x:hover {
+    background-color: #03a9f490;
+    border: 2px solid #03a9f4;
+}
+.box-dc:hover {
+    background-color: #536dfe90;
+    border: 2px solid #536dfe;
+}
+.box-fogma:hover {
+    background-color: #66bb6a90;
+    border: 2px solid #66bb6a;
+}
+.box-gh:hover {
+    background-color: #000000aa;
+    border: 2px solid #00000090;
+    color: white;
+}
+.box-boblox:hover {
+    background-color: #ff573390;
+    border: 2px solid #ff5733;
+}
+.box-neboola:hover {
+    background-color: #834dba90;
+    border: 2px solid #834dba;
+}
+.box-bread:hover {
+    background-color: #0070f390;
+    border: 2px solid #0070f3;
+}
+.box-ppt:hover {
+    background-color: #ffa50090;
+    border: 2px solid #ffa500f3;
+}
+.box-websocket:hover {
+    background-color: #194ec590;
+    border: 2px solid #194ec5;
+}
+.box-sus:hover {
+    background-color: #dc187a90;
+    border: 2px solid #dc187a;
+}
+.box-exponential:hover {
+    background-color: #3280ff70; /* for visibility, i'll make an exception with this color */
+    border: 2px solid #3280ff;
+}
+.box-kantera:hover {
+    background-color: #d42e3e90;
+    border: 2px solid #d42e3e;
+}
+.box-nodular:hover {
+    background-color: #a0524490;
+    border: 2px solid #a05244;
+}
+.box-proton:hover {
+    background-color: #7341ff90;
+    border: 2px solid #7341ff;
+}
+.box-vuelta:hover {
+    background-color: #f99a6690;
+    border: 2px solid #f99a66;
+}
+.box-sky:hover {
+    background-color: #2587fa90;
+    border: 2px solid #2587fa;
+}
+.box-cat:hover {
+    background-color: #e2432990;
+    border: 2px solid #e24329;
+}
+.box-codeberg:hover {
+    background-color: #2186cf90;
+    border: 2px solid #2186cf;
+}
+.box-beans:hover {
+    background-color: #5d2bff90;
+    border: 2px solid #5d2bff;
+}
+.box-hokkas:hover {
+    background-color: #fac29090;
+    border: 2px solid #fac290;
+}
+.box-kbi:hover {
+    background-color: #c2328290;
+    border: 2px solid #c23282;
+}
+.box-ovs:hover {
+    background-color: #3e5cb190;
+    border: 2px solid #3e5cb1;
+}
+.box-in:hover {
+    background-color: #00669990;
+    border: 2px solid #006699;
+}
+.box-profe:hover {
+    background-color: #0099ff90;
+    border: 2px solid #0099ff;
+}
+.box-in:hover svg path {
+    fill: #006699;
+}
+
+/* Animate On Scroll. Inspired (aka copied) from a Fireship video. Looks good. */
+.animation {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.6s ease !important;
+}
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .animation {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+.scroll-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE DESIGN FOR PEOPLE WHO CAN'T BUY A PC AND NEED TO USE A SCREEN ON THEIR POCKET */
+@media only screen and (max-width: 1000px) {
+    body {
+        flex-direction: column;
+        justify-content: start;
+        height: auto;
+        max-width: calc(100vw - 40px);
+    }
+    .bento {
+        width: 100%;
+        /* use flex instead of grid for easier responsive */
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        flex-grow: 1;
+    }
+    .all-skills {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+    .skill {
+        width: calc(100% - 40px);
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        border-radius: 10px;
+        flex-basis: 30%;
+        flex-direction: column;
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        flex-direction: column;
+        justify-content: start;
+        max-width: 1500px !important;
+        width: 90vw;
+    }
+    .skill {
+        flex-direction: row;
+    }
 }
