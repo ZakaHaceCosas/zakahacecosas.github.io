@@ -238,7 +238,7 @@ Plus, its got something particularly useful (and that I haven't seen in barely a
 
 #### Config system
 
-You'd usually find this section at the end, but the Sokora Control Panel is Lo suyo sería poner algo así al final, pero el Panel de Control de Sokora is enviable, seriously.
+You'd usually find this section at the end, but the Sokora Control Panel is enviable, seriously.
 
 Instead of a web panel (which requires the user to log in) or individual settings commands (which are annoying, we know first hand as our previous config system worked like that), Sokora pushes the Discord Components V2 API to the limit to create a control panel in-app. Using interactive containers, you get the beautiful interface you see below (in [Screenshots](#screenshots)), which shows right away the current settings and how to change them. It works extremely well, with a few clicks you have everything setup, without having to log into a site or confirming changes (if you ever hit "Reset" yes you'll have to confirm, don't worry…).
 

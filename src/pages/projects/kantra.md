@@ -11,7 +11,27 @@ chapters:
       hrefES: "qué-es-y-qué-hace"
       titleEN: "What it is and what it does"
       hrefEN: "what-it-is-and-what-it-does"
-
+    - depth: 2
+      titleES: "La arquitectura"
+      hrefES: "la-arquitectura"
+    - depth: 1
+      titleES: "Desarrollo"
+      hrefES: "desarrollo"
+    - depth: 2
+      titleES: "La pila tecnológica"
+      hrefES: "la-pila-tecnológica"
+    - depth: 2
+      titleES: "Modelo de distribución"
+      hrefES: "modelo-de-distribución"
+    - depth: 1
+      titleES: "Funcionalidades"
+      hrefES: "funcionalidades"
+    - depth: 1
+      titleES: "Disponibilidad"
+      hrefES: "disponibilidad"
+    - depth: 1
+      titleES: "Capturas de pantalla"
+      hrefES: "capturas-de-pantalla"
 ---
 
 <esp>
@@ -65,16 +85,16 @@ Sobre si debería hacer todo en la máquina directamente o instalar una solució
 # Funcionalidades
 
 - Registro de entradas, salidas y recogidas de hijos/as
-  - Diferencia docentes, alumnos, trabajadores, o visitantes (mas «otros»)
-  - Agrupación por puertas
-  - Registra acompañantes o hijos/as
-  - Ofrece tique a imprimir (formatos Zebra y PDF)
-  - Ofrece gafete a imprimir en papel (formato PDF)
-  - Permite añadir notas adicionales por si algo se da he esclarecer
-  - Una vez registrada una entrada, con un clic se auto-registra la salida de quien haya entrado a la hora actual (u otra a especificar)
+    - Diferencia docentes, alumnos, trabajadores, o visitantes (mas «otros»)
+    - Agrupación por puertas
+    - Registra acompañantes o hijos/as
+    - Ofrece tique a imprimir (formatos Zebra y PDF)
+    - Ofrece gafete a imprimir en papel (formato PDF)
+    - Permite añadir notas adicionales por si algo se da he esclarecer
+    - Una vez registrada una entrada, con un clic se auto-registra la salida de quien haya entrado a la hora actual (u otra a especificar)
 - Registro interactivo en el que la propia persona anota los datos
-  - Muestra indicaciones de privacidad (R.G.P.D.) y plan de evacuación (a determinar por el centro)
-  - Dicha interfaz es personalizable con colores y logotipos del centro
+    - Muestra indicaciones de privacidad (R.G.P.D.) y plan de evacuación (a determinar por el centro)
+    - Dicha interfaz es personalizable con colores y logotipos del centro
 - Visualización de los datos, agrupados por fecha
 - Interfaz para filtrar datos de múltiples maneras (por tipo de autor, por DNI)
 - Generación de informes (formato PDF) con todos los movimientos asociados a una o varias personas
