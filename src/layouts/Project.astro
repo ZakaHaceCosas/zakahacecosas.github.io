@@ -1,4 +1,5 @@
 ---
+import ToC from "../components/ToC.astro";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
@@ -7,14 +8,16 @@ const { frontmatter } = Astro.props;
 <Layout>
     <h1 class="animation">
         <span style="font-weight: 400;"><a href="/">Zaka</a>\</span><span style="font-weight: 400;"
-            ><a href="/projects">Projects</a></span
+            ><a href="/projects"><eng>Projects</eng><esp>Proyectos</esp></a></span
         >\<esp>{frontmatter.titleES}</esp><eng>{frontmatter.titleEN}</eng>
     </h1>
     <p class="animation"><em>
         <esp>{frontmatter.descriptionES}</esp><eng>{frontmatter.descriptionEN}</eng>
     </em></p>
     <hr />
-    <div  style="max-width: 850px; margin-left: auto; margin-right: auto;">
-        <img class="animation" src={`/covers/${frontmatter.id}.png`} alt="Project cover" style="width: 100%;" />
-        <slot  /></div>
+    <ToC chapters={frontmatter.chapters} />
+        <div  style="max-width: 850px; margin-left: auto; margin-right: auto;">
+            <img class="animation" src={`/covers/${frontmatter.id}.png`} alt="Project cover" style="width: 100%;" />
+            <slot  />
+        </div>
 </Layout>

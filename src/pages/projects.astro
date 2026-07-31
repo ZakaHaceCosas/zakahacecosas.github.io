@@ -1,17 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
 import ZakaBox from "../components/ZakaBox.astro";
-import Showcase from "../components/Showcase.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
     <h1>
-        <esp>Proyectos</esp>
-        <eng>Projects</eng>
+        <span style="font-weight: 400;"><a href="/">Zaka</a></span>\<esp>Proyectos</esp><eng>Projects</eng>
     </h1>
 
     <div class="bento">
@@ -161,6 +155,64 @@ import Showcase from "../components/Showcase.astro";
             desc={{
                 esp: "Un motor de juegos en Golang (deprecado)",
                 eng: "A game engine in Golang (deprecated)",
+            }}
+        />
+    </div>
+
+        <h2>
+            <esp>Proyectos no mantenidos</esp>
+            <eng>Unmaintained projects</eng>
+        </h2>
+    <div class="bento">
+        <ZakaBox
+            url="https://konbini.vercel.app/"
+            name="Konbini"
+            boxIcon={{
+                type: "svg",
+                name: "kbi",
+            }}
+            boxClass="box-kbi"
+            label={{
+                esp: "Herramienta de terminal, hecha con Bun + Web app, hecha con Preact",
+                eng: "CLI tool, made with Bun + Web app, made with Preact",
+            }}
+            desc={{
+                esp: "Cliente universal para la mayoría de gestores de paquetes.",
+                eng: "Universal client for the majority of package managers.",
+            }}
+        />
+        <ZakaBox
+            url="https://github.com/HanaOrg/Zaiko"
+            name="Zaiko"
+            boxIcon={{
+                type: "svg",
+                name: "ovs",
+            }}
+            boxClass="box-ovs"
+            label={{
+                esp: "App de escritorio, hecha con Tauri y Bun",
+                eng: "Desktop app, made with Tauri and Bun",
+            }}
+            desc={{
+                esp: "Programa de escritorio simple para gestión de inventario.",
+                eng: "Simple desktop program for stock management.",
+            }}
+        />
+        <ZakaBox
+            url="https://personaplus.zhc.es/"
+            name="PersonaPlus"
+            boxIcon={{
+                type: "svg",
+                name: "exponential",
+            }}
+            boxClass="box-exponential"
+            label={{
+                esp: "App de Android, hecha con React Native",
+                eng: "Android app, made with React Native",
+            }}
+            desc={{
+                esp: "Pequeña app de salud que nunca acabé.",
+                eng: "Small health app I never finished.",
             }}
         />
     </div>

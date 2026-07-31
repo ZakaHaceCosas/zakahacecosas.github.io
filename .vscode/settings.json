@@ -9,6 +9,7 @@
     "cSpell.language": "en-US,es-ES",
     "cSpell.words": [
         "amog",
+        "avalonia",
         "avdan",
         "bento",
         "boblox",
@@ -20,7 +21,17 @@
         "grosso",
         "hokkas",
         "hokki",
+        "hokkiai",
+        "zaiko",
+        "konbini",
+        "preact",
+        "teka",
+        "dotnet",
+        "kantera",
+        "kantra",
+        "kantractl",
         "neboola",
+        "nivelaje",
         "notabean",
         "notabena",
         "productoscapilares",
@@ -28,7 +39,8 @@
         "sokoballs",
         "sokora",
         "supabase",
+        "Tauri",
         "zaka",
-        "Zakaria"
+        "zakaria"
     ]
 }

@@ -46,7 +46,12 @@ import Showcase from "../components/Showcase.astro";
             }}
         />
         <div class="animation showcased" style="cursor: default;">
-            <p>Soon more.</p>
+            <esp>
+                <p>Pronto más.</p>
+            </esp>
+            <eng>
+                <p>Soon more.</p>
+            </eng>
         </div>
     </div>
     <h2>
@@ -147,15 +152,6 @@ import Showcase from "../components/Showcase.astro";
             <esp>He creado estos proyectos</esp>
             <eng>I've created these projects</eng>
         </h3>
-        <!--<p>
-            <esp
-                >algunos están bajo organizaciones en vez de bajo mi perfil personal, pero todos me acreditan
-                debidamente como creador</esp
-            >
-            <eng
-                >some are under organizations instead of my personal profile, but they all properly credit me as creator</eng
-            >
-        </p>-->
     </div>
     <div class="bento">
         <ZakaBox
@@ -192,58 +188,6 @@ import Showcase from "../components/Showcase.astro";
                 eng: "Automation CLI for NodeJS (and other stacks) developers. Fairly powerful.",
             }}
         />
-        <!-- these still exists, but TEMPORARILY unmaintained so maybe i should hide it
-        <ZakaBox
-            url="https://konbini.vercel.app/"
-            name="Konbini"
-            boxIcon={{
-                type: "svg",
-                name: "kbi",
-            }}
-            boxClass="box-kbi"
-            label={{
-                esp: "Herramienta de terminal, hecha con Bun + Web app, hecha con Preact",
-                eng: "CLI tool, made with Bun + Web app, made with Preact",
-            }}
-            desc={{
-                esp: "Cliente universal para la mayoría de gestores de paquetes.",
-                eng: "Universal client for the majority of package managers.",
-            }}
-        />
-        <ZakaBox
-            url="https://github.com/HanaOrg/Zaiko"
-            name="Zaiko"
-            boxIcon={{
-                type: "svg",
-                name: "ovs",
-            }}
-            boxClass="box-ovs"
-            label={{
-                esp: "App de escritorio, hecha con Tauri y Bun",
-                eng: "Desktop app, made with Tauri and Bun",
-            }}
-            desc={{
-                esp: "Programa de escritorio simple para gestión de inventario.",
-                eng: "Simple desktop program for stock management.",
-            }}
-        />
-        <ZakaBox
-            url="https://personaplus.zhc.es/"
-            name="PersonaPlus"
-            boxIcon={{
-                type: "svg",
-                name: "exponential",
-            }}
-            boxClass="box-exponential"
-            label={{
-                esp: "App de Android, hecha con React Native",
-                eng: "Android app, made with React Native",
-            }}
-            desc={{
-                esp: "Pequeña app de salud (trabajo en progreso). Está medio-abandonada por ahora, pero planeo retomarla.",
-                eng: "Small (work in progress) health app. It's half-abandoned as of now, but I plan to retake it.",
-            }}
-        /> -->
     </div>
     <p>
         <esp>También hay cosas más pequeñas, como paquetes</esp>
@@ -317,7 +261,74 @@ import Showcase from "../components/Showcase.astro";
             }}
         />
     </div>
-
+    <div>
+        <h3>
+            <esp>Proyectos no mantenidos</esp>
+            <eng>Unmaintained projects</eng>
+        </h3>
+        <p>
+            <esp
+                >Luego están las cosas que ya no tengo tiempo de mantener, al menos por ahora. No son geniales, pero algo demuestran. Que las retome a futuro es posible pero no prometido. Algunos están bajo organizaciones en vez de bajo mi perfil personal, pero todos me acreditan
+                debidamente como creador.</esp
+            >
+            <eng
+                >Then you've got the things I no longer have time to maintain, at least for now. They're not great, but something they showcase. Whether I retake them on the future is possible but not promised. some are under organizations instead of my personal profile, but they all properly credit me as creator</eng
+            >
+        </p>
+    </div>
+    <div class="bento">
+        <ZakaBox
+            url="https://konbini.vercel.app/"
+            name="Konbini"
+            boxIcon={{
+                type: "svg",
+                name: "kbi",
+            }}
+            boxClass="box-kbi"
+            label={{
+                esp: "Herramienta de terminal, hecha con Bun + Web app, hecha con Preact",
+                eng: "CLI tool, made with Bun + Web app, made with Preact",
+            }}
+            desc={{
+                esp: "Cliente universal para la mayoría de gestores de paquetes.",
+                eng: "Universal client for the majority of package managers.",
+            }}
+        />
+        <ZakaBox
+            url="https://github.com/HanaOrg/Zaiko"
+            name="Zaiko"
+            boxIcon={{
+                type: "svg",
+                name: "ovs",
+            }}
+            boxClass="box-ovs"
+            label={{
+                esp: "App de escritorio, hecha con Tauri y Bun",
+                eng: "Desktop app, made with Tauri and Bun",
+            }}
+            desc={{
+                esp: "Programa de escritorio simple para gestión de inventario.",
+                eng: "Simple desktop program for stock management.",
+            }}
+        />
+        <ZakaBox
+            url="https://personaplus.zhc.es/"
+            name="PersonaPlus"
+            boxIcon={{
+                type: "svg",
+                name: "exponential",
+            }}
+            boxClass="box-exponential"
+            label={{
+                esp: "App de Android, hecha con React Native",
+                eng: "Android app, made with React Native",
+            }}
+            desc={{
+                esp: "Pequeña app de salud que nunca acabé.",
+                eng: "Small health app I never finished.",
+            }}
+        />
+    </div>
     <h3>
         <esp>Trabajo con</esp>
         <eng>I work with</eng>
@@ -442,7 +453,7 @@ import Showcase from "../components/Showcase.astro";
     </div>
     <div class="bento">
         <ZakaBox
-            url="https://discord.com/users/807903704472223754/"
+            url="https://discord.com/users/1136046074700771400/"
             name="Discord"
             boxIcon={{
                 type: "svg",

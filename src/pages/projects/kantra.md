@@ -45,7 +45,7 @@ No es nada sobre lo que vaya a escribir demasiado.
 
 <br>
 
-**C# para la línea de comandos.** ¡Sí, hay una _CLI_! La «`kantractl`», se utiliza principalmente como gestor de instalación y actualización del programa, aunque a futuro preveemos permitir su uso para interactuar con todo el software desde la terminal. Elegí C# por ser un lenguaje bastante disfrutable y por .NET, que me lo pone muy fácil para enchufar un kit como Avalonia para en el futuro darle interfaz gráfica al instalador/actualizador (o incluso portar Kantra de web a nativo para reducir exigencias, quién sabe).
+**C# para la línea de comandos.** ¡Sí, hay una _CLI_! La «`kantractl`», se utiliza principalmente como gestor de instalación y actualización del programa, aunque a futuro prevemos permitir su uso para interactuar con todo el software desde la terminal. Elegí C# por ser un lenguaje bastante disfrutable y por .NET, que me lo pone muy fácil para enchufar un kit como Avalonia para en el futuro darle interfaz gráfica al instalador/actualizador (o incluso portar Kantra de web a nativo para reducir exigencias, quién sabe).
 
 ## Modelo de distribución
 
@@ -58,16 +58,16 @@ Sobre si debería hacer todo en la máquina directamente o instalar una solució
 # Funcionalidades
 
 - Registro de entradas, salidas y recogidas de hijos/as
-    - Diferencia docentes, alumnos, trabajadores, o visitantes (mas «otros»)
-    - Agrupación por puertas
-    - Registra acompañantes o hijos/as
-    - Ofrece tiquet a imprimir (formatos Zebra y PDF)
-    - Ofrece gafete a imprimir en papel (formato PDF)
-    - Permite añadir notas adicionales por si algo se da he esclarecer
-    - Una vez registrada una entrada, con un clic se auto-registra la salida de quien haya entrado a la hora actual (u otra a especificar)
+  - Diferencia docentes, alumnos, trabajadores, o visitantes (mas «otros»)
+  - Agrupación por puertas
+  - Registra acompañantes o hijos/as
+  - Ofrece tique a imprimir (formatos Zebra y PDF)
+  - Ofrece gafete a imprimir en papel (formato PDF)
+  - Permite añadir notas adicionales por si algo se da he esclarecer
+  - Una vez registrada una entrada, con un clic se auto-registra la salida de quien haya entrado a la hora actual (u otra a especificar)
 - Registro interactivo en el que la propia persona anota los datos
-    - Muestra indicaciones de privacidad (RGPD) y plan de evacuación (a determinar por el centro)
-    - Dicha interfaz es personalizable con colores y logotipos del centro
+  - Muestra indicaciones de privacidad (R.G.P.D.) y plan de evacuación (a determinar por el centro)
+  - Dicha interfaz es personalizable con colores y logotipos del centro
 - Visualización de los datos, agrupados por fecha
 - Interfaz para filtrar datos de múltiples maneras (por tipo de autor, por DNI)
 - Generación de informes (formato PDF) con todos los movimientos asociados a una o varias personas
@@ -95,7 +95,7 @@ Auto-registro:
 
 <img src="/screens/kantra_3.png" alt="Captura 3" class="proj-d-png" />
 
-(Cabe aclarar que estas son viejas, hace no demasiado que empezamos a rediseñar Kantra usando un diseño propio en vez de Microsoft Fluent 2; actualizaré las capturas en cuanto esté terminado)
+(Cabe aclarar que estas son viejas, hace no demasiado que empezamos a re-diseñar Kantra usando un diseño propio en vez de Microsoft Fluent 2; actualizaré las capturas en cuanto esté terminado)
 
 [^1]: Créditos a mi compañero [Mario](https://mariomadorran-portfolio.vercel.app/) por aportar gran parte del desarrollo del proyecto.
 

@@ -1,0 +1,33 @@
+---
+interface Props {
+  chapters: {
+    depth: number;
+    titleES: string;
+    hrefES: string;
+    titleEN: string;
+    hrefEN: string;
+  }[];
+}
+
+const { chapters } = Astro.props;
+---
+
+<div style="min-width: 250px; position: sticky; top: 20px;">
+  <h2>
+      <esp>Tabla de Contenidos</esp>
+      <eng>Table of Contents</eng>
+  </h2>
+    {
+      chapters.map((chapter: Props["chapters"][number]) => (
+      <div>
+          <esp>
+              <a style={{ marginLeft: `${(chapter.depth - 1) * 2}em` }} href={`#${chapter.hrefES}`}>{chapter.titleES}</a>
+          </esp>
+          <eng>
+              <a style={{ marginLeft: `${(chapter.depth - 1) * 2}em` }} href={`#${chapter.hrefEN}`}>{chapter.titleEN}</a>
+          </eng>
+          <br />
+      </div>
+      ))
+    }
+</div>
